@@ -43,6 +43,8 @@ import {
   FilePPTIcon,
   StarIcon,
   HeartIcon,
+  CaretDownIcon,
+  DragPointIcon,
   PenIcon,
   PreDoubleIcon,
   NextDoubleIcon,
@@ -132,4 +134,11 @@ export const PreDouble: Story<IconProps> = (props) => (
 )
 export const NextDouble: Story<IconProps> = (props) => (
   <NextDoubleIcon {...props} />
+)
+
+export const CaretDown: Story<IconProps> = (props) => (
+  <CaretDownIcon {...props} />
+)
+export const DragPoint: Story<IconProps> = (props) => (
+  <DragPointIcon {...props} />
 )

@@ -3,11 +3,15 @@ import { NodeProps, TreeDataType } from "./interface"
 export const loopNode = (nodeArr?: TreeDataType[]) => {
   if (!nodeArr) return []
   const nodeList: NodeProps[] = []
-  const loop = (nodeArr: TreeDataType[], father: NodeProps) => {
+  const _loop = (nodeArr: TreeDataType[], father: NodeProps) => {
+    if (father.expanding === false) return
     nodeArr.map((node) => {
       const nodeProps: NodeProps & { children?: NodeProps[] } = {
-        key: node.key,
+        _key: node.key,
         title: node.title,
+        disabled: node.disabled,
+        isLeaf: node.children == null,
+        expanding: node.expanding ?? true,
         _father: father,
         _fatherPath: father?._fatherPath
           ? [...father?._fatherPath, father]
@@ -16,11 +20,32 @@ export const loopNode = (nodeArr?: TreeDataType[]) => {
       }
       nodeList.push(nodeProps)
       if (node.children) {
-        loop(node.children, nodeProps)
+        _loop(node.children, nodeProps)
       }
     })
   }
-  loop(nodeArr, {})
-
+  _loop(nodeArr, {})
   return nodeList
+}
+
+export const loopNodeWithExpand = (
+  nodeArr: TreeDataType[],
+  key: string,
+  targetExpand: boolean,
+) => {
+  if (!nodeArr) return []
+  const _loop = (nodeArr: TreeDataType[]) => {
+    nodeArr.every((node) => {
+      if (node.key === key) {
+        node.expanding = targetExpand
+        return false
+      }
+      if (node.children) {
+        _loop(node.children)
+      }
+      return true
+    })
+  }
+  _loop(nodeArr)
+  return loopNode(nodeArr)
 }

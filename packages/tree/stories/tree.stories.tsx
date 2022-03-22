@@ -19,27 +19,27 @@ export default {
 const Template: Story<TreeProps> = (args) => {
   const data = [
     {
-      title: "floor 1️⃣",
+      title: "floor 1",
       key: "0-0",
       children: [
         {
-          title: "floor 2️⃣ ",
+          title: "floor 2 ",
           key: "0-0-0",
           disabled: true,
           children: [
             {
-              title: "🍃",
+              title: "aoao",
               key: "0-0-0-0",
               disableCheckbox: true,
             },
             {
-              title: "🍃",
+              title: "aoao",
               key: "0-0-0-1",
             },
           ],
         },
         {
-          title: "floor 2️⃣ ",
+          title: "floor 2 ",
           key: "0-0-1",
           children: [
             {
@@ -49,7 +49,7 @@ const Template: Story<TreeProps> = (args) => {
                     color: "#1890ff",
                   }}
                 >
-                  🍃
+                  xixi
                 </span>
               ),
               key: "0-0-1-0",

@@ -1,5 +1,4 @@
 import { HTMLAttributes, ReactNode } from "react"
-import sinonChai from "cypress/types/sinon-chai"
 
 export type TreeSize = "mini" | "small" | "default" | "large"
 export type CheckedStrategy = "SHOW_ALL" | "SHOW_PARENT" | "SHOW_CHILD"
@@ -98,18 +97,29 @@ export interface TreeDataType extends NodeProps {
   children?: TreeDataType[]
 }
 
-export interface NodeProps {
+export interface NodeProps
+  extends Omit<HTMLAttributes<HTMLDivElement>, "key" | "title"> {
   checkable?: boolean
   disableCheckbox?: boolean
   disabled?: boolean
   icon?: ReactNode
-  isLeaf?: boolean
   key?: string
-  selectable?: boolean
+  size?: TreeSize
   title?: string | ReactNode
+  selected?: boolean
+  expanding?: boolean
+  isLeaf?: boolean
   _father?: NodeProps
   _level?: number
   _fatherPath?: NodeProps[]
+  _key?: string
+  handleExpand?: (key: string, to: boolean) => void
+}
+
+export interface ListProps extends HTMLAttributes<HTMLDivElement> {
+  listData: NodeProps[]
+  handleExpand?: (key: string, to: boolean) => void
+  size?: TreeSize
 }
 
 export interface FieldNamesType {
@@ -127,7 +137,5 @@ export type Key2nodePropsType = {
 }
 
 export interface AllowDrop {}
-
-export interface NodeProps {}
 
 export interface NodeInstance {}
