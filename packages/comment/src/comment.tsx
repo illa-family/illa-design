@@ -49,7 +49,7 @@ export const Comment = forwardRef<HTMLDivElement, CommentProps>(
           <div className={contentContainerCss}>
             <div className={applyAuthorDatetimeContainer(dateTimeAlign)}>
               <span className={authorTextCss}> {author}</span>
-              <span className={[dateTimeTextCss]}>{datetime}</span>
+              <span className={dateTimeTextCss}>{datetime}</span>
             </div>
             <span className={contentCss}>{content}</span>
             <span className={applyActionCss(actionAlign)}> {actions}</span>

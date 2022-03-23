@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef, useCallback, useContext, useEffect } from "react"
 import { useMergeValue } from "@illa-design/system"
 import { CheckmarkIcon, ReduceIcon } from "@illa-design/icon"

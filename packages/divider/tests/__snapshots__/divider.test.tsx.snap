@@ -15,7 +15,7 @@ exports[`Divider renders default 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   />
 </DocumentFragment>
 `;
@@ -35,7 +35,7 @@ exports[`Divider renders horizontal 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   />
 </DocumentFragment>
 `;
@@ -56,7 +56,7 @@ exports[`Divider renders vertical 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   />
 </DocumentFragment>
 `;

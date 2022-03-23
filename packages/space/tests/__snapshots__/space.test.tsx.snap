@@ -21,7 +21,7 @@ exports[`Space renders with different align 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -31,7 +31,7 @@ exports[`Space renders with different align 1`] = `
   margin-bottom: 0px;
 }
 
-.emotion-3 {
+.emotion-2 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -42,17 +42,17 @@ exports[`Space renders with different align 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         A
       </span>
     </div>
     <div
-      class="emotion-3"
+      class="emotion-2"
     >
       <span>
         B
@@ -83,7 +83,7 @@ exports[`Space renders with different align 2`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -93,7 +93,7 @@ exports[`Space renders with different align 2`] = `
   margin-bottom: 0px;
 }
 
-.emotion-3 {
+.emotion-2 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -104,17 +104,17 @@ exports[`Space renders with different align 2`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         A
       </span>
     </div>
     <div
-      class="emotion-3"
+      class="emotion-2"
     >
       <span>
         B
@@ -145,7 +145,7 @@ exports[`Space renders with different align 3`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -155,7 +155,7 @@ exports[`Space renders with different align 3`] = `
   margin-bottom: 0px;
 }
 
-.emotion-3 {
+.emotion-2 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -166,17 +166,17 @@ exports[`Space renders with different align 3`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         A
       </span>
     </div>
     <div
-      class="emotion-3"
+      class="emotion-2"
     >
       <span>
         B
@@ -207,7 +207,7 @@ exports[`Space renders with different align 4`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -217,7 +217,7 @@ exports[`Space renders with different align 4`] = `
   margin-bottom: 0px;
 }
 
-.emotion-3 {
+.emotion-2 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -228,17 +228,17 @@ exports[`Space renders with different align 4`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         A
       </span>
     </div>
     <div
-      class="emotion-3"
+      class="emotion-2"
     >
       <span>
         B
@@ -269,7 +269,7 @@ exports[`Space renders with divider 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -279,7 +279,7 @@ exports[`Space renders with divider 1`] = `
   margin-bottom: 0px;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: inline-flex;
   vertical-align: middle;
   border-width: 0 0 0 1px;
@@ -289,7 +289,7 @@ exports[`Space renders with divider 1`] = `
   height: 1em;
 }
 
-.emotion-6 {
+.emotion-4 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -300,20 +300,20 @@ exports[`Space renders with divider 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         A
       </span>
     </div>
     <div
-      class="emotion-3 emotion-2 emotion-3"
+      class="emotion-2 emotion-1"
     />
     <div
-      class="emotion-6"
+      class="emotion-4"
     >
       <span>
         B
@@ -344,7 +344,7 @@ exports[`Space renders with wrap 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -354,7 +354,7 @@ exports[`Space renders with wrap 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-7 {
+.emotion-6 {
   height: 100%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -365,45 +365,45 @@ exports[`Space renders with wrap 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         A
       </span>
     </div>
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         B
       </span>
     </div>
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         C
       </span>
     </div>
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         D
       </span>
     </div>
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <span>
         E
       </span>
     </div>
     <div
-      class="emotion-7"
+      class="emotion-6"
     >
       <span>
         F

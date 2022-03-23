@@ -59,13 +59,9 @@ export const Countdown = forwardRef<HTMLDivElement, CountDownProps>(
       }
     }, [start])
     return (
-      <div
-        ref={ref}
-        className={cx(applyStatistic(), className)}
-        {...restProps}
-      >
-        {title && <div className={applyStatisticTitle}>{title}</div>}
-        <div className={applyStatisticContent}>
+      <div ref={ref} className={cx(applyStatistic(), className)} {...restProps}>
+        {title && <div className={applyStatisticTitle()}>{title}</div>}
+        <div className={applyStatisticContent()}>
           {getDateString(valueShow, format)}
         </div>
       </div>

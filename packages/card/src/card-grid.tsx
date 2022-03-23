@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react"
+import { forwardRef } from "react"
 import { CardGridProps } from "./interface"
 import { applyCardGrid } from "./style"
 import { cx } from "@emotion/css"

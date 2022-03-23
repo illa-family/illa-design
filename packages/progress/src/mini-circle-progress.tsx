@@ -8,7 +8,8 @@ import {
   applyCircleStatus,
   applyCircleSvgContainer,
 } from "./mini-circle-progress-style"
-import { cx, globalColor, illaPrefix } from "@illa-design/theme"
+import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx } from "@emotion/css"
 
 export const MiniCircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
   (props, ref) => {

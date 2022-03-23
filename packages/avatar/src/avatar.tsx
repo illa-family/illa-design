@@ -1,12 +1,10 @@
-import * as React from "react"
 import { forwardRef, ReactNode } from "react"
 import { AvatarProps } from "./interface"
 import { IconAvatar } from "./icon-avatar"
 import { TextAvatar } from "./text-avatar"
 import { ImgAvatar } from "./img-avatar"
-import { css } from "@emotion/css"
+import { css, cx } from "@emotion/css"
 import { AvatarGroupContext } from "./avatar-group-context"
-import { cx } from "@emotion/css"
 
 const applyOuterCss = css`
   vertical-align: middle;

@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef, useEffect, useReducer, useRef, useState } from "react"
 import { InputElement, InputElementProps } from "@illa-design/input"
 import { isNumber, isObject, omit } from "@illa-design/system"
@@ -17,8 +16,8 @@ import {
   applySelectViewText,
   iconPointerStyle,
 } from "./style"
-import { css } from "@emotion/css"
-import { cx, globalColor, illaPrefix } from "@illa-design/theme"
+import { css, cx } from "@emotion/css"
+import { globalColor, illaPrefix } from "@illa-design/theme"
 
 const SearchStatus = {
   BEFORE: 0,
@@ -310,7 +309,7 @@ export const SelectView = forwardRef<HTMLDivElement, SelectViewProps>(
               {removeIcon ? removeIcon : <ErrorIcon />}
             </span>
           ) : null}
-          <div className={applyIconStyle}>{suffixIcon}</div>
+          <div className={applyIconStyle()}>{suffixIcon}</div>
         </div>
       </div>
     )

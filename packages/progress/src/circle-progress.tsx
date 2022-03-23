@@ -8,7 +8,8 @@ import {
   applyProgressContainerBg,
   applySvgContainer,
 } from "./common-style"
-import { cx, globalColor, illaPrefix } from "@illa-design/theme"
+import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx } from "@emotion/css"
 
 export const CircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
   (props, ref) => {

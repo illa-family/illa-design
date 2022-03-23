@@ -8,7 +8,7 @@ import {
   dragUploadTipCss,
 } from "./styles"
 import { AddIcon } from "@illa-design/icon"
-import * as React from "react"
+
 import { traverseFileTree } from "./traverse-file-tree"
 import {
   ConfigProviderContext,

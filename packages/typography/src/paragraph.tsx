@@ -1,11 +1,10 @@
-import * as React from "react"
-import { forwardRef } from "react"
+import { forwardRef, Children } from "react"
 import { ParagraphProps } from "./interface"
 import { Base } from "./base"
 import { applyParagraphContainer, applyTextContainer } from "./paragraph-style"
 import mergedToString from "./measure-element"
 import { Tooltip } from "@illa-design/tooltip"
-import { css } from "@storybook/theming"
+import { css } from "@emotion/css"
 import { cx } from "@emotion/css"
 
 export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
@@ -37,11 +36,7 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
     `
 
     const p = (
-      <div
-        ref={ref}
-        className={cx(finalCss, className)}
-        {...otherProps}
-      >
+      <div ref={ref} className={cx(finalCss, className)} {...otherProps}>
         <Base
           colorScheme={colorScheme}
           ellipsis={ellipsis}
@@ -60,9 +55,7 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
 
     if (showTooltip) {
       return (
-        <Tooltip
-          content={mergedToString(React.Children.toArray(props.children))}
-        >
+        <Tooltip content={mergedToString(Children.toArray(props.children))}>
           {p}
         </Tooltip>
       )

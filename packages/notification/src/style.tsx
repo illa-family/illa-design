@@ -11,7 +11,7 @@ export const positionMap = {
   bottomRight: "bottom:20px;right:20px",
 }
 
-export function applyNotificationWrapper(position: NoticePosition) {
+export function applyNotificationWrapper(position: NoticePosition): string {
   const align =
     position === "topRight" || position === "bottomRight"
       ? `align-items:end`
@@ -26,7 +26,7 @@ export function applyNotificationWrapper(position: NoticePosition) {
   `
 }
 
-export function applyNotification() {
+export function applyNotification(): string {
   return css`
     margin-bottom: 20px;
     padding: 16px;
@@ -41,21 +41,21 @@ export function applyNotification() {
   `
 }
 
-export function applyNotificationIcon(type: AlertType) {
+export function applyNotificationIcon(type: AlertType): string {
   return css`
     padding-right: 8px;
     font-size: 16px;
     color: ${iconColorMap[type]};
   `
 }
-export function applyNotificationContentWrapper() {
+export function applyNotificationContentWrapper(): string {
   return css`
     flex: 1;
     word-break: break-all;
   `
 }
 
-export function applyNotificationTitle() {
+export function applyNotificationTitle(): string {
   return css`
     font-size: 16px;
     font-weight: 500;
@@ -64,7 +64,7 @@ export function applyNotificationTitle() {
   `
 }
 
-export function applyNotificationContent(hasTitle: boolean) {
+export function applyNotificationContent(hasTitle: boolean): string {
   const fontSize = hasTitle ? `14px` : `16px`
   return css`
     font-size: ${fontSize};
@@ -73,7 +73,7 @@ export function applyNotificationContent(hasTitle: boolean) {
   `
 }
 
-export function applyNotificationCloseBtn() {
+export function applyNotificationCloseBtn(): string {
   return css`
     font-size: 8px;
     color: ${globalColor(`--${illaPrefix}-gray-03`)};
@@ -81,7 +81,7 @@ export function applyNotificationCloseBtn() {
   `
 }
 
-export function applyNotificationAction() {
+export function applyNotificationAction(): string {
   return css`
     text-align: right;
     margin-top: 16px;
@@ -108,7 +108,7 @@ export function applyNotificationSlide(position: NoticePosition): Variants {
   }
 }
 
-export function applyMessage(closable: boolean) {
+export function applyMessage(closable: boolean): string {
   const padding = closable ? `padding-right:36px` : ""
   return css`
     margin-bottom: 24px;
@@ -125,7 +125,7 @@ export function applyMessage(closable: boolean) {
   `
 }
 
-export function applyMessageIcon(type: MessageType) {
+export function applyMessageIcon(type: MessageType): string {
   return css`
     margin-right: 8px;
     font-size: 16px;
@@ -133,14 +133,14 @@ export function applyMessageIcon(type: MessageType) {
     display: inline-block;
   `
 }
-export function applyMessageContent() {
+export function applyMessageContent(): string {
   return css`
     font-size: 14px;
     line-height: 1.57;
     color: ${globalColor(`--${illaPrefix}-gray-02`)};
   `
 }
-export function applyMessageCloseBtn() {
+export function applyMessageCloseBtn(): string {
   return css`
     position: absolute;
     top: 12px;

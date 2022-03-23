@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef } from "react"
 import { List } from "@illa-design/list"
 import { css } from "@emotion/css"

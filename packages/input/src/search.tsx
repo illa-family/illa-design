@@ -1,4 +1,3 @@
-import * as React from "react"
 import { ChangeEvent, forwardRef, useState } from "react"
 import { SearchProps } from "./interface"
 import { useMergeValue } from "@illa-design/system"

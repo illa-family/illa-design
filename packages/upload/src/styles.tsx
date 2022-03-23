@@ -1,4 +1,4 @@
-import { css, string } from "@storybook/theming"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 export const uploadContainerCss = css`
@@ -22,7 +22,7 @@ export const inputCss = css`
   display: none;
 `
 
-export function applyBackgroundCss(disabled?: boolean) {
+export function applyBackgroundCss(disabled?: boolean): string {
   if (disabled) {
     return css`
       background-color: ${globalColor(`--${illaPrefix}-gray-09`)};
@@ -42,7 +42,7 @@ export function applyBackgroundCss(disabled?: boolean) {
   }
 }
 
-export function applyImageUploadContainerCss(disabled?: boolean) {
+export function applyImageUploadContainerCss(disabled?: boolean): string {
   return css`
     display: inline-flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ export function applyImageUploadContainerCss(disabled?: boolean) {
   `
 }
 
-export function applyDragUploadContainerCss(disabled?: boolean) {
+export function applyDragUploadContainerCss(disabled?: boolean): string {
   return css`
     display: inline-flex;
     flex-direction: column;
@@ -152,7 +152,7 @@ export const fileItemContainerCss = css`
   margin-top: 16px;
 `
 
-export function applyFileItemTitleCss(isFail?: boolean) {
+export function applyFileItemTitleCss(isFail?: boolean): string {
   let textColorCss
   if (isFail === true) {
     textColorCss = css`

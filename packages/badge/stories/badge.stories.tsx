@@ -1,4 +1,3 @@
-import * as React from "react"
 import { Meta, Story } from "@storybook/react"
 import { Avatar } from "@illa-design/avatar"
 import { SearchIcon } from "@illa-design/icon"

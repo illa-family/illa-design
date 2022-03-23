@@ -1,4 +1,3 @@
-import * as React from "react"
 import {
   forwardRef,
   useCallback,
@@ -102,7 +101,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
         }
         return isNumber(finalValue)
           ? isNumber(mergedPrecision)
-            ? Number(finalValue.toFixed(mergedPrecision))
+            ? Number(finalValue?.toFixed(mergedPrecision))
             : finalValue
           : undefined
       },
@@ -226,10 +225,10 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
                   className={applyStepEmbedContainer(stateValue)}
                   title="inputStepEmbed"
                 >
-                  <span className={applyStepEmbed} {...stepEvents("plus")}>
+                  <span className={applyStepEmbed()} {...stepEvents("plus")}>
                     {icons && icons.up ? icons.up : <UpIcon />}
                   </span>
-                  <span className={applyStepEmbed} {...stepEvents("minus")}>
+                  <span className={applyStepEmbed()} {...stepEvents("minus")}>
                     {icons && icons.down ? icons.down : <DownIcon />}
                   </span>
                 </div>

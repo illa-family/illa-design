@@ -1,18 +1,18 @@
-import React, { forwardRef, Children, cloneElement, ReactElement } from "react"
+import { Children, cloneElement, forwardRef, ReactElement } from "react"
 import { CardGrid } from "./card-grid"
 import { Meta } from "./meta"
 import { CardProps } from "./interface"
 import { Spin } from "@illa-design/spin"
 import {
-  applyCardActionItem,
   applyCard,
+  applyCardActionItem,
   applyCardActions,
+  applyCardActionsRight,
   applyCardBody,
   applyCardCover,
   applyCardHeader,
   applyCardHeaderExtra,
   applyCardHeaderTitle,
-  applyCardActionsRight,
 } from "./style"
 import { cx } from "@emotion/css"
 
@@ -47,9 +47,9 @@ export const Card = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
   const actionList =
     actions && actions.length ? (
       <div className={applyCardActions(isContainMeta)}>
-        <div className={applyCardActionsRight}>
+        <div className={applyCardActionsRight()}>
           {actions.map((action, index) => (
-            <span key={`action-${index}`} className={applyCardActionItem}>
+            <span key={`action-${index}`} className={applyCardActionItem()}>
               {action}
             </span>
           ))}
@@ -75,12 +75,12 @@ export const Card = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
     >
       {title || extra ? (
         <div className={applyCardHeader(size)}>
-          {title && <div className={applyCardHeaderTitle}>{title}</div>}
-          {extra && <div className={applyCardHeaderExtra}>{extra}</div>}
+          {title && <div className={applyCardHeaderTitle()}>{title}</div>}
+          {extra && <div className={applyCardHeaderExtra()}>{extra}</div>}
         </div>
       ) : null}
 
-      {cover ? <div className={applyCardCover}>{cover}</div> : null}
+      {cover ? <div className={applyCardCover()}>{cover}</div> : null}
 
       <div className={applyCardBody(size, loading, isContainGrid)}>
         {loading ? <Spin /> : handledChildren}

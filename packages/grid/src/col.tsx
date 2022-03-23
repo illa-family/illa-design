@@ -89,11 +89,7 @@ export const Col = forwardRef<HTMLDivElement, ColProps>((props, ref) => {
   `
 
   return (
-    <div
-      ref={ref}
-      className={cx(finalCss, className)}
-      {...otherProps}
-    >
+    <div ref={ref} className={cx(finalCss, className)} {...otherProps}>
       {props.children}
     </div>
   )

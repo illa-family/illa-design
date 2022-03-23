@@ -1,5 +1,5 @@
 import { HeadingLevel } from "./interface"
-import { css, string } from "@storybook/theming"
+import { css } from "@emotion/css"
 
 export function getHeadingSize(level: HeadingLevel): string[] {
   // font-size line-height

@@ -1,8 +1,8 @@
 import { Children, CSSProperties, forwardRef, ReactNode } from "react"
 import { AvatarGroupProps } from "./interface"
-import { css } from "@emotion/css"
+import { css, cx } from "@emotion/css"
 import { Avatar } from "./avatar"
-import { cx, globalColor, illaPrefix } from "@illa-design/theme"
+import { globalColor, illaPrefix } from "@illa-design/theme"
 import { AvatarGroupContext } from "./avatar-group-context"
 
 const avatarGroupCss = css`
@@ -78,11 +78,7 @@ export const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
       ${avatarGroupCss};
     `
     return (
-      <div
-        ref={ref}
-        className={cx(finalCss, className)}
-        {...otherProps}
-      >
+      <div ref={ref} className={cx(className, finalCss)} {...otherProps}>
         {newNodeList}
       </div>
     )

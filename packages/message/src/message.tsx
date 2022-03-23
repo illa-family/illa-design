@@ -131,10 +131,7 @@ export const Message: MessageComponent = forwardRef<
   }, [notice])
 
   return (
-    <div
-      ref={ref}
-      className={cx(applyMessageWrapper(position), className)}
-    >
+    <div ref={ref} className={cx(applyMessageWrapper(position), className)}>
       <AnimatePresence>
         {messageSet[position].map((notice) => (
           <motion.div

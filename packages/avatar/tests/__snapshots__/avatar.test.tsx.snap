@@ -10,12 +10,7 @@ exports[`Avatar Avatar renders with colorScheme 1`] = `
   display: inline-flex;
 }
 
-.emotion-0 {
-  vertical-align: middle;
-  display: inline-flex;
-}
-
-.emotion-2 {
+.emotion-1 {
   background-color: #c2c2c2;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -44,7 +39,7 @@ exports[`Avatar Avatar renders with colorScheme 1`] = `
   border-radius: 50%;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,11 +60,11 @@ exports[`Avatar Avatar renders with colorScheme 1`] = `
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-3 {
   vertical-align: middle;
 }
 
-.emotion-7 {
+.emotion-5 {
   background-color: #007a41;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -98,7 +93,7 @@ exports[`Avatar Avatar renders with colorScheme 1`] = `
   border-radius: 50%;
 }
 
-.emotion-12 {
+.emotion-9 {
   background-color: #123321;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -129,16 +124,16 @@ exports[`Avatar Avatar renders with colorScheme 1`] = `
 
 <div>
     <div
-      class="emotion-0 emotion-0"
+      class="emotion-0"
     >
       <div
-        class="emotion-2"
+        class="emotion-1"
       >
         <div
-          class="emotion-3"
+          class="emotion-2"
         >
           <svg
-            class="emotion-4"
+            class="emotion-3"
             color="currentColor"
             height="14px"
             viewBox="0 0 16 16"
@@ -156,16 +151,16 @@ exports[`Avatar Avatar renders with colorScheme 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-0"
+      class="emotion-0"
     >
       <div
-        class="emotion-7"
+        class="emotion-5"
       >
         <div
-          class="emotion-3"
+          class="emotion-2"
         >
           <svg
-            class="emotion-4"
+            class="emotion-3"
             color="currentColor"
             height="14px"
             viewBox="0 0 16 16"
@@ -183,16 +178,16 @@ exports[`Avatar Avatar renders with colorScheme 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-0"
+      class="emotion-0"
     >
       <div
-        class="emotion-12"
+        class="emotion-9"
       >
         <div
-          class="emotion-3"
+          class="emotion-2"
         >
           <svg
-            class="emotion-4"
+            class="emotion-3"
             color="currentColor"
             height="14px"
             viewBox="0 0 16 16"
@@ -223,12 +218,7 @@ exports[`Avatar Avatar renders with icon 1`] = `
   display: inline-flex;
 }
 
-.emotion-0 {
-  vertical-align: middle;
-  display: inline-flex;
-}
-
-.emotion-2 {
+.emotion-1 {
   background-color: #c2c2c2;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -257,7 +247,7 @@ exports[`Avatar Avatar renders with icon 1`] = `
   border-radius: 50%;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -279,13 +269,13 @@ exports[`Avatar Avatar renders with icon 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <div
-        class="emotion-3"
+        class="emotion-2"
       >
         <svg
           fill="currentColor"
@@ -316,12 +306,7 @@ exports[`Avatar Avatar renders with shape 1`] = `
   display: inline-flex;
 }
 
-.emotion-0 {
-  vertical-align: middle;
-  display: inline-flex;
-}
-
-.emotion-2 {
+.emotion-1 {
   background-color: #c2c2c2;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -350,7 +335,7 @@ exports[`Avatar Avatar renders with shape 1`] = `
   border-radius: 50%;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -371,11 +356,11 @@ exports[`Avatar Avatar renders with shape 1`] = `
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-3 {
   vertical-align: middle;
 }
 
-.emotion-7 {
+.emotion-5 {
   background-color: #c2c2c2;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -406,16 +391,16 @@ exports[`Avatar Avatar renders with shape 1`] = `
 
 <div>
     <div
-      class="emotion-0 emotion-0"
+      class="emotion-0"
     >
       <div
-        class="emotion-2"
+        class="emotion-1"
       >
         <div
-          class="emotion-3"
+          class="emotion-2"
         >
           <svg
-            class="emotion-4"
+            class="emotion-3"
             color="currentColor"
             height="14px"
             viewBox="0 0 16 16"
@@ -433,16 +418,16 @@ exports[`Avatar Avatar renders with shape 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-0"
+      class="emotion-0"
     >
       <div
-        class="emotion-7"
+        class="emotion-5"
       >
         <div
-          class="emotion-3"
+          class="emotion-2"
         >
           <svg
-            class="emotion-4"
+            class="emotion-3"
             color="currentColor"
             height="14px"
             viewBox="0 0 16 16"
@@ -473,12 +458,7 @@ exports[`Avatar Avatar renders with size 1`] = `
   display: inline-flex;
 }
 
-.emotion-0 {
-  vertical-align: middle;
-  display: inline-flex;
-}
-
-.emotion-2 {
+.emotion-1 {
   background-color: #c2c2c2;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -507,7 +487,7 @@ exports[`Avatar Avatar renders with size 1`] = `
   border-radius: 50%;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -528,11 +508,11 @@ exports[`Avatar Avatar renders with size 1`] = `
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-3 {
   vertical-align: middle;
 }
 
-.emotion-7 {
+.emotion-5 {
   background-color: #c2c2c2;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -561,7 +541,7 @@ exports[`Avatar Avatar renders with size 1`] = `
   border-radius: 50%;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -582,7 +562,7 @@ exports[`Avatar Avatar renders with size 1`] = `
   height: 18px;
 }
 
-.emotion-12 {
+.emotion-9 {
   background-color: #c2c2c2;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -611,7 +591,7 @@ exports[`Avatar Avatar renders with size 1`] = `
   border-radius: 50%;
 }
 
-.emotion-13 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -634,16 +614,16 @@ exports[`Avatar Avatar renders with size 1`] = `
 
 <div>
     <div
-      class="emotion-0 emotion-0"
+      class="emotion-0"
     >
       <div
-        class="emotion-2"
+        class="emotion-1"
       >
         <div
-          class="emotion-3"
+          class="emotion-2"
         >
           <svg
-            class="emotion-4"
+            class="emotion-3"
             color="currentColor"
             height="14px"
             viewBox="0 0 16 16"
@@ -661,16 +641,16 @@ exports[`Avatar Avatar renders with size 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-0"
+      class="emotion-0"
     >
       <div
-        class="emotion-7"
+        class="emotion-5"
       >
         <div
-          class="emotion-8"
+          class="emotion-6"
         >
           <svg
-            class="emotion-4"
+            class="emotion-3"
             color="currentColor"
             height="18px"
             viewBox="0 0 16 16"
@@ -688,16 +668,16 @@ exports[`Avatar Avatar renders with size 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-0"
+      class="emotion-0"
     >
       <div
-        class="emotion-12"
+        class="emotion-9"
       >
         <div
-          class="emotion-13"
+          class="emotion-10"
         >
           <svg
-            class="emotion-4"
+            class="emotion-3"
             color="currentColor"
             height="28px"
             viewBox="0 0 16 16"

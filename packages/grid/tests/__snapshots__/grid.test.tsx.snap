@@ -15,7 +15,7 @@ exports[`Grid renders col correctly. 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   box-sizing: border-box;
   position: relative;
   -webkit-order: 2;
@@ -25,7 +25,7 @@ exports[`Grid renders col correctly. 1`] = `
   width: calc(12 * calc(100% / 24));
 }
 
-.emotion-4 {
+.emotion-2 {
   box-sizing: border-box;
   position: relative;
   -webkit-order: 1;
@@ -36,14 +36,14 @@ exports[`Grid renders col correctly. 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-0"
+  class="emotion-0"
   data-testid="test-row"
 >
   <div
-    class="emotion-2 emotion-2"
+    class="emotion-1"
   />
   <div
-    class="emotion-4 emotion-4"
+    class="emotion-2"
   />
 </div>
 `;
@@ -63,6 +63,65 @@ exports[`Grid renders reactive correctly. 1`] = `
   flex-wrap: wrap;
 }
 
+.emotion-1 {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(24 * calc(100% / 24));
+}
+
+@media (min-width: 0px) {
+  .emotion-1 {
+    left: calc(3 * calc(100% / 24));
+    right: calc(3 * calc(100% / 24));
+    margin-left: calc(3 * calc(100% / 24));
+    width: calc(12 * calc(100% / 24));
+  }
+}
+
+@media (min-width: 576px) {
+  .emotion-1 {
+    left: calc(3 * calc(100% / 24));
+    right: calc(3 * calc(100% / 24));
+    margin-left: calc(3 * calc(100% / 24));
+  }
+}
+
+@media (min-width: 768px) {
+  .emotion-1 {
+    left: calc(3 * calc(100% / 24));
+    right: calc(3 * calc(100% / 24));
+    margin-left: calc(3 * calc(100% / 24));
+    width: calc(12 * calc(100% / 24));
+  }
+}
+
+@media (min-width: 992px) {
+  .emotion-1 {
+    left: calc(3 * calc(100% / 24));
+    right: calc(3 * calc(100% / 24));
+    margin-left: calc(3 * calc(100% / 24));
+    width: calc(12 * calc(100% / 24));
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-1 {
+    left: calc(3 * calc(100% / 24));
+    right: calc(3 * calc(100% / 24));
+    margin-left: calc(3 * calc(100% / 24));
+    width: calc(12 * calc(100% / 24));
+  }
+}
+
+@media (min-width: 1600px) {
+  .emotion-1 {
+    left: calc(3 * calc(100% / 24));
+    right: calc(3 * calc(100% / 24));
+    margin-left: calc(3 * calc(100% / 24));
+    width: calc(12 * calc(100% / 24));
+  }
+}
+
 .emotion-2 {
   position: relative;
   box-sizing: border-box;
@@ -71,108 +130,49 @@ exports[`Grid renders reactive correctly. 1`] = `
 
 @media (min-width: 0px) {
   .emotion-2 {
-    left: calc(3 * calc(100% / 24));
-    right: calc(3 * calc(100% / 24));
-    margin-left: calc(3 * calc(100% / 24));
     width: calc(12 * calc(100% / 24));
   }
 }
 
 @media (min-width: 576px) {
   .emotion-2 {
-    left: calc(3 * calc(100% / 24));
-    right: calc(3 * calc(100% / 24));
-    margin-left: calc(3 * calc(100% / 24));
+    width: calc(12 * calc(100% / 24));
   }
 }
 
 @media (min-width: 768px) {
   .emotion-2 {
-    left: calc(3 * calc(100% / 24));
-    right: calc(3 * calc(100% / 24));
-    margin-left: calc(3 * calc(100% / 24));
     width: calc(12 * calc(100% / 24));
   }
 }
 
 @media (min-width: 992px) {
   .emotion-2 {
-    left: calc(3 * calc(100% / 24));
-    right: calc(3 * calc(100% / 24));
-    margin-left: calc(3 * calc(100% / 24));
     width: calc(12 * calc(100% / 24));
   }
 }
 
 @media (min-width: 1200px) {
   .emotion-2 {
-    left: calc(3 * calc(100% / 24));
-    right: calc(3 * calc(100% / 24));
-    margin-left: calc(3 * calc(100% / 24));
     width: calc(12 * calc(100% / 24));
   }
 }
 
 @media (min-width: 1600px) {
   .emotion-2 {
-    left: calc(3 * calc(100% / 24));
-    right: calc(3 * calc(100% / 24));
-    margin-left: calc(3 * calc(100% / 24));
-    width: calc(12 * calc(100% / 24));
-  }
-}
-
-.emotion-4 {
-  position: relative;
-  box-sizing: border-box;
-  width: calc(24 * calc(100% / 24));
-}
-
-@media (min-width: 0px) {
-  .emotion-4 {
-    width: calc(12 * calc(100% / 24));
-  }
-}
-
-@media (min-width: 576px) {
-  .emotion-4 {
-    width: calc(12 * calc(100% / 24));
-  }
-}
-
-@media (min-width: 768px) {
-  .emotion-4 {
-    width: calc(12 * calc(100% / 24));
-  }
-}
-
-@media (min-width: 992px) {
-  .emotion-4 {
-    width: calc(12 * calc(100% / 24));
-  }
-}
-
-@media (min-width: 1200px) {
-  .emotion-4 {
-    width: calc(12 * calc(100% / 24));
-  }
-}
-
-@media (min-width: 1600px) {
-  .emotion-4 {
     width: calc(12 * calc(100% / 24));
   }
 }
 
 <div
-  class="emotion-0 emotion-0"
+  class="emotion-0"
   data-testid="test-row"
 >
   <div
-    class="emotion-2 emotion-2"
+    class="emotion-1"
   />
   <div
-    class="emotion-4 emotion-4"
+    class="emotion-2"
   />
 </div>
 `;
@@ -203,27 +203,27 @@ exports[`Grid renders span. 1`] = `
   align-items: start;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: relative;
   box-sizing: border-box;
   width: calc(13 * calc((100% - 30px * (2 - 1)) / 24));
 }
 
-.emotion-4 {
+.emotion-2 {
   position: relative;
   box-sizing: border-box;
   width: calc(15 * calc((100% - 30px * (2 - 1)) / 24));
 }
 
 <div
-  class="emotion-0 emotion-0"
+  class="emotion-0"
   data-testid="test-row"
 >
   <div
-    class="emotion-2 emotion-2"
+    class="emotion-1"
   />
   <div
-    class="emotion-4 emotion-4"
+    class="emotion-2"
   />
 </div>
 `;
@@ -321,27 +321,27 @@ exports[`Grid renders with gap. 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   position: relative;
   box-sizing: border-box;
   width: calc(20 * calc(100% / 24));
 }
 
-.emotion-4 {
+.emotion-2 {
   position: relative;
   box-sizing: border-box;
   width: calc(15 * calc(100% / 24));
 }
 
 <div
-  class="emotion-0 emotion-0"
+  class="emotion-0"
   data-testid="test-row"
 >
   <div
-    class="emotion-2 emotion-2"
+    class="emotion-1"
   />
   <div
-    class="emotion-4 emotion-4"
+    class="emotion-2"
   />
 </div>
 `;

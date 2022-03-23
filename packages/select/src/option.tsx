@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef } from "react"
 import { OptionProps } from "./interface"
 import { applyOptionStyle } from "./style"

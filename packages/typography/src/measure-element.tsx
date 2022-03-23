@@ -1,5 +1,4 @@
-import * as React from "react"
-import { ReactNode } from "react"
+import { Children, ReactNode } from "react"
 
 function inRange(
   computeElement: HTMLElement,
@@ -100,7 +99,7 @@ export function measureElement(
   document.body.appendChild(computeElement)
 
   // create text node
-  const fullText = mergedToString(React.Children.toArray(children))
+  const fullText = mergedToString(Children.toArray(children))
   const textNode = document.createTextNode(fullText)
 
   // deal css
@@ -158,7 +157,7 @@ export function isNumber(obj: any): obj is number {
 
 export default function mergedToString(children: any): string {
   const mergedResult = [""]
-  React.Children.forEach(children, (child) => {
+  Children.forEach(children, (child) => {
     const prevIndex = mergedResult.length - 1
     const prevChild = mergedResult[prevIndex]
 

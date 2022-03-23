@@ -7,7 +7,7 @@ import {
   imageSizeCss,
 } from "./styles"
 import { Image } from "@illa-design/image"
-import * as React from "react"
+
 import { getDeleteButton, getRightIcon } from "./file-list-util"
 
 const getObjectUrl = (file?: File) => {

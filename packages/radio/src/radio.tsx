@@ -1,4 +1,3 @@
-import * as React from "react"
 import { ChangeEvent, forwardRef, useContext } from "react"
 import { RadioProps } from "./interface"
 import {

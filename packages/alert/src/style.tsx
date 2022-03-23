@@ -1,7 +1,6 @@
 import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { AlertType } from "./interface"
-import React from "react"
 
 export const colorMap = {
   info: `${globalColor(`--${illaPrefix}-blue-07`)}`,
@@ -23,7 +22,7 @@ export function applyAlertContainer(
   type: AlertType,
   hasContent: boolean,
   showBanner: boolean,
-) {
+): string {
   const padding = hasContent ? `16px` : `9px 16px`
   const radius = showBanner ? `` : `border-radius: 2px`
   return css`
@@ -38,7 +37,8 @@ export function applyAlertContainer(
     background-color: ${colorMap[type]};
   `
 }
-export function applyAlert(hasContent: boolean) {
+
+export function applyAlert(hasContent: boolean): string {
   const align = hasContent ? `flex-start` : `center`
   return css`
     box-sizing: border-box;
@@ -50,7 +50,7 @@ export function applyAlert(hasContent: boolean) {
   `
 }
 
-export function applyAlertIcon(type: AlertType, hasContent: boolean) {
+export function applyAlertIcon(type: AlertType, hasContent: boolean): string {
   const display = hasContent
     ? ""
     : `display: flex;
@@ -58,6 +58,7 @@ export function applyAlertIcon(type: AlertType, hasContent: boolean) {
   return css`
     margin-right: 8px;
     ${display};
+
     svg {
       color: ${iconColorMap[type]};
       font-size: 16px;
@@ -65,14 +66,14 @@ export function applyAlertIcon(type: AlertType, hasContent: boolean) {
   `
 }
 
-export function applyAlertContentWrapper() {
+export function applyAlertContentWrapper(): string {
   return css`
     position: relative;
     flex: 1;
   `
 }
 
-export function applyAlertTitle(hasContent: boolean) {
+export function applyAlertTitle(hasContent: boolean): string {
   const style = hasContent
     ? `
         margin-bottom: 4px;
@@ -87,13 +88,13 @@ export function applyAlertTitle(hasContent: boolean) {
   `
 }
 
-export function applyAlertContent() {
+export function applyAlertContent(): string {
   return css`
     color: ${globalColor(`--${illaPrefix}-gray-04`)};
   `
 }
 
-export function applyAlertCloseBtn(type: AlertType) {
+export function applyAlertCloseBtn(type: AlertType): string {
   return css`
     box-sizing: border-box;
     padding: 0;
@@ -108,7 +109,7 @@ export function applyAlertCloseBtn(type: AlertType) {
   `
 }
 
-export function applyAlertAction() {
+export function applyAlertAction(): string {
   return css`
     margin-left: 8px;
   `

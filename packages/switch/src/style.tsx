@@ -20,7 +20,7 @@ export function applySwitch(
   colorScheme: SwitchColorScheme,
   checked: boolean,
   size: SwitchSize,
-) {
+): string {
   const minWidth = size === "medium" ? "29px" : "40px"
   const height = size === "medium" ? "18px" : "24px"
   const isInnerColor: boolean = innerColor.indexOf(colorScheme) > -1
@@ -45,6 +45,7 @@ export function applySwitch(
     padding: 0;
     outline: none;
     transition: background-color 0.2s ease-in-out;
+
     &:disabled {
       cursor: not-allowed;
       background-color: ${isInnerColor && checked
@@ -61,7 +62,7 @@ export function applySwitchDot(
   size: SwitchSize,
   checked: boolean,
   disabled: boolean,
-) {
+): string {
   const dotSize = size === "medium" ? "12px" : "16px"
   const dotSpacing = size === "medium" ? "3px" : "4px"
   const dotPosition = checked
@@ -91,7 +92,7 @@ export function applySwitchDot(
   `
 }
 
-export function applySwitchText(checked: boolean, size: SwitchSize) {
+export function applySwitchText(checked: boolean, size: SwitchSize): string {
   const textSize =
     size === "medium"
       ? `
@@ -116,7 +117,7 @@ export function applySwitchText(checked: boolean, size: SwitchSize) {
   `
 }
 
-export function applySwitchIcon() {
+export function applySwitchIcon(): string {
   return css`
     width: 8px;
     height: 8px;

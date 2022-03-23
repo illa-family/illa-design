@@ -1,6 +1,6 @@
 import { forwardRef, useState, useEffect, useMemo } from "react"
 import { PageNumGroupProps } from "./interface"
-import * as React from "react"
+
 import { PageNumItem } from "./page-num-item"
 import { paginationContainer } from "./style"
 

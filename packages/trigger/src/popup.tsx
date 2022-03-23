@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { createPortal } from "react-dom"
-import { css, string } from "@emotion/css"
+import { css } from "@emotion/css"
 
 function applyPopupContainer(top: string, left: string): string {
   return css`

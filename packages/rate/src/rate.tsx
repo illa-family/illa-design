@@ -135,7 +135,7 @@ export const Rate = forwardRef<HTMLDivElement, RateProps>((props, ref) => {
       {...restProps}
       onMouseLeave={resetHoverIndex}
     >
-      <div className={applyRateInner}>
+      <div className={applyRateInner()}>
         {Array.apply(null, Array(count)).map((_, index) =>
           renderCharacter(index),
         )}

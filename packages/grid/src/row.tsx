@@ -30,11 +30,7 @@ export const Row = forwardRef<HTMLDivElement, RowProps>((props, ref) => {
   `
 
   return (
-    <div
-      ref={ref}
-      className={cx(finalCss, className)}
-      {...otherProps}
-    >
+    <div ref={ref} className={cx(finalCss, className)} {...otherProps}>
       <RowContext.Provider
         value={
           {

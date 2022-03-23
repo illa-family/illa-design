@@ -13,7 +13,8 @@ import {
 } from "./line-progress-style"
 import { SuccessIcon, WarningCircleIcon } from "@illa-design/icon"
 import { Space } from "@illa-design/space"
-import { cx, globalColor, illaPrefix } from "@illa-design/theme"
+import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx } from "@emotion/css"
 
 export const LineProgress = forwardRef<HTMLDivElement, ProgressProps>(
   (props, ref) => {

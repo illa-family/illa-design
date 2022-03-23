@@ -8,7 +8,7 @@ import {
 } from "./styles"
 import { Image } from "@illa-design/image"
 import { AddIcon, UploadIcon } from "@illa-design/icon"
-import * as React from "react"
+
 import { Button } from "@illa-design/button"
 import { TriggerNode } from "./drag-uploader"
 import {

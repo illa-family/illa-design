@@ -1,10 +1,4 @@
-import React, {
-  forwardRef,
-  useMemo,
-  useRef,
-  useEffect,
-  MouseEvent,
-} from "react"
+import { forwardRef, useMemo, useRef, useEffect, MouseEvent } from "react"
 import { NoticeProps } from "./interface"
 import {
   applyNotification,
@@ -111,9 +105,9 @@ export const Notice = forwardRef<HTMLDivElement, NoticeProps>((props, ref) => {
         {showIcon && renderIcon && (
           <span className={applyMessageIcon(type)}>{renderIcon}</span>
         )}
-        <span className={applyMessageContent}>{content}</span>
+        <span className={applyMessageContent()}>{content}</span>
         {closable && (
-          <span className={applyMessageCloseBtn} onClick={handleClose}>
+          <span className={applyMessageCloseBtn()} onClick={handleClose}>
             {closeElement || <CloseIcon />}
           </span>
         )}
@@ -122,7 +116,7 @@ export const Notice = forwardRef<HTMLDivElement, NoticeProps>((props, ref) => {
   }
   return (
     <div
-      className={applyNotification}
+      className={applyNotification()}
       ref={ref}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -133,13 +127,13 @@ export const Notice = forwardRef<HTMLDivElement, NoticeProps>((props, ref) => {
           {renderIcon}
         </div>
       )}
-      <div className={applyNotificationContentWrapper}>
-        {title && <div className={applyNotificationTitle}>{title}</div>}
+      <div className={applyNotificationContentWrapper()}>
+        {title && <div className={applyNotificationTitle()}>{title}</div>}
         <div className={applyNotificationContent(!!title)}>{content}</div>
-        {action && <div className={applyNotificationAction}>{action}</div>}
+        {action && <div className={applyNotificationAction()}>{action}</div>}
       </div>
       {closable && (
-        <div className={applyNotificationCloseBtn} onClick={handleClose}>
+        <div className={applyNotificationCloseBtn()} onClick={handleClose}>
           {closeElement || <CloseIcon />}
         </div>
       )}

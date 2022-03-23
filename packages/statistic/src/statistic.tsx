@@ -43,11 +43,7 @@ export const Statistic = forwardRef<HTMLDivElement, StatisticProps>(
       return decimal !== void 0 ? int + decimalSeparator + decimal : int
     }, [format, value, groupSeparator, decimalSeparator, precision])
     return (
-      <div
-        className={cx(applyStatistic(), className)}
-        ref={ref}
-        {...restProps}
-      >
+      <div className={cx(applyStatistic(), className)} ref={ref} {...restProps}>
         {title && <div className={applyStatisticTitle()}>{title}</div>}
         <div className={applyStatisticContent()}>
           {prefix && (

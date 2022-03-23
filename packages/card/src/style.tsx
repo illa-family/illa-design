@@ -1,9 +1,8 @@
 import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { CardSize } from "./interface"
-import React from "react"
 
-export function applyCard(bordered: boolean, hoverable: boolean) {
+export function applyCard(bordered: boolean, hoverable: boolean): string {
   const border = bordered
     ? `border: solid 1px ${globalColor(`--${illaPrefix}-gray-08`)}`
     : ``
@@ -18,13 +17,14 @@ export function applyCard(bordered: boolean, hoverable: boolean) {
     background-color: ${globalColor(`--${illaPrefix}-white-01`)};
     border-radius: 2px;
     ${border};
+
     &:hover {
       ${boxShadow};
     }
   `
 }
 
-export function applyCardHeader(size: CardSize) {
+export function applyCardHeader(size: CardSize): string {
   const paddingSize = size === "small" ? `8px` : `16px`
   return css`
     position: relative;
@@ -37,7 +37,7 @@ export function applyCardHeader(size: CardSize) {
   `
 }
 
-export function applyCardHeaderTitle() {
+export function applyCardHeaderTitle(): string {
   return css`
     font-size: 16px;
     font-weight: 500;
@@ -50,7 +50,7 @@ export function applyCardHeaderTitle() {
   `
 }
 
-export function applyCardHeaderExtra() {
+export function applyCardHeaderExtra(): string {
   return css`
     color: ${globalColor(`--${illaPrefix}-gray-02`)};
     overflow: hidden;
@@ -63,7 +63,7 @@ export function applyCardBody(
   size: CardSize,
   loading: boolean,
   isContainGrid: boolean,
-) {
+): string {
   const loadingStyle = loading
     ? css`
         text-align: center;
@@ -88,14 +88,14 @@ export function applyCardBody(
   `
 }
 
-export function applyCardCover() {
+export function applyCardCover(): string {
   return css`
     border-radius: 2px;
     overflow: hidden;
   `
 }
 
-export function applyCardActions(isContainMeta: boolean) {
+export function applyCardActions(isContainMeta: boolean): string {
   const margin = isContainMeta ? `` : `margin-top: 20px`
   return css`
     ${margin};
@@ -105,14 +105,14 @@ export function applyCardActions(isContainMeta: boolean) {
   `
 }
 
-export function applyCardActionsRight() {
+export function applyCardActionsRight(): string {
   return css`
     display: flex;
     align-items: center;
   `
 }
 
-export function applyCardActionItem() {
+export function applyCardActionItem(): string {
   return css`
     display: flex;
     align-items: center;
@@ -123,27 +123,30 @@ export function applyCardActionItem() {
     cursor: pointer;
     color: ${globalColor(`--${illaPrefix}-gray-03`)};
     transition: color 0.2s ease-in-out;
+
     &:not(:last-child) {
       margin-right: 24px;
     }
+
     &:hover {
       color: ${globalColor(`--${illaPrefix}-blue-03`)};
     }
   `
 }
 
-export function applyCardGrid(hoverable: boolean) {
+export function applyCardGrid(hoverable: boolean): string {
   return css`
     position: relative;
     box-sizing: border-box;
     width: 33.33%;
+
     &:hover {
       z-index: ${hoverable ? 1 : ""};
     }
   `
 }
 
-export function applyCardMetaTitle() {
+export function applyCardMetaTitle(): string {
   return css`
     font-size: 16px;
     font-weight: 500;
@@ -155,7 +158,7 @@ export function applyCardMetaTitle() {
   `
 }
 
-export function applyCardMetaDescription() {
+export function applyCardMetaDescription(): string {
   return css`
     &:not(:first-of-type) {
       margin-top: 4px;
@@ -163,11 +166,12 @@ export function applyCardMetaDescription() {
   `
 }
 
-export function applyCardMetaFooter() {
+export function applyCardMetaFooter(): string {
   return css`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     &:last-of-type {
       margin-top: 16px;
     }

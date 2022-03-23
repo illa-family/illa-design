@@ -7,7 +7,6 @@ import {
   simplePaginationSumCss,
 } from "./style"
 import { Input } from "@illa-design/input"
-import * as React from "react"
 
 export const SimplePagination = forwardRef<
   HTMLSpanElement,

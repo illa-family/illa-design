@@ -59,7 +59,12 @@ exports[`Card renders with Meta 1`] = `
   display: inline-flex;
 }
 
-.emotion-5 {
+.emotion-3 {
+  vertical-align: middle;
+  display: inline-flex;
+}
+
+.emotion-4 {
   background-color: #c2c2c2;
   display: inline-flex;
   overflow: hidden;
@@ -85,7 +90,7 @@ exports[`Card renders with Meta 1`] = `
   border-radius: 50%;
 }
 
-.emotion-6 {
+.emotion-5 {
   display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -103,15 +108,15 @@ exports[`Card renders with Meta 1`] = `
   height: 14px;
 }
 
-.emotion-7 {
+.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-6 {
   vertical-align: middle;
 }
 
 .emotion-7 {
-  vertical-align: middle;
-}
-
-.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -125,7 +130,7 @@ exports[`Card renders with Meta 1`] = `
   justify-content: space-between;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,7 +141,7 @@ exports[`Card renders with Meta 1`] = `
   align-items: center;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -158,11 +163,11 @@ exports[`Card renders with Meta 1`] = `
   transition: color 0.2s ease-in-out;
 }
 
-.emotion-10:not(:last-child) {
+.emotion-9:not(:last-child) {
   margin-right: 24px;
 }
 
-.emotion-10:hover {
+.emotion-9:hover {
   color: #1e6fff;
 }
 
@@ -184,16 +189,16 @@ exports[`Card renders with Meta 1`] = `
   >
     <div>
       <div
-        class="emotion-3 emotion-3"
+        class="emotion-3"
       >
         <div
-          class="emotion-5"
+          class="emotion-4"
         >
           <div
-            class="emotion-6"
+            class="emotion-5"
           >
             <svg
-              class="emotion-7"
+              class="emotion-6"
               color="currentColor"
               height="14px"
               viewBox="0 0 16 16"
@@ -212,16 +217,16 @@ exports[`Card renders with Meta 1`] = `
       </div>
     </div>
     <div
-      class="emotion-8"
+      class="emotion-7"
     >
       <div
-        class="emotion-9"
+        class="emotion-8"
       >
         <span
-          class="emotion-10"
+          class="emotion-9"
         >
           <svg
-            class="emotion-7"
+            class="emotion-6"
             color="currentColor"
             height="1em"
             viewBox="0 0 16 16"
@@ -239,10 +244,10 @@ exports[`Card renders with Meta 1`] = `
           </svg>
         </span>
         <span
-          class="emotion-10"
+          class="emotion-9"
         >
           <svg
-            class="emotion-7"
+            class="emotion-6"
             color="currentColor"
             height="1em"
             viewBox="0 0 16 16"
@@ -260,10 +265,10 @@ exports[`Card renders with Meta 1`] = `
           </svg>
         </span>
         <span
-          class="emotion-10"
+          class="emotion-9"
         >
           <svg
-            class="emotion-7"
+            class="emotion-6"
             color="currentColor"
             height="1em"
             viewBox="0 0 12 12"
@@ -300,7 +305,7 @@ exports[`Card renders with different hoverable 1`] = `
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
 }
 
-.emotion-2 {
+.emotion-1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -318,7 +323,7 @@ exports[`Card renders with different hoverable 1`] = `
   padding: 16px;
 }
 
-.emotion-3 {
+.emotion-2 {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -331,26 +336,26 @@ exports[`Card renders with different hoverable 1`] = `
   white-space: nowrap;
 }
 
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   padding: 16px;
   color: #999;
 }
 
 <div
-  class="emotion-0 emotion-0"
+  class="emotion-0"
 >
   <div
-    class="emotion-2"
+    class="emotion-1"
   >
     <div
-      class="emotion-3"
+      class="emotion-2"
     >
       hoverable
     </div>
   </div>
   <div
-    class="emotion-4"
+    class="emotion-3"
   />
 </div>
 `;

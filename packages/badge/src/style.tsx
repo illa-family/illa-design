@@ -1,4 +1,4 @@
-import { css, keyframes, string } from "@emotion/css"
+import { css, keyframes } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { isObject } from "@illa-design/system"
 import { BadgeColorScheme, BadgeStatus } from "./interface"

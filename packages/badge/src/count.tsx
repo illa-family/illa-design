@@ -1,4 +1,3 @@
-import React from "react"
 import usePrevious from "./usePrevious"
 import { CountProps } from "./interface"
 import { globalColor, illaPrefix } from "@illa-design/theme"

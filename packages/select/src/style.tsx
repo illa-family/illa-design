@@ -29,7 +29,7 @@ export const errorOutlineStyle = css`
   }
 `
 
-function applyStatus(stateValue: SelectStateValue) {
+function applyStatus(stateValue: SelectStateValue): string {
   let mainStyle: string
   let inputStyle = inputOutlineStyle
 
@@ -64,7 +64,7 @@ function applyStatus(stateValue: SelectStateValue) {
   `
 }
 
-export function applySizeStyle(size?: SelectProps["size"]) {
+export function applySizeStyle(size?: SelectProps["size"]): string {
   let sizeStyle: string = css()
   switch (size) {
     default:
@@ -157,7 +157,7 @@ export function applyIconStyle(): string {
   `
 }
 
-export function iconPointerStyle(size: string) {
+export function iconPointerStyle(size: string): string {
   let positionStyle: string = css()
   switch (size) {
     default:

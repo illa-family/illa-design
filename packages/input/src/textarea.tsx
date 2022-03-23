@@ -1,4 +1,3 @@
-import * as React from "react"
 import {
   ChangeEvent,
   CSSProperties,
@@ -10,10 +9,10 @@ import {
   useRef,
   useImperativeHandle,
 } from "react"
-import { css } from "@emotion/css"
+import { css, cx } from "@emotion/css"
 import { omit, useMergeValue } from "@illa-design/system"
 import { ErrorIcon } from "@illa-design/icon"
-import { cx, globalColor, illaPrefix } from "@illa-design/theme"
+import { globalColor, illaPrefix } from "@illa-design/theme"
 import autoSizeTextAreaHeight from "./autoSizeTextAreaHeight"
 import { applyLengthErrorStyle, applyCountLimitStyle } from "./style"
 import { InputSize, TextAreaProps } from "./interface"
@@ -172,7 +171,7 @@ export const TextArea = forwardRef<HTMLSpanElement, TextAreaProps>(
         <textarea
           style={{ ...autoSizeStyle }}
           ref={refTextArea}
-          className={applyTextAreaStyle}
+          className={applyTextAreaStyle()}
           {...textAreaProps}
           onChange={onChange}
           onFocus={(e) => {
@@ -204,7 +203,7 @@ export const TextArea = forwardRef<HTMLSpanElement, TextAreaProps>(
             />
           </span>
         ) : null}
-        {suffix ? <span className={applyPrefixCls}>{suffix}</span> : null}
+        {suffix ? <span className={applyPrefixCls()}>{suffix}</span> : null}
       </span>
     )
   },

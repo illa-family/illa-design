@@ -1,4 +1,4 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 export function applyImageCss(

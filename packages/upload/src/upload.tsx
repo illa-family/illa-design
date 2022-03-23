@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef, useMemo, useRef, useState } from "react"
 import {
   UploadItem,
@@ -181,11 +180,7 @@ export const Upload = forwardRef<HTMLDivElement, UploadProps>((props, ref) => {
   }
 
   return (
-    <div
-      ref={ref}
-      className={cx(uploadContainerCss, className)}
-      {...rest}
-    >
+    <div ref={ref} className={cx(uploadContainerCss, className)} {...rest}>
       <UploadElement
         directory={directory}
         accept={accept}

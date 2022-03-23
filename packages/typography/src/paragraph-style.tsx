@@ -1,4 +1,4 @@
-import { css, string } from "@storybook/theming"
+import { css } from "@emotion/css"
 
 export function applyParagraphContainer(indent: boolean): string {
   if (indent) {

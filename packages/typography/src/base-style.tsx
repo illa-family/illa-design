@@ -1,6 +1,5 @@
-import * as React from "react"
 import { TypographyColorScheme } from "./interface"
-import { css, string } from "@storybook/theming"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 const colorSchemes = [

@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef } from "react"
 import { TimelineItemProps } from "./interface"
 import { TimelineContext } from "./timeline-context"

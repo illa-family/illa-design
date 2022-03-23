@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef, useState } from "react"
 import { TagProps } from "./interface"
 import { css, cx } from "@emotion/css"

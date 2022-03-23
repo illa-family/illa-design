@@ -17,7 +17,7 @@ exports[`AvatarGroup renders with large props 1`] = `
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   vertical-align: middle;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -25,7 +25,7 @@ exports[`AvatarGroup renders with large props 1`] = `
   display: inline-flex;
 }
 
-.emotion-4 {
+.emotion-2 {
   background-color: #e07800;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -55,14 +55,14 @@ exports[`AvatarGroup renders with large props 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: 0px; border: 2px solid #fff; border-radius: 50%; z-index: 5;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -72,11 +72,11 @@ exports[`AvatarGroup renders with large props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -20px; border: 2px solid #fff; border-radius: 50%; z-index: 4;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -86,11 +86,11 @@ exports[`AvatarGroup renders with large props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -20px; border: 2px solid #fff; border-radius: 50%; z-index: 3;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -100,11 +100,11 @@ exports[`AvatarGroup renders with large props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -20px; border: 2px solid #fff; border-radius: 50%; z-index: 2;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -114,11 +114,11 @@ exports[`AvatarGroup renders with large props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -20px; border: 2px solid #fff; border-radius: 50%; z-index: 1;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -148,7 +148,7 @@ exports[`AvatarGroup renders with medium props 1`] = `
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   vertical-align: middle;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -156,7 +156,7 @@ exports[`AvatarGroup renders with medium props 1`] = `
   display: inline-flex;
 }
 
-.emotion-4 {
+.emotion-2 {
   background-color: #e07800;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -186,14 +186,14 @@ exports[`AvatarGroup renders with medium props 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: 0px; border: 2px solid #fff; border-radius: 50%; z-index: 5;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -203,11 +203,11 @@ exports[`AvatarGroup renders with medium props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -12px; border: 2px solid #fff; border-radius: 50%; z-index: 4;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -217,11 +217,11 @@ exports[`AvatarGroup renders with medium props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -12px; border: 2px solid #fff; border-radius: 50%; z-index: 3;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -231,11 +231,11 @@ exports[`AvatarGroup renders with medium props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -12px; border: 2px solid #fff; border-radius: 50%; z-index: 2;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -245,11 +245,11 @@ exports[`AvatarGroup renders with medium props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -12px; border: 2px solid #fff; border-radius: 50%; z-index: 1;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -279,7 +279,7 @@ exports[`AvatarGroup renders with zIndexAscend 1`] = `
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   vertical-align: middle;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -287,7 +287,7 @@ exports[`AvatarGroup renders with zIndexAscend 1`] = `
   display: inline-flex;
 }
 
-.emotion-4 {
+.emotion-2 {
   background-color: #c2c2c2;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -317,14 +317,14 @@ exports[`AvatarGroup renders with zIndexAscend 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: 0px; border: 2px solid #fff; border-radius: 50%; z-index: 0;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -334,11 +334,11 @@ exports[`AvatarGroup renders with zIndexAscend 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -8px; border: 2px solid #fff; border-radius: 50%; z-index: 1;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -348,11 +348,11 @@ exports[`AvatarGroup renders with zIndexAscend 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -8px; border: 2px solid #fff; border-radius: 50%; z-index: 2;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -362,11 +362,11 @@ exports[`AvatarGroup renders with zIndexAscend 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -8px; border: 2px solid #fff; border-radius: 50%; z-index: 3;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"
@@ -376,11 +376,11 @@ exports[`AvatarGroup renders with zIndexAscend 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-2"
+      class="emotion-1"
       style="margin-left: -8px; border: 2px solid #fff; border-radius: 50%; z-index: 4;"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <span
           style="transform: scale(1);"

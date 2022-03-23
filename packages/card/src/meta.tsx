@@ -12,14 +12,14 @@ export const Meta = forwardRef<HTMLDivElement, CardMetaProps>((props, ref) => {
     <div ref={ref} {...restProps}>
       {title || description ? (
         <div>
-          {title && <div className={applyCardMetaTitle}>{title}</div>}
+          {title && <div className={applyCardMetaTitle()}>{title}</div>}
           {description && (
-            <div className={applyCardMetaDescription}>{description}</div>
+            <div className={applyCardMetaDescription()}>{description}</div>
           )}
         </div>
       ) : null}
       {avatar || actionList ? (
-        <div className={applyCardMetaFooter}>
+        <div className={applyCardMetaFooter()}>
           {avatar ? <div>{avatar}</div> : null}
           {actionList}
         </div>

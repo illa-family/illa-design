@@ -105,13 +105,13 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>((props, ref) => {
                 {renderIcon}
               </div>
             )}
-            <div className={applyAlertContentWrapper}>
+            <div className={applyAlertContentWrapper()}>
               {title && (
                 <div className={applyAlertTitle(!!content)}>{title}</div>
               )}
-              {content && <div className={applyAlertContent}>{content}</div>}
+              {content && <div className={applyAlertContent()}>{content}</div>}
             </div>
-            {action && <div className={applyAlertAction}>{action}</div>}
+            {action && <div className={applyAlertAction()}>{action}</div>}
             {closable && (
               <button
                 className={applyAlertCloseBtn(type)}

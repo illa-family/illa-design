@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef, useRef, useState, useMemo, useEffect } from "react"
 import { useMergeValue, isArray, isObject } from "@illa-design/system"
 import { Trigger } from "@illa-design/trigger"

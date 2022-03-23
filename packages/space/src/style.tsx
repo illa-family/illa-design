@@ -1,5 +1,5 @@
 import { SpaceAlign, SpaceDirection, SpaceSize } from "./interface"
-import { css, string } from "@emotion/css"
+import { css } from "@emotion/css"
 
 export function applyContainer(
   direction: SpaceDirection,

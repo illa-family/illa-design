@@ -1,6 +1,7 @@
 import { Ellipsis, EllipsisBuilder } from "./ellipsis-config"
-import * as React from "react"
+
 import {
+  Children,
   FC,
   Fragment,
   MutableRefObject,
@@ -16,7 +17,7 @@ import {
   applyFontContentStyle,
   applyOperationSpan,
 } from "./base-style"
-import { css } from "@storybook/theming"
+import { css } from "@emotion/css"
 import mergedToString, { measureElement } from "./measure-element"
 import { BaseProps } from "./interface"
 import { Copyable, CopyableBuilder } from "./copyable-config"
@@ -151,7 +152,7 @@ export const Base: FC<BaseProps> = (props) => {
     <span
       onClick={() => {
         setCopied(true)
-        copyToClipboard(mergedToString(React.Children.toArray(props.children)))
+        copyToClipboard(mergedToString(Children.toArray(props.children)))
         if (originCopyable.onCopy != undefined) {
           originCopyable.onCopy()
         }

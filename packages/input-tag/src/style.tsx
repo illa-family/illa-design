@@ -1,5 +1,5 @@
 import chroma from "chroma-js"
-import { css, string } from "@emotion/css"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { InputTagStateValue } from "./interface"
 

@@ -14,7 +14,7 @@ export const rateScale = keyframes`
     transform: scale(1);
   }
 `
-export function applyRate(disabled: boolean) {
+export function applyRate(disabled: boolean): string {
   const cursor = disabled ? `cursor: not-allowed;` : ""
   return css`
     display: inline-block;
@@ -23,7 +23,7 @@ export function applyRate(disabled: boolean) {
   `
 }
 
-export function applyRateInner() {
+export function applyRateInner(): string {
   return css`
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@ export function applyRateCharacter(
   disabled: boolean,
   readonly: boolean,
   animate?: boolean,
-) {
+): string {
   const cursor = disabled || readonly ? `` : `cursor: pointer`
   const animation = animate
     ? css`
@@ -59,7 +59,10 @@ export function applyRateCharacter(
   `
 }
 
-export function applyRateCharacterLeft(isHalf?: boolean, isStar?: boolean) {
+export function applyRateCharacterLeft(
+  isHalf?: boolean,
+  isStar?: boolean,
+): string {
   const color = isStar
     ? `${globalColor(`--${illaPrefix}-yellow-04`)}`
     : `${globalColor(`--${illaPrefix}-red-03`)}`
@@ -79,7 +82,10 @@ export function applyRateCharacterLeft(isHalf?: boolean, isStar?: boolean) {
   `
 }
 
-export function applyRateCharacterRight(isFull?: boolean, isStar?: boolean) {
+export function applyRateCharacterRight(
+  isFull?: boolean,
+  isStar?: boolean,
+): string {
   const color = isStar
     ? `${globalColor(`--${illaPrefix}-yellow-04`)}`
     : `${globalColor(`--${illaPrefix}-red-03`)}`

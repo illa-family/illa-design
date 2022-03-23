@@ -53,14 +53,14 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
       >
         <div className={applySwitchDot(size, mergedChecked, disabled)}>
           {(checkedIcon || uncheckedIcon) && (
-            <div className={applySwitchIcon}>
+            <div className={applySwitchIcon()}>
               {mergedChecked ? checkedIcon : uncheckedIcon}
             </div>
           )}
         </div>
         <div className={applySwitchText(mergedChecked, size)}>
           {isObject(renderText) ? (
-            <div className={applySwitchIcon}>{renderText}</div>
+            <div className={applySwitchIcon()}>{renderText}</div>
           ) : (
             renderText
           )}

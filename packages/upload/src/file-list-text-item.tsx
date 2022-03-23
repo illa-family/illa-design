@@ -5,7 +5,7 @@ import {
   fileItemContainerCss,
   fileTextItemCss,
 } from "./styles"
-import * as React from "react"
+
 import {
   FileDefaultIcon,
   FileExcelIcon,

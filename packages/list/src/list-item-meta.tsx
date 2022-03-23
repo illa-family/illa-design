@@ -7,7 +7,8 @@ import {
 } from "./style"
 import { Avatar } from "@illa-design/avatar"
 import { Paragraph, Text, Typography } from "@illa-design/typography"
-import { cx, globalColor, illaPrefix } from "@illa-design/theme"
+import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx } from "@emotion/css"
 
 export const ListItemMeta = forwardRef<HTMLDivElement, ListItemMetaProps>(
   (props, ref) => {

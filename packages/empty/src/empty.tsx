@@ -25,11 +25,7 @@ export const Empty = forwardRef<HTMLDivElement, EmptyProps>((props, ref) => {
   } = props
 
   return (
-    <div
-      ref={ref}
-      className={cx(emptyContainerCss, className)}
-      {...rest}
-    >
+    <div ref={ref} className={cx(emptyContainerCss, className)} {...rest}>
       <div>
         {imgSrc ? (
           <Image

@@ -1,4 +1,4 @@
-import { css, string } from "@emotion/css"
+import { css } from "@emotion/css"
 import {
   ButtonColorScheme,
   ButtonShape,
@@ -8,7 +8,7 @@ import {
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 // button
-export function applyTagContainer(fullWidth?: boolean) {
+export function applyTagContainer(fullWidth?: boolean): string {
   return css`
     ${fullWidth
       ? css`
@@ -74,6 +74,7 @@ export function getDifferentStatusColor(
             globalColor(`--${illaPrefix}-${colorScheme}-01`),
           ]
       }
+      break
     case State.HOVER:
       switch (variant) {
         case "fill":
@@ -107,6 +108,7 @@ export function getDifferentStatusColor(
             globalColor(`--${illaPrefix}-${colorScheme}-02`),
           ]
       }
+      break
     case State.ACTIVE:
       switch (variant) {
         case "fill":
@@ -140,6 +142,7 @@ export function getDifferentStatusColor(
             globalColor(`--${illaPrefix}-${colorScheme}-n-01`),
           ]
       }
+      break
     case State.DISABLE:
       switch (variant) {
         case "fill":
@@ -173,6 +176,7 @@ export function getDifferentStatusColor(
             globalColor(`--${illaPrefix}-${colorScheme}-05`),
           ]
       }
+      break
   }
 }
 

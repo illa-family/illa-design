@@ -3,10 +3,10 @@ import { BadgeProps } from "./interface"
 import { isObject } from "@illa-design/system"
 import {
   applyBadge,
-  applyBadgeStatusWrapper,
   applyBadgeDot,
-  applyBadgeStatusText,
   applyBadgeNumberOrText,
+  applyBadgeStatusText,
+  applyBadgeStatusWrapper,
   getDotColor,
 } from "./style"
 
@@ -45,9 +45,9 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
     // display status dot
     if (status) {
       return (
-        <span className={applyBadgeStatusWrapper} style={dotStyle}>
+        <span className={applyBadgeStatusWrapper()} style={dotStyle}>
           <span className={applyBadgeDot(colorStyle, hasChildren, true)} />
-          {text && <span className={applyBadgeStatusText}>{text}</span>}
+          {text && <span className={applyBadgeStatusText()}>{text}</span>}
         </span>
       )
     }
@@ -98,11 +98,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
     ) : null
   }
   return (
-    <span
-      ref={ref}
-      className={cx(applyBadge(), className)}
-      {...restProps}
-    >
+    <span ref={ref} className={cx(applyBadge(), className)} {...restProps}>
       {children}
       {renderBadge()}
     </span>

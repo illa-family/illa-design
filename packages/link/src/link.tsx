@@ -23,11 +23,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   `
 
   return (
-    <a
-      ref={ref}
-      className={cx(finalCss, className)}
-      {...otherProps}
-    >
+    <a ref={ref} className={cx(finalCss, className)} {...otherProps}>
       {leftIcon && <span className={applyLeftIcon}>{leftIcon}</span>}
       {props.children}
     </a>

@@ -3,7 +3,7 @@ import { globalColor, illaPrefix } from "@illa-design/theme"
 import { getAnimation } from "./transform"
 import { Variants } from "framer-motion"
 import { AdjustResult } from "./adjust-tips-location"
-import { string, css } from "@emotion/css"
+import { css } from "@emotion/css"
 
 const colorSchemes = [
   "white",
@@ -23,7 +23,7 @@ export const applyChildrenContainer = css`
   display: inline-flex;
 `
 
-export function applyMotionDiv() {
+export function applyMotionDiv(): string {
   return css`
     display: inline-flex;
     pointer-events: auto;

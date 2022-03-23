@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef, useEffect, useState } from "react"
 import { ImageProps } from "./interface"
 import { ImageDefaultIcon } from "@illa-design/icon"

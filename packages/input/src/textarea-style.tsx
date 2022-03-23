@@ -1,5 +1,5 @@
 import chroma from "chroma-js"
-import { css, string } from "@emotion/css"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import {
   disableFillStyle,
@@ -13,7 +13,7 @@ import {
 } from "./style"
 import { StateValue } from "./interface"
 
-function applyStatus(stateValue: StateValue) {
+function applyStatus(stateValue: StateValue): string {
   let mainStyle: string
   let disableStyle, hoverStyle, inputStyle, errorStyle: string
 
@@ -66,7 +66,7 @@ function applyStatus(stateValue: StateValue) {
   `
 }
 
-export function applyTextAreaContainer(stateValue: StateValue) {
+export function applyTextAreaContainer(stateValue: StateValue): string {
   return css`
     width: 280px;
     margin-bottom: 16px;
@@ -82,7 +82,7 @@ export function applyTextAreaContainer(stateValue: StateValue) {
   `
 }
 
-export function applyTextAreaStyle() {
+export function applyTextAreaStyle(): string {
   return css`
     width: 100%;
     appearance: none;
@@ -108,7 +108,7 @@ export function applyTextAreaStyle() {
   `
 }
 
-export function applyPrefixCls() {
+export function applyPrefixCls(): string {
   return css`
     margin-top: 4px;
     text-align: end;

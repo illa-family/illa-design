@@ -1,4 +1,4 @@
-import { css, keyframes, string } from "@emotion/css"
+import { css, keyframes } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { SpinSize } from "./interface"
 

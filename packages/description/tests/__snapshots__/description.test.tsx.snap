@@ -15,14 +15,14 @@ exports[`Description renders with different data 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 7px 48px 7px 0px;
   margin: 0;
@@ -32,7 +32,7 @@ exports[`Description renders with different data 1`] = `
   color: #999;
 }
 
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   padding: 7px 48px 7px 0px;
   margin: 0;
@@ -46,48 +46,48 @@ exports[`Description renders with different data 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -96,26 +96,26 @@ exports[`Description renders with different data 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             2020-05-15
@@ -124,13 +124,13 @@ exports[`Description renders with different data 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="5"
           >
             Building, Road, Beijing
@@ -140,35 +140,35 @@ exports[`Description renders with different data 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             123-1234-1234
@@ -177,26 +177,26 @@ exports[`Description renders with different data 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             2020-05-15
@@ -205,13 +205,13 @@ exports[`Description renders with different data 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="5"
           >
             Building, Road, Beijing
@@ -221,48 +221,48 @@ exports[`Description renders with different data 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -271,26 +271,26 @@ exports[`Description renders with different data 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             2020-05-15
@@ -299,13 +299,13 @@ exports[`Description renders with different data 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             Building, Road, Beijing
@@ -332,7 +332,7 @@ exports[`Description renders with different reactive size 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-weight: bold;
   color: #1f1f1f;
   font-size: 16px;
@@ -340,11 +340,21 @@ exports[`Description renders with different reactive size 1`] = `
   margin-bottom: 12px;
 }
 
-.emotion-3 {
+.emotion-2 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  padding: 5px 48px 5px 0px;
+  margin: 0;
+  min-width: 115px;
+  line-height: 22px;
+  font-size: 14px;
+  color: #999;
 }
 
 .emotion-4 {
@@ -354,20 +364,10 @@ exports[`Description renders with different reactive size 1`] = `
   min-width: 115px;
   line-height: 22px;
   font-size: 14px;
-  color: #999;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  padding: 5px 48px 5px 0px;
-  margin: 0;
-  min-width: 115px;
-  line-height: 22px;
-  font-size: 14px;
   color: #1f1f1f;
 }
 
-.emotion-18 {
+.emotion-16 {
   font-weight: bold;
   color: #1f1f1f;
   font-size: 16px;
@@ -375,7 +375,7 @@ exports[`Description renders with different reactive size 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-20 {
+.emotion-18 {
   box-sizing: border-box;
   padding: 7px 48px 7px 0px;
   margin: 0;
@@ -385,7 +385,7 @@ exports[`Description renders with different reactive size 1`] = `
   color: #999;
 }
 
-.emotion-21 {
+.emotion-19 {
   box-sizing: border-box;
   padding: 7px 48px 7px 0px;
   margin: 0;
@@ -395,7 +395,7 @@ exports[`Description renders with different reactive size 1`] = `
   color: #1f1f1f;
 }
 
-.emotion-34 {
+.emotion-31 {
   font-weight: bold;
   color: #1f1f1f;
   font-size: 16px;
@@ -403,7 +403,7 @@ exports[`Description renders with different reactive size 1`] = `
   margin-bottom: 24px;
 }
 
-.emotion-36 {
+.emotion-33 {
   box-sizing: border-box;
   padding: 9px 48px 9px 0px;
   margin: 0;
@@ -413,7 +413,7 @@ exports[`Description renders with different reactive size 1`] = `
   color: #999;
 }
 
-.emotion-37 {
+.emotion-34 {
   box-sizing: border-box;
   padding: 9px 48px 9px 0px;
   margin: 0;
@@ -427,53 +427,53 @@ exports[`Description renders with different reactive size 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       TitleSmall
     </div>
     <table
-      class="emotion-3"
+      class="emotion-2"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="1"
           >
             Beijing
@@ -482,26 +482,26 @@ exports[`Description renders with different reactive size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="3"
           >
             2020-05-15
@@ -510,13 +510,13 @@ exports[`Description renders with different reactive size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="5"
           >
             Building, Road, Beijing
@@ -526,53 +526,53 @@ exports[`Description renders with different reactive size 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-18"
+      class="emotion-16"
     >
       TitleMedium
     </div>
     <table
-      class="emotion-3"
+      class="emotion-2"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="1"
           >
             Beijing
@@ -581,26 +581,26 @@ exports[`Description renders with different reactive size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="3"
           >
             2020-05-15
@@ -609,13 +609,13 @@ exports[`Description renders with different reactive size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="5"
           >
             Building, Road, Beijing
@@ -625,53 +625,53 @@ exports[`Description renders with different reactive size 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-34"
+      class="emotion-31"
     >
       TitleLarge
     </div>
     <table
-      class="emotion-3"
+      class="emotion-2"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="1"
           >
             Beijing
@@ -680,26 +680,26 @@ exports[`Description renders with different reactive size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="3"
           >
             2020-05-15
@@ -708,13 +708,13 @@ exports[`Description renders with different reactive size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="5"
           >
             Building, Road, Beijing
@@ -741,7 +741,7 @@ exports[`Description renders with different size 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-weight: bold;
   color: #1f1f1f;
   font-size: 16px;
@@ -749,11 +749,21 @@ exports[`Description renders with different size 1`] = `
   margin-bottom: 12px;
 }
 
-.emotion-3 {
+.emotion-2 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  padding: 5px 48px 5px 0px;
+  margin: 0;
+  min-width: 115px;
+  line-height: 22px;
+  font-size: 14px;
+  color: #999;
 }
 
 .emotion-4 {
@@ -763,20 +773,10 @@ exports[`Description renders with different size 1`] = `
   min-width: 115px;
   line-height: 22px;
   font-size: 14px;
-  color: #999;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  padding: 5px 48px 5px 0px;
-  margin: 0;
-  min-width: 115px;
-  line-height: 22px;
-  font-size: 14px;
   color: #1f1f1f;
 }
 
-.emotion-18 {
+.emotion-16 {
   font-weight: bold;
   color: #1f1f1f;
   font-size: 16px;
@@ -784,7 +784,7 @@ exports[`Description renders with different size 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-20 {
+.emotion-18 {
   box-sizing: border-box;
   padding: 7px 48px 7px 0px;
   margin: 0;
@@ -794,7 +794,7 @@ exports[`Description renders with different size 1`] = `
   color: #999;
 }
 
-.emotion-21 {
+.emotion-19 {
   box-sizing: border-box;
   padding: 7px 48px 7px 0px;
   margin: 0;
@@ -804,7 +804,7 @@ exports[`Description renders with different size 1`] = `
   color: #1f1f1f;
 }
 
-.emotion-34 {
+.emotion-31 {
   font-weight: bold;
   color: #1f1f1f;
   font-size: 16px;
@@ -812,7 +812,7 @@ exports[`Description renders with different size 1`] = `
   margin-bottom: 24px;
 }
 
-.emotion-36 {
+.emotion-33 {
   box-sizing: border-box;
   padding: 9px 48px 9px 0px;
   margin: 0;
@@ -822,7 +822,7 @@ exports[`Description renders with different size 1`] = `
   color: #999;
 }
 
-.emotion-37 {
+.emotion-34 {
   box-sizing: border-box;
   padding: 9px 48px 9px 0px;
   margin: 0;
@@ -836,53 +836,53 @@ exports[`Description renders with different size 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       TitleSmall
     </div>
     <table
-      class="emotion-3"
+      class="emotion-2"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="1"
           >
             Beijing
@@ -891,26 +891,26 @@ exports[`Description renders with different size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="3"
           >
             2020-05-15
@@ -919,13 +919,13 @@ exports[`Description renders with different size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-5"
+            class="emotion-4"
             colspan="5"
           >
             Building, Road, Beijing
@@ -935,53 +935,53 @@ exports[`Description renders with different size 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-18"
+      class="emotion-16"
     >
       TitleMedium
     </div>
     <table
-      class="emotion-3"
+      class="emotion-2"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="1"
           >
             Beijing
@@ -990,26 +990,26 @@ exports[`Description renders with different size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="3"
           >
             2020-05-15
@@ -1018,13 +1018,13 @@ exports[`Description renders with different size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-20"
+            class="emotion-18"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-21"
+            class="emotion-19"
             colspan="5"
           >
             Building, Road, Beijing
@@ -1034,53 +1034,53 @@ exports[`Description renders with different size 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <div
-      class="emotion-34"
+      class="emotion-31"
     >
       TitleLarge
     </div>
     <table
-      class="emotion-3"
+      class="emotion-2"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="1"
           >
             Beijing
@@ -1089,26 +1089,26 @@ exports[`Description renders with different size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="3"
           >
             2020-05-15
@@ -1117,13 +1117,13 @@ exports[`Description renders with different size 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-36"
+            class="emotion-33"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-37"
+            class="emotion-34"
             colspan="5"
           >
             Building, Road, Beijing
@@ -1150,14 +1150,14 @@ exports[`Description renders with horizontal layout 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 7px 48px 7px 0px;
   margin: 0;
@@ -1167,7 +1167,7 @@ exports[`Description renders with horizontal layout 1`] = `
   color: #999;
 }
 
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   padding: 7px 48px 7px 0px;
   margin: 0;
@@ -1181,48 +1181,48 @@ exports[`Description renders with horizontal layout 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -1231,26 +1231,26 @@ exports[`Description renders with horizontal layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             2020-05-15
@@ -1259,13 +1259,13 @@ exports[`Description renders with horizontal layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="5"
           >
             Building, Road, Beijing
@@ -1275,48 +1275,48 @@ exports[`Description renders with horizontal layout 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -1325,26 +1325,26 @@ exports[`Description renders with horizontal layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             2020-05-15
@@ -1353,13 +1353,13 @@ exports[`Description renders with horizontal layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="5"
           >
             Building, Road, Beijing
@@ -1386,7 +1386,7 @@ exports[`Description renders with horizontal layout and border 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   border: solid 1px #ebebeb;
   width: 100%;
   box-sizing: border-box;
@@ -1394,7 +1394,7 @@ exports[`Description renders with horizontal layout and border 1`] = `
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 7px 24px;
   margin: 0;
@@ -1406,7 +1406,7 @@ exports[`Description renders with horizontal layout and border 1`] = `
   background-color: #f5f5f5;
 }
 
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   padding: 7px 24px;
   margin: 0;
@@ -1421,48 +1421,48 @@ exports[`Description renders with horizontal layout and border 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -1471,26 +1471,26 @@ exports[`Description renders with horizontal layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             2020-05-15
@@ -1499,13 +1499,13 @@ exports[`Description renders with horizontal layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="5"
           >
             Building, Road, Beijing
@@ -1515,48 +1515,48 @@ exports[`Description renders with horizontal layout and border 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             ILLA
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             123-1234-1234
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -1565,26 +1565,26 @@ exports[`Description renders with horizontal layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             2020-05-15
@@ -1593,13 +1593,13 @@ exports[`Description renders with horizontal layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="5"
           >
             Building, Road, Beijing
@@ -1626,14 +1626,14 @@ exports[`Description renders with horizontal layout and single column 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 9px 40px 9px 0px;
   margin: 0;
@@ -1643,7 +1643,7 @@ exports[`Description renders with horizontal layout and single column 1`] = `
   color: #999;
 }
 
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   padding: 9px 40px 9px 0px;
   margin: 0;
@@ -1657,22 +1657,22 @@ exports[`Description renders with horizontal layout and single column 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             ILLA
@@ -1681,13 +1681,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             123-1234-1234
@@ -1696,13 +1696,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -1711,13 +1711,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -1726,13 +1726,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             2020-05-15
@@ -1741,13 +1741,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="5"
           >
             Building, Road, Beijing
@@ -1757,22 +1757,22 @@ exports[`Description renders with horizontal layout and single column 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Name
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             ILLA
@@ -1781,13 +1781,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Mobile
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             123-1234-1234
@@ -1796,13 +1796,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Residence
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -1811,13 +1811,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Hometown
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="1"
           >
             Beijing
@@ -1826,13 +1826,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Date of Birth
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="3"
           >
             2020-05-15
@@ -1841,13 +1841,13 @@ exports[`Description renders with horizontal layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="1"
           >
             Address
           </td>
           <td
-            class="emotion-4"
+            class="emotion-3"
             colspan="5"
           >
             Building, Road, Beijing
@@ -1874,21 +1874,21 @@ exports[`Description renders with inline-horizontal layout 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 7px 48px 7px 0px;
   margin: 0;
   min-width: 115px;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1898,14 +1898,14 @@ exports[`Description renders with inline-horizontal layout 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 {
+.emotion-4 {
   line-height: 22px;
   font-size: 14px;
   color: #999;
   margin-right: 16px;
 }
 
-.emotion-6 {
+.emotion-5 {
   line-height: 22px;
   font-size: 14px;
   color: #1f1f1f;
@@ -1915,28 +1915,28 @@ exports[`Description renders with inline-horizontal layout 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -1944,19 +1944,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -1964,19 +1964,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -1986,19 +1986,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2006,19 +2006,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -2028,19 +2028,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -2051,28 +2051,28 @@ exports[`Description renders with inline-horizontal layout 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -2080,19 +2080,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -2100,19 +2100,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2122,19 +2122,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2142,19 +2142,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -2164,19 +2164,19 @@ exports[`Description renders with inline-horizontal layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -2204,7 +2204,7 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   border: solid 1px #ebebeb;
   width: 100%;
   box-sizing: border-box;
@@ -2212,7 +2212,7 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 7px 24px;
   margin: 0;
@@ -2220,7 +2220,7 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
   border: solid 1px #ebebeb;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2230,14 +2230,14 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 {
+.emotion-4 {
   line-height: 22px;
   font-size: 14px;
   color: #999;
   margin-right: 16px;
 }
 
-.emotion-6 {
+.emotion-5 {
   line-height: 22px;
   font-size: 14px;
   color: #1f1f1f;
@@ -2247,28 +2247,28 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -2276,19 +2276,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -2296,19 +2296,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2318,19 +2318,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2338,19 +2338,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -2360,19 +2360,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -2383,28 +2383,28 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -2412,19 +2412,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -2432,19 +2432,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2454,19 +2454,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2474,19 +2474,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -2496,19 +2496,19 @@ exports[`Description renders with inline-horizontal layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -2536,21 +2536,21 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 7px 40px 7px 0px;
   margin: 0;
   min-width: 115px;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2560,14 +2560,14 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
   flex-direction: row;
 }
 
-.emotion-5 {
+.emotion-4 {
   line-height: 22px;
   font-size: 14px;
   color: #999;
   margin-right: 16px;
 }
 
-.emotion-6 {
+.emotion-5 {
   line-height: 22px;
   font-size: 14px;
   color: #1f1f1f;
@@ -2577,28 +2577,28 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -2608,19 +2608,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -2630,19 +2630,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2652,19 +2652,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2674,19 +2674,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -2696,19 +2696,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -2719,28 +2719,28 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -2750,19 +2750,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -2772,19 +2772,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2794,19 +2794,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2816,19 +2816,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -2838,19 +2838,19 @@ exports[`Description renders with inline-horizontal layout and single column 1`]
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -2878,21 +2878,21 @@ exports[`Description renders with inline-vertical layout 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 9px 48px 9px 0px;
   margin: 0;
   min-width: 115px;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2902,14 +2902,14 @@ exports[`Description renders with inline-vertical layout 1`] = `
   flex-direction: column;
 }
 
-.emotion-5 {
+.emotion-4 {
   line-height: 22px;
   font-size: 14px;
   color: #999;
   margin-bottom: 4px;
 }
 
-.emotion-6 {
+.emotion-5 {
   line-height: 22px;
   font-size: 14px;
   color: #1f1f1f;
@@ -2919,28 +2919,28 @@ exports[`Description renders with inline-vertical layout 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -2948,19 +2948,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -2968,19 +2968,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -2990,19 +2990,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3010,19 +3010,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -3032,19 +3032,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -3055,28 +3055,28 @@ exports[`Description renders with inline-vertical layout 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -3084,19 +3084,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -3104,19 +3104,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3126,19 +3126,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3146,19 +3146,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -3168,19 +3168,19 @@ exports[`Description renders with inline-vertical layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -3208,7 +3208,7 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   border: solid 1px #ebebeb;
   width: 100%;
   box-sizing: border-box;
@@ -3216,7 +3216,7 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 5px 24px;
   margin: 0;
@@ -3224,7 +3224,7 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
   border: solid 1px #ebebeb;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3234,20 +3234,20 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
   flex-direction: column;
 }
 
-.emotion-5 {
+.emotion-4 {
   line-height: 22px;
   font-size: 14px;
   color: #999;
   margin-bottom: 4px;
 }
 
-.emotion-6 {
+.emotion-5 {
   line-height: 22px;
   font-size: 14px;
   color: #1f1f1f;
 }
 
-.emotion-30 {
+.emotion-28 {
   box-sizing: border-box;
   padding: 9px 24px;
   margin: 0;
@@ -3259,28 +3259,28 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -3288,19 +3288,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -3308,19 +3308,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3330,19 +3330,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3350,19 +3350,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -3372,19 +3372,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -3395,28 +3395,28 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-30"
+            class="emotion-28"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -3424,19 +3424,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-30"
+            class="emotion-28"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -3444,19 +3444,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-30"
+            class="emotion-28"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3466,19 +3466,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-30"
+            class="emotion-28"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3486,19 +3486,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
           </td>
           <td
             align="right"
-            class="emotion-30"
+            class="emotion-28"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -3508,19 +3508,19 @@ exports[`Description renders with inline-vertical layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-30"
+            class="emotion-28"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -3548,21 +3548,21 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 5px 40px 5px 0px;
   margin: 0;
   min-width: 115px;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3572,14 +3572,14 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
   flex-direction: column;
 }
 
-.emotion-5 {
+.emotion-4 {
   line-height: 22px;
   font-size: 14px;
   color: #999;
   margin-bottom: 4px;
 }
 
-.emotion-6 {
+.emotion-5 {
   line-height: 22px;
   font-size: 14px;
   color: #1f1f1f;
@@ -3589,28 +3589,28 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -3620,19 +3620,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -3642,19 +3642,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3664,19 +3664,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3686,19 +3686,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -3708,19 +3708,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -3731,28 +3731,28 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Name
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 ILLA
               </span>
@@ -3762,19 +3762,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Mobile
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 123-1234-1234
               </span>
@@ -3784,19 +3784,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Residence
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3806,19 +3806,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Hometown
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Beijing
               </span>
@@ -3828,19 +3828,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Date of Birth
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 2020-05-15
               </span>
@@ -3850,19 +3850,19 @@ exports[`Description renders with inline-vertical layout and single column 1`] =
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             <div
-              class="emotion-4"
+              class="emotion-3"
             >
               <span
-                class="emotion-5"
+                class="emotion-4"
               >
                 Address
               </span>
               <span
-                class="emotion-6"
+                class="emotion-5"
               >
                 Building, Road, Beijing
               </span>
@@ -3890,14 +3890,14 @@ exports[`Description renders with vertical layout 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 5px 48px 5px 0px;
   margin: 0;
@@ -3907,7 +3907,7 @@ exports[`Description renders with vertical layout 1`] = `
   color: #999;
 }
 
-.emotion-6 {
+.emotion-5 {
   box-sizing: border-box;
   padding: 5px 48px 5px 0px;
   margin: 0;
@@ -3921,30 +3921,30 @@ exports[`Description renders with vertical layout 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Name
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Mobile
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Residence
@@ -3953,21 +3953,21 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             Beijing
@@ -3976,14 +3976,14 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Hometown
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             Date of Birth
@@ -3992,14 +3992,14 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="4"
           >
             2020-05-15
@@ -4008,7 +4008,7 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             Address
@@ -4017,7 +4017,7 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="6"
           >
             Building, Road, Beijing
@@ -4027,30 +4027,30 @@ exports[`Description renders with vertical layout 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Name
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Mobile
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Residence
@@ -4059,21 +4059,21 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             ILLA
           </td>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             123-1234-1234
           </td>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             Beijing
@@ -4082,14 +4082,14 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Hometown
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             Date of Birth
@@ -4098,14 +4098,14 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             Beijing
           </td>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="4"
           >
             2020-05-15
@@ -4114,7 +4114,7 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             Address
@@ -4123,7 +4123,7 @@ exports[`Description renders with vertical layout 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="6"
           >
             Building, Road, Beijing
@@ -4150,7 +4150,7 @@ exports[`Description renders with vertical layout and border 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   border: solid 1px #ebebeb;
   width: 100%;
   box-sizing: border-box;
@@ -4158,7 +4158,7 @@ exports[`Description renders with vertical layout and border 1`] = `
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 7px 24px;
   margin: 0;
@@ -4170,7 +4170,7 @@ exports[`Description renders with vertical layout and border 1`] = `
   color: #999;
 }
 
-.emotion-6 {
+.emotion-5 {
   box-sizing: border-box;
   padding: 7px 24px;
   margin: 0;
@@ -4185,30 +4185,30 @@ exports[`Description renders with vertical layout and border 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Name
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Mobile
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Residence
@@ -4217,21 +4217,21 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             ILLA
           </td>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             123-1234-1234
           </td>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             Beijing
@@ -4240,14 +4240,14 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Hometown
           </td>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             Date of Birth
@@ -4256,14 +4256,14 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             Beijing
           </td>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="4"
           >
             2020-05-15
@@ -4272,7 +4272,7 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             Address
@@ -4281,7 +4281,7 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-6"
+            class="emotion-5"
             colspan="6"
           >
             Building, Road, Beijing
@@ -4291,30 +4291,30 @@ exports[`Description renders with vertical layout and border 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Name
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Mobile
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Residence
@@ -4323,21 +4323,21 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             ILLA
           </td>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             123-1234-1234
           </td>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             Beijing
@@ -4346,14 +4346,14 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Hometown
           </td>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             Date of Birth
@@ -4362,14 +4362,14 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="2"
           >
             Beijing
           </td>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="4"
           >
             2020-05-15
@@ -4378,7 +4378,7 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             Address
@@ -4387,7 +4387,7 @@ exports[`Description renders with vertical layout and border 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-6"
+            class="emotion-5"
             colspan="6"
           >
             Building, Road, Beijing
@@ -4414,14 +4414,14 @@ exports[`Description renders with vertical layout and single column 1`] = `
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
   box-sizing: border-box;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   padding: 7px 40px 7px 0px;
   margin: 0;
@@ -4431,7 +4431,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
   color: #999;
 }
 
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   padding: 7px 40px 7px 0px;
   margin: 0;
@@ -4445,16 +4445,16 @@ exports[`Description renders with vertical layout and single column 1`] = `
   data-testid="test-description"
 >
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Name
@@ -4463,7 +4463,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="2"
           >
             ILLA
@@ -4472,7 +4472,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Mobile
@@ -4481,7 +4481,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="2"
           >
             123-1234-1234
@@ -4490,7 +4490,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Residence
@@ -4499,7 +4499,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="2"
           >
             Beijing
@@ -4508,7 +4508,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Hometown
@@ -4517,7 +4517,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="2"
           >
             Beijing
@@ -4526,7 +4526,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             Date of Birth
@@ -4535,7 +4535,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="4"
           >
             2020-05-15
@@ -4544,7 +4544,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             Address
@@ -4553,7 +4553,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="left"
-            class="emotion-4"
+            class="emotion-3"
             colspan="6"
           >
             Building, Road, Beijing
@@ -4563,16 +4563,16 @@ exports[`Description renders with vertical layout and single column 1`] = `
     </table>
   </div>
   <div
-    class="emotion-0 emotion-0"
+    class="emotion-0"
   >
     <table
-      class="emotion-2"
+      class="emotion-1"
     >
       <tbody>
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Name
@@ -4581,7 +4581,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-4"
+            class="emotion-3"
             colspan="2"
           >
             ILLA
@@ -4590,7 +4590,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Mobile
@@ -4599,7 +4599,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-4"
+            class="emotion-3"
             colspan="2"
           >
             123-1234-1234
@@ -4608,7 +4608,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Residence
@@ -4617,7 +4617,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-4"
+            class="emotion-3"
             colspan="2"
           >
             Beijing
@@ -4626,7 +4626,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="2"
           >
             Hometown
@@ -4635,7 +4635,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-4"
+            class="emotion-3"
             colspan="2"
           >
             Beijing
@@ -4644,7 +4644,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="4"
           >
             Date of Birth
@@ -4653,7 +4653,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-4"
+            class="emotion-3"
             colspan="4"
           >
             2020-05-15
@@ -4662,7 +4662,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-3"
+            class="emotion-2"
             colspan="6"
           >
             Address
@@ -4671,7 +4671,7 @@ exports[`Description renders with vertical layout and single column 1`] = `
         <tr>
           <td
             align="right"
-            class="emotion-4"
+            class="emotion-3"
             colspan="6"
           >
             Building, Road, Beijing

@@ -1,4 +1,3 @@
-import * as React from "react"
 import { forwardRef } from "react"
 import { DividerProps } from "./interface"
 import {
