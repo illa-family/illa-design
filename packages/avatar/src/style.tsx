@@ -146,7 +146,7 @@ export function applyShape(shape: AvatarShape): string {
 }
 
 // icon avatar
-export function applyIconSize(size: AvatarSize) {
+export function applyIconSize(size: AvatarSize): string {
   let width: number
   let height: number
   switch (size) {

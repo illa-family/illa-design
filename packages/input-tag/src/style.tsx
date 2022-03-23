@@ -28,7 +28,7 @@ export const errorOutlineStyle = css`
   }
 `
 
-function applySizeStyle(size?: string) {
+function applySizeStyle(size?: string): string {
   let sizeCss: string
   switch (size) {
     default:
@@ -51,7 +51,7 @@ function applySizeStyle(size?: string) {
   return sizeCss
 }
 
-export function applyInputInnerCss(stateValue: InputTagStateValue) {
+export function applyInputInnerCss(stateValue: InputTagStateValue): string {
   let paddingCss: string
   switch (stateValue?.size) {
     default:
@@ -81,7 +81,7 @@ export function applyInputInnerCss(stateValue: InputTagStateValue) {
   `
 }
 
-function applyStatus(stateValue: InputTagStateValue) {
+function applyStatus(stateValue: InputTagStateValue): string {
   let mainStyle: string
   let disableStyle, hoverStyle, inputStyle, errorStyle: string
 
@@ -122,7 +122,7 @@ function applyStatus(stateValue: InputTagStateValue) {
   `
 }
 
-export function applyInputContainer(stateValue: InputTagStateValue) {
+export function applyInputContainer(stateValue: InputTagStateValue): string {
   return css`
     box-sizing: border-box;
     display: flex;
@@ -140,7 +140,7 @@ export function applyInputContainer(stateValue: InputTagStateValue) {
   `
 }
 
-function baseFixCls(stateValue: InputTagStateValue) {
+function baseFixCls(stateValue: InputTagStateValue): string {
   let sizeCss: string
   switch (stateValue?.size) {
     default:
@@ -165,7 +165,7 @@ function baseFixCls(stateValue: InputTagStateValue) {
   `
 }
 
-export function applySuffixCls(stateValue: InputTagStateValue) {
+export function applySuffixCls(stateValue: InputTagStateValue): string {
   return css`
     ${baseFixCls(stateValue)}
     margin-left: 12px;

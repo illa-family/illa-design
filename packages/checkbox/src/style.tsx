@@ -3,7 +3,7 @@ import { CheckboxProps } from "./interface"
 
 import { css } from "@emotion/css"
 
-export function applyCheckboxSize(checked?: boolean) {
+export function applyCheckboxSize(checked?: boolean): string {
   let checkedCss = css()
   if (checked) {
     checkedCss = css`
@@ -42,7 +42,7 @@ export function applyCheckboxSize(checked?: boolean) {
   `
 }
 
-export function applyCheckState(checked: boolean) {
+export function applyCheckState(checked: boolean): string {
   return css`
     position: absolute;
     left: 0;

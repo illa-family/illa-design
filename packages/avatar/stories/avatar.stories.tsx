@@ -14,7 +14,9 @@ export default {
   },
 } as Meta
 
-const Template: Story<AvatarProps> = (args) => <Avatar {...args} />
+const Template: Story<AvatarProps> = (args) => {
+  return <Avatar {...args} />
+}
 
 export const Basic = Template.bind({
   icon: <BsFacebook />,

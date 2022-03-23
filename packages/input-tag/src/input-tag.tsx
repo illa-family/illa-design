@@ -1,10 +1,4 @@
-import {
-  forwardRef,
-  ElementRef,
-  useState,
-  useRef,
-  useImperativeHandle,
-} from "react"
+import { forwardRef, useImperativeHandle, useRef, useState } from "react"
 import { useMergeValue } from "@illa-design/system"
 import { InputElement } from "@illa-design/input"
 import { ErrorIcon } from "@illa-design/icon"
@@ -110,8 +104,8 @@ export const InputTag = forwardRef<HTMLDivElement, InputTagProps>(
 
     return (
       <div
-        className={cx(applyInputContainer(stateValue), className)}
         ref={ref}
+        className={cx(applyInputContainer(stateValue), className)}
         onClick={(e) => {
           !focus && refInput?.current?.focus?.()
           onClick?.(e)
