@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { ChangeEvent, forwardRef, useState } from "react"
 import { SearchProps } from "./interface"
@@ -7,13 +6,11 @@ import { SearchIcon } from "@illa-design/icon"
 import { applyContainerCss, applyInputContainer, applySuffixCls } from "./style"
 import { InputElement } from "./input-element"
 import { Button } from "@illa-design/button"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 export const Search = forwardRef<HTMLDivElement, SearchProps>((props, ref) => {
   const {
-    style,
-    className,
     inputRef,
     allowClear,
     error,
@@ -56,9 +53,9 @@ export const Search = forwardRef<HTMLDivElement, SearchProps>((props, ref) => {
   }
 
   return (
-    <div ref={ref} style={style} className={className}>
-      <span css={applyContainerCss(stateValue)}>
-        <span css={applyInputContainer(stateValue)}>
+    <div ref={ref}>
+      <span className={applyContainerCss(stateValue)}>
+        <span className={applyInputContainer(stateValue)}>
           <InputElement
             {...searchProp}
             ref={inputRef}
@@ -84,9 +81,11 @@ export const Search = forwardRef<HTMLDivElement, SearchProps>((props, ref) => {
             }}
           />
           {!searchButton ? (
-            <span css={applySuffixCls(stateValue)}>
+            <span className={applySuffixCls(stateValue)}>
               <SearchIcon
-                css={css(`color: ${globalColor(`--${illaPrefix}-gray-05`)};`)}
+                className={css(
+                  `color: ${globalColor(`--${illaPrefix}-gray-05`)};`,
+                )}
               />
             </span>
           ) : null}

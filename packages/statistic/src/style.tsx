@@ -1,23 +1,22 @@
-import { css } from "@emotion/react"
+import { css, string } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
-export function applyStatistic() {
+export function applyStatistic(): string {
   return css`
     display: inline-block;
     line-height: 1.33;
   `
 }
 
-export function applyStatisticTitle() {
+export function applyStatisticTitle(): string {
   return css`
     margin-bottom: 4px;
-    font-family: SFProDisplay;
     font-size: 14px;
     color: ${globalColor(`--${illaPrefix}-gray-04`)};
   `
 }
 
-export function applyStatisticContent() {
+export function applyStatisticContent(): string {
   return css`
     font-family: HelveticaNeue;
     font-size: 24px;
@@ -26,7 +25,10 @@ export function applyStatisticContent() {
   `
 }
 
-export function applyStatisticDecorator(isPrefix: boolean, isText: boolean) {
+export function applyStatisticDecorator(
+  isPrefix: boolean,
+  isText: boolean,
+): string {
   const spacing = isText ? 4 : 8
   const margin = isPrefix
     ? `margin-right:${spacing}px;`
@@ -40,7 +42,7 @@ export function applyStatisticDecorator(isPrefix: boolean, isText: boolean) {
   `
 }
 
-export function applyStatisticValue() {
+export function applyStatisticValue(): string {
   return css`
     display: inline-block;
     direction: ltr;

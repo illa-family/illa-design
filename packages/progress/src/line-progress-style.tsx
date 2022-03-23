@@ -1,5 +1,4 @@
-import { css } from "@emotion/react"
-import { SerializedStyles } from "@storybook/theming"
+import { css } from "@emotion/css"
 import { ProgressColorScheme } from "./interface"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
@@ -37,10 +36,7 @@ export const applyStatusIcon = css`
   margin-left: 8px;
 `
 
-export function applyLineContainer(
-  width: string,
-  stokeWidth: string,
-): SerializedStyles {
+export function applyLineContainer(width: string, stokeWidth: string): string {
   return css`
     display: inline-block;
     height: ${stokeWidth};
@@ -49,7 +45,7 @@ export function applyLineContainer(
   `
 }
 
-export function applySpace(): SerializedStyles {
+export function applySpace(): string {
   return css`
     width: 100%;
     position: absolute;
@@ -60,7 +56,7 @@ export function applyLineProgress(
   percent: number,
   stokeWidth: string,
   colorScheme: ProgressColorScheme,
-): SerializedStyles {
+): string {
   let color
   if (colorScheme == "gray") {
     color = globalColor(`--${illaPrefix}-${colorScheme}-02`)
@@ -86,7 +82,7 @@ export function applyLineProgressStep(
   colorScheme: ProgressColorScheme,
   steps: number,
   index: number,
-): SerializedStyles {
+): string {
   let color
   if (colorScheme == "gray") {
     color = globalColor(`--${illaPrefix}-${colorScheme}-02`)
@@ -115,7 +111,7 @@ export function applyLineProgressStep(
 export function applyLineProgressBg(
   stokeWidth: string,
   trailColorScheme: ProgressColorScheme,
-): SerializedStyles {
+): string {
   let color
   if (trailColorScheme == "gray") {
     color = globalColor(`--${illaPrefix}-${trailColorScheme}-08`)
@@ -137,7 +133,7 @@ export function applyLineProgressBgStep(
   strokeWidth: string,
   width: string,
   trailColorScheme: ProgressColorScheme,
-): SerializedStyles {
+): string {
   let color
 
   if (trailColorScheme == "gray") {

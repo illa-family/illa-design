@@ -1,11 +1,10 @@
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import {
   DescriptionLayout,
   DescriptionSize,
   DescriptionTabLayout,
 } from "./interface"
-import { SerializedStyles } from "@storybook/theming"
 
 export const applyDescContainerStyle = css`
   padding: 24px;
@@ -16,7 +15,7 @@ export const applyDescContainerStyle = css`
   max-width: 100%;
 `
 
-export function applyTitleStyle(size: DescriptionSize): SerializedStyles {
+export function applyTitleStyle(size: DescriptionSize): string {
   let marginBottom
 
   switch (size) {
@@ -53,7 +52,7 @@ export const applyInlineVerticalStyle = css`
 export function applyLabelStyle(
   bordered: boolean,
   layout: DescriptionLayout,
-): SerializedStyles {
+): string {
   switch (layout) {
     case "horizontal":
       if (bordered) {
@@ -102,7 +101,7 @@ export function applyLabelStyle(
   }
 }
 
-export function applyValueStyle(): SerializedStyles {
+export function applyValueStyle(): string {
   return css`
     line-height: 22px;
     font-size: 14px;
@@ -114,7 +113,7 @@ export function applyBlockStyle(
   size: DescriptionSize,
   bordered: boolean,
   column: number,
-): SerializedStyles {
+): string {
   let padding
 
   switch (size) {
@@ -179,7 +178,7 @@ export function applyBlockStyle(
 export function applyTableStyle(
   tableLayout: DescriptionTabLayout,
   bordered: boolean,
-): SerializedStyles {
+): string {
   const border = css`
     border: solid 1px ${globalColor(`--${illaPrefix}-gray-08`)};
   `

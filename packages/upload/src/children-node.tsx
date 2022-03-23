@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, useContext } from "react"
 import { ChildrenNodeProps, UploadItem, UploadRefType } from "./interface"
 import {
@@ -66,9 +65,9 @@ export const ChildrenNode = forwardRef<UploadRefType, ChildrenNodeProps>(
               }
             />
           ) : (
-            <span css={applyImageUploadContainerCss(disabled)}>
-              <AddIcon css={applyIconCss(disabled)} />
-              <span css={applyImageUploadTextCss(disabled)}>Upload</span>
+            <span className={applyImageUploadContainerCss(disabled)}>
+              <AddIcon className={applyIconCss(disabled)} />
+              <span className={applyImageUploadTextCss(disabled)}>Upload</span>
             </span>
           )}
         </span>
@@ -112,7 +111,7 @@ export const ChildrenNode = forwardRef<UploadRefType, ChildrenNodeProps>(
           onClick={() => {
             handleClickSelectedButton && handleClickSelectedButton()
           }}
-          css={noAutoUploadButtonCss}
+          className={noAutoUploadButtonCss}
           size={"medium"}
           leftIcon={<UploadIcon />}
         >

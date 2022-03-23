@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import React, {
   forwardRef,
   useCallback,
@@ -170,10 +169,10 @@ export const Affix = forwardRef<HTMLDivElement, AffixProps>((props, ref) => {
   })
 
   return (
-    <div ref={setWrapperRefs} style={style} className={className} {...rest}>
-      {lastIsFixed.current && <div css={applySize(size)}></div>}
+    <div ref={setWrapperRefs} {...rest}>
+      {lastIsFixed.current && <div className={applySize(size)} />}
       <div
-        css={applyAffixFixedStyle({
+        className={applyAffixFixedStyle({
           isFixed: lastIsFixed.current,
           position,
           size,

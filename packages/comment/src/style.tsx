@@ -1,4 +1,4 @@
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 export const commentContainerCss = css`
@@ -16,12 +16,10 @@ export const contentCss = css`
   margin-top: 4px;
   color: ${globalColor(`--${illaPrefix}-gray-02`)};
   font-size: 14px;
-  font-family: SFProDisplay;
   margin-bottom: 11px;
 `
 export const avatarCss = css`
   font-size: 14px;
-  font-family: SFProDisplay;
 `
 
 export const contentContainerCss = css`

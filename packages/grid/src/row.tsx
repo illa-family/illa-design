@@ -1,16 +1,23 @@
-/** @jsxImportSource @emotion/react */
-import { forwardRef, Children } from "react"
+import { Children, forwardRef } from "react"
 import { RowContextProps, RowProps } from "./interface"
 import {
   applyHorizontalGap,
   applyRowContainer,
   applyVerticalGap,
 } from "./style"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { RowContext } from "./row-context"
+import { cx } from "@emotion/css"
 
 export const Row = forwardRef<HTMLDivElement, RowProps>((props, ref) => {
-  const { align, justify, horizontalGap, verticalGap, ...otherProps } = props
+  const {
+    align,
+    justify,
+    horizontalGap,
+    verticalGap,
+    className,
+    ...otherProps
+  } = props
 
   const horizontalGapCss = applyHorizontalGap(horizontalGap)
   const verticalGapCss = applyVerticalGap(verticalGap)
@@ -23,7 +30,11 @@ export const Row = forwardRef<HTMLDivElement, RowProps>((props, ref) => {
   `
 
   return (
-    <div ref={ref} css={finalCss} {...otherProps}>
+    <div
+      ref={ref}
+      className={cx(finalCss, className)}
+      {...otherProps}
+    >
       <RowContext.Provider
         value={
           {

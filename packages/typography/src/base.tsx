@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { Ellipsis, EllipsisBuilder } from "./ellipsis-config"
 import * as React from "react"
 import {
@@ -142,7 +141,7 @@ export const Base: FC<BaseProps> = (props) => {
     ${applyFontContentStyle(bold, mark, underline, deleted, disabled, code)};
   `
   const content = (
-    <span ref={contentRef} css={contentCss}>
+    <span ref={contentRef} className={contentCss}>
       {finalShowExpand ? clipShowText : props.children}
     </span>
   )
@@ -157,7 +156,7 @@ export const Base: FC<BaseProps> = (props) => {
           originCopyable.onCopy()
         }
       }}
-      css={applyCopyableIconSize}
+      className={applyCopyableIconSize}
     >
       {!copied ? originCopyable.copyIcon : originCopyable.copiedIcon}
     </span>
@@ -169,13 +168,13 @@ export const Base: FC<BaseProps> = (props) => {
 
   const expandPanel = finalShowExpand && !haveShowExpandSize && (
     <Fragment>
-      <span css={contentCss}>
+      <span className={contentCss}>
         ...
         {originEllipsis.suffix && <span>{originEllipsis.suffix}</span>}
       </span>
       {
         <a
-          css={applyExpandLabelCss()}
+          className={applyExpandLabelCss()}
           onClick={() => {
             if (originEllipsis.onExpand != undefined) {
               originEllipsis.onExpand()
@@ -204,7 +203,7 @@ export const Base: FC<BaseProps> = (props) => {
     )
 
   const operation = (showExpand || copyable) && (
-    <span ref={operationRef} css={applyOperationSpan}>
+    <span ref={operationRef} className={applyOperationSpan}>
       {expandPanel}
       {copyablePanel}
     </span>

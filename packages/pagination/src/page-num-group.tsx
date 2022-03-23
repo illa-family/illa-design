@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, useState, useEffect, useMemo } from "react"
 import { PageNumGroupProps } from "./interface"
 import * as React from "react"
@@ -70,7 +69,7 @@ export const PageNumGroup = forwardRef<HTMLSpanElement, PageNumGroupProps>(
     }, [selectedIndex, total])
 
     return (
-      <span css={paginationContainer}>
+      <span className={paginationContainer}>
         {showNumList?.map((number, index) => (
           <PageNumItem
             key={number}

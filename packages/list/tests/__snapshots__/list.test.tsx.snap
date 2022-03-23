@@ -14,11 +14,11 @@ exports[`List renders without border and split 1`] = `
   border-radius: 2px;
 }
 
-.emotion-1 {
+.emotion-2 {
   padding: 12px 24px;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,7 +28,7 @@ exports[`List renders without border and split 1`] = `
   flex-direction: row;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -42,7 +42,7 @@ exports[`List renders without border and split 1`] = `
   flex-grow: 1;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -56,74 +56,74 @@ exports[`List renders without border and split 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
+.emotion-8 {
   word-break: break-all;
 }
 
-.emotion-6 h1 {
+.emotion-8 h1 {
   margin: 0;
   font-size: 36px;
   line-height: normal;
 }
 
-.emotion-6 h2 {
+.emotion-8 h2 {
   margin: 0;
   font-size: 32px;
   line-height: normal;
 }
 
-.emotion-6 h3 {
+.emotion-8 h3 {
   margin: 0;
   font-size: 28px;
   line-height: normal;
 }
 
-.emotion-6 h4 {
+.emotion-8 h4 {
   margin: 0;
   font-size: 24px;
   line-height: normal;
 }
 
-.emotion-6 h5 {
+.emotion-8 h5 {
   margin: 0;
   font-size: 20px;
   line-height: normal;
 }
 
-.emotion-6 h6 {
+.emotion-8 h6 {
   margin: 0;
   font-size: 16px;
   line-height: normal;
 }
 
-.emotion-6 p {
+.emotion-8 p {
   margin: 0;
 }
 
-.emotion-7 {
+.emotion-9 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-11 {
   font-size: 14px;
 }
 
-.emotion-8 {
+.emotion-13 {
   color: #1f1f1f;
   font-weight: bold;
 }
 
-.emotion-9 {
+.emotion-14 {
   font-size: 14px;
 }
 
-.emotion-10 {
+.emotion-16 {
   color: #999;
 }
 
-.emotion-11 {
+.emotion-17 {
   display: inline-flex;
   vertical-align: middle;
   border-color: #ebebeb;
@@ -133,7 +133,7 @@ exports[`List renders without border and split 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-list"
 >
   <div
@@ -149,22 +149,22 @@ exports[`List renders without border and split 1`] = `
           style="display: flex; flex-direction: column;"
         >
           <div
-            class="emotion-1"
+            class="emotion-2"
           >
             <div
-              class="emotion-2"
+              class="emotion-3 emotion-3"
             >
               <div
-                class="emotion-3"
+                class="emotion-5"
               >
                 <div
-                  class="emotion-4"
+                  class="emotion-6 emotion-6"
                 >
                   <article
-                    class="emotion-5 emotion-6"
+                    class="emotion-8 emotion-9 emotion-8"
                   >
                     <span
-                      class="emotion-7"
+                      class="emotion-11 emotion-11"
                     >
                       <span
                         style="position: relative;"
@@ -173,7 +173,7 @@ exports[`List renders without border and split 1`] = `
                           style="background: transparent; height: 100%; left: 0px; position: absolute; top: 0px; width: 100%; z-index: -1;"
                         />
                         <span
-                          class="emotion-8"
+                          class="emotion-13"
                         >
                           Title A
                         </span>
@@ -183,7 +183,7 @@ exports[`List renders without border and split 1`] = `
                       style="height: 4px;"
                     />
                     <div
-                      class="emotion-9"
+                      class="emotion-14 emotion-14"
                     >
                       <span
                         style="position: relative;"
@@ -192,7 +192,7 @@ exports[`List renders without border and split 1`] = `
                           style="background: transparent; height: 100%; left: 0px; position: absolute; top: 0px; width: 100%; z-index: -1;"
                         />
                         <span
-                          class="emotion-10"
+                          class="emotion-16"
                         >
                           Desc A
                         </span>
@@ -204,25 +204,25 @@ exports[`List renders without border and split 1`] = `
             </div>
           </div>
           <div
-            class="emotion-11"
+            class="emotion-17 emotion-17"
           />
           <div
-            class="emotion-1"
+            class="emotion-2"
           >
             <div
-              class="emotion-2"
+              class="emotion-3 emotion-3"
             >
               <div
-                class="emotion-3"
+                class="emotion-5"
               >
                 <div
-                  class="emotion-4"
+                  class="emotion-6 emotion-6"
                 >
                   <article
-                    class="emotion-5 emotion-6"
+                    class="emotion-8 emotion-9 emotion-8"
                   >
                     <span
-                      class="emotion-7"
+                      class="emotion-11 emotion-11"
                     >
                       <span
                         style="position: relative;"
@@ -231,7 +231,7 @@ exports[`List renders without border and split 1`] = `
                           style="background: transparent; height: 100%; left: 0px; position: absolute; top: 0px; width: 100%; z-index: -1;"
                         />
                         <span
-                          class="emotion-8"
+                          class="emotion-13"
                         >
                           Title A
                         </span>
@@ -241,7 +241,7 @@ exports[`List renders without border and split 1`] = `
                       style="height: 4px;"
                     />
                     <div
-                      class="emotion-9"
+                      class="emotion-14 emotion-14"
                     >
                       <span
                         style="position: relative;"
@@ -250,7 +250,7 @@ exports[`List renders without border and split 1`] = `
                           style="background: transparent; height: 100%; left: 0px; position: absolute; top: 0px; width: 100%; z-index: -1;"
                         />
                         <span
-                          class="emotion-10"
+                          class="emotion-16"
                         >
                           Desc A
                         </span>

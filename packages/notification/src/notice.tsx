@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import React, {
   forwardRef,
   useMemo,
@@ -103,18 +102,18 @@ export const Notice = forwardRef<HTMLDivElement, NoticeProps>((props, ref) => {
   if (noticeType === "Message") {
     return (
       <div
-        css={applyMessage(closable)}
+        className={applyMessage(closable)}
         ref={ref}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         {...restProps}
       >
         {showIcon && renderIcon && (
-          <span css={applyMessageIcon(type)}>{renderIcon}</span>
+          <span className={applyMessageIcon(type)}>{renderIcon}</span>
         )}
-        <span css={applyMessageContent}>{content}</span>
+        <span className={applyMessageContent}>{content}</span>
         {closable && (
-          <span css={applyMessageCloseBtn} onClick={handleClose}>
+          <span className={applyMessageCloseBtn} onClick={handleClose}>
             {closeElement || <CloseIcon />}
           </span>
         )}
@@ -123,22 +122,24 @@ export const Notice = forwardRef<HTMLDivElement, NoticeProps>((props, ref) => {
   }
   return (
     <div
-      css={applyNotification}
+      className={applyNotification}
       ref={ref}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       {...restProps}
     >
       {showIcon && renderIcon && (
-        <div css={applyNotificationIcon(type as AlertType)}>{renderIcon}</div>
+        <div className={applyNotificationIcon(type as AlertType)}>
+          {renderIcon}
+        </div>
       )}
-      <div css={applyNotificationContentWrapper}>
-        {title && <div css={applyNotificationTitle}>{title}</div>}
-        <div css={applyNotificationContent(!!title)}>{content}</div>
-        {action && <div css={applyNotificationAction}>{action}</div>}
+      <div className={applyNotificationContentWrapper}>
+        {title && <div className={applyNotificationTitle}>{title}</div>}
+        <div className={applyNotificationContent(!!title)}>{content}</div>
+        {action && <div className={applyNotificationAction}>{action}</div>}
       </div>
       {closable && (
-        <div css={applyNotificationCloseBtn} onClick={handleClose}>
+        <div className={applyNotificationCloseBtn} onClick={handleClose}>
           {closeElement || <CloseIcon />}
         </div>
       )}

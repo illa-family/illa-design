@@ -1,5 +1,5 @@
 import chroma from "chroma-js"
-import { css, SerializedStyles } from "@emotion/react"
+import { css, string } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import {
   disableFillStyle,
@@ -14,8 +14,8 @@ import {
 import { StateValue } from "./interface"
 
 function applyStatus(stateValue: StateValue) {
-  let mainStyle: SerializedStyles
-  let disableStyle, hoverStyle, inputStyle, errorStyle: SerializedStyles
+  let mainStyle: string
+  let disableStyle, hoverStyle, inputStyle, errorStyle: string
 
   switch (stateValue?.variant) {
     default:

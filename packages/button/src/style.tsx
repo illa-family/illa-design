@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from "@emotion/react"
+import { css, string } from "@emotion/css"
 import {
   ButtonColorScheme,
   ButtonShape,
@@ -179,7 +179,7 @@ export function getDifferentStatusColor(
 export function applyBg(
   variant: ButtonVariant,
   colorScheme: ButtonColorScheme,
-): SerializedStyles {
+): string {
   switch (variant) {
     case "text":
       return css`
@@ -278,10 +278,7 @@ export function applyBg(
   }
 }
 
-export function applyCursor(
-  loading: boolean,
-  disabled: boolean,
-): SerializedStyles {
+export function applyCursor(loading: boolean, disabled: boolean): string {
   if (loading) {
     return css`
       cursor: default;
@@ -300,7 +297,7 @@ export function applyCursor(
 export function applyElementColor(
   variant: ButtonVariant,
   colorScheme: ButtonColorScheme,
-): SerializedStyles {
+): string {
   switch (variant) {
     case "text":
       return css`
@@ -393,7 +390,7 @@ export function applyShape(
   attached: boolean,
   first: boolean,
   last: boolean,
-): SerializedStyles {
+): string {
   switch (shape) {
     case "square":
       if (attached) {
@@ -444,7 +441,7 @@ export function applyShape(
 export function applyPaddingStyle(
   size: ButtonSize,
   variant: ButtonVariant,
-): SerializedStyles {
+): string {
   switch (size) {
     case "small":
       return css`
@@ -470,7 +467,7 @@ export function applyPaddingStyle(
 export function applyWithoutTextSize(
   size: ButtonSize,
   fullWidth?: boolean,
-): SerializedStyles {
+): string {
   switch (size) {
     case "small":
       return css`
@@ -496,7 +493,7 @@ export function applyWithoutTextSize(
   }
 }
 
-export function applyFontStyle(size: ButtonSize): SerializedStyles {
+export function applyFontStyle(size: ButtonSize): string {
   switch (size) {
     case "small":
       return css`
@@ -520,7 +517,7 @@ export function applyFontStyle(size: ButtonSize): SerializedStyles {
   }
 }
 
-export function applyLeftIconStyle(size: ButtonSize): SerializedStyles {
+export function applyLeftIconStyle(size: ButtonSize): string {
   switch (size) {
     case "small":
       return css`
@@ -546,7 +543,7 @@ export function applyLeftIconStyle(size: ButtonSize): SerializedStyles {
   }
 }
 
-export function applyIconWithoutText(size: ButtonSize): SerializedStyles {
+export function applyIconWithoutText(size: ButtonSize): string {
   switch (size) {
     case "small":
     case "medium":
@@ -562,7 +559,7 @@ export function applyIconWithoutText(size: ButtonSize): SerializedStyles {
   }
 }
 
-export function applyRightIconStyle(size: ButtonSize): SerializedStyles {
+export function applyRightIconStyle(size: ButtonSize): string {
   switch (size) {
     case "small":
       return css`
@@ -599,7 +596,7 @@ export function applySpacing(
   spacing: string,
   index: number,
   attached: boolean,
-): SerializedStyles {
+): string {
   if (attached) {
     return css`
       display: inline-flex;

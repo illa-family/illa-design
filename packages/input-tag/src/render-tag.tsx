@@ -1,26 +1,21 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef, HTMLAttributes } from "react"
 import { motion } from "framer-motion"
 import { Tag } from "@illa-design/tag"
 import { ObjectValueType, RenderTagsProps } from "./interface"
 import { tagStyle } from "./style"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 
 export const RenderTags = forwardRef<HTMLElement, RenderTagsProps>(
   (props, ref) => {
     const {
-      style,
-      className,
       value,
       size = "medium",
       disabled,
       readOnly,
-      labelInValue,
       // events
       onRemove,
       valueChangeHandler,
-      ...rest
     } = props
 
     const tagCloseHandler = (itemValue: ObjectValueType, index: number) => {
@@ -38,7 +33,7 @@ export const RenderTags = forwardRef<HTMLElement, RenderTagsProps>(
           const closable = !readOnly && !disabled && item.closable !== false
           return (
             <motion.div
-              css={css`
+              className={css`
                 display: inline-grid;
               `}
               initial="initial"
@@ -47,7 +42,7 @@ export const RenderTags = forwardRef<HTMLElement, RenderTagsProps>(
               key={index}
             >
               <Tag
-                css={tagStyle}
+                className={tagStyle}
                 visible
                 size={size}
                 closable={closable}

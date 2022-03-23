@@ -1,8 +1,7 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef } from "react"
 import { List } from "@illa-design/list"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { Empty } from "@illa-design/empty"
 import { OptionListProps } from "./interface"
 
@@ -19,14 +18,14 @@ export const OptionList = forwardRef<HTMLDivElement, OptionListProps<any>>(
 
     return (
       <div
-        css={css`
+        className={css`
           background-color: white;
         `}
       >
         {childrenList?.length ? (
           <List
             ref={ref}
-            css={css`
+            className={css`
               min-width: unset !important;
               width: 100%;
               border: unset !important;
@@ -46,7 +45,7 @@ export const OptionList = forwardRef<HTMLDivElement, OptionListProps<any>>(
           <span>{notFoundContent}</span>
         ) : (
           <Empty
-            css={css`
+            className={css`
               padding: 16px 0;
             `}
           />

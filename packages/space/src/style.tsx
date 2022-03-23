@@ -1,11 +1,11 @@
 import { SpaceAlign, SpaceDirection, SpaceSize } from "./interface"
-import { css, SerializedStyles } from "@emotion/react"
+import { css, string } from "@emotion/css"
 
 export function applyContainer(
   direction: SpaceDirection,
   align: SpaceAlign,
   wrap: boolean,
-): SerializedStyles {
+): string {
   let cssDirection: string
   switch (direction) {
     case "horizontal":
@@ -29,7 +29,7 @@ export function applyDividerSizeSingle(
   direction: SpaceDirection,
   wrap: boolean,
   isLast: boolean,
-): SerializedStyles {
+): string {
   let horSpace, verSpace: string
   switch (direction) {
     case "horizontal":
@@ -60,7 +60,7 @@ export function applyDividerMultiSize(
   size: SpaceSize[],
   direction: SpaceDirection,
   isLast: boolean,
-): SerializedStyles {
+): string {
   let horSpace, verSpace: string
   switch (direction) {
     case "horizontal":
@@ -86,7 +86,7 @@ export function applyDividerSize(
   direction: SpaceDirection,
   wrap: boolean,
   isLast: boolean,
-): SerializedStyles {
+): string {
   if (typeof size == "string") {
     return applyDividerSizeSingle(size, direction, wrap, isLast)
   } else {

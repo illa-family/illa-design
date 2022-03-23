@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { Children, forwardRef } from "react"
 import { TimelineProps } from "./interface"
@@ -6,6 +5,7 @@ import { Spin } from "@illa-design/spin"
 import { TimelineItem } from "./timelineItem"
 import { TimelineContext } from "./timeline-context"
 import { applyWrapCss } from "./styles"
+import { cx } from "@emotion/css"
 
 export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(
   (props, ref) => {
@@ -21,8 +21,8 @@ export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(
     } = props
 
     const pendingNode = typeof pending === "boolean" ? null : pending
-    const pedningItem = pending ? (
-      <TimelineItem dot={pendingDot || pendingNode}></TimelineItem>
+    const pendingItem = pending ? (
+      <TimelineItem dot={pendingDot || pendingNode} />
     ) : null
 
     let childLiItem = Children.toArray(props.children)
@@ -31,7 +31,7 @@ export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(
       childLiItem.reverse()
     }
 
-    pending && childLiItem.push(pedningItem as any)
+    pending && childLiItem.push(pendingItem as any)
 
     const items = Children.map(childLiItem, (ele, index) => {
       return (
@@ -48,7 +48,11 @@ export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(
     })
 
     return (
-      <div ref={ref} {...rest} css={applyWrapCss(direction)}>
+      <div
+        ref={ref}
+        className={cx(applyWrapCss(direction), className)}
+        {...rest}
+      >
         {items}
       </div>
     )

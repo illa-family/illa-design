@@ -20,18 +20,18 @@ exports[`Progress renders with colors 1`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-flex;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #fcc;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #ff4747;
@@ -45,17 +45,17 @@ exports[`Progress renders with colors 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-red"
 >
   <span
-    class="emotion-1"
+    class="emotion-2"
   >
     <svg
-      class="emotion-2"
+      class="emotion-3"
     >
       <circle
-        class="emotion-3"
+        class="emotion-4"
         cx="calc(16px / 2)"
         cy="calc(16px / 2)"
         fill="none"
@@ -87,18 +87,18 @@ exports[`Progress renders with colors 2`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-flex;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #ebebeb;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #1f1f1f;
@@ -112,17 +112,17 @@ exports[`Progress renders with colors 2`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-gray"
 >
   <span
-    class="emotion-1"
+    class="emotion-2"
   >
     <svg
-      class="emotion-2"
+      class="emotion-3"
     >
       <circle
-        class="emotion-3"
+        class="emotion-4"
         cx="calc(16px / 2)"
         cy="calc(16px / 2)"
         fill="none"
@@ -154,18 +154,18 @@ exports[`Progress renders with colors 3`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-flex;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #321321;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #123123;
@@ -179,17 +179,17 @@ exports[`Progress renders with colors 3`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-custom"
 >
   <span
-    class="emotion-1"
+    class="emotion-2"
   >
     <svg
-      class="emotion-2"
+      class="emotion-3"
     >
       <circle
-        class="emotion-3"
+        class="emotion-4"
         cx="calc(16px / 2)"
         cy="calc(16px / 2)"
         fill="none"
@@ -221,18 +221,18 @@ exports[`Progress renders with custom width 1`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-flex;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: #ebebeb;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #1e6fff;
@@ -246,17 +246,17 @@ exports[`Progress renders with custom width 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress"
 >
   <span
-    class="emotion-1"
+    class="emotion-2"
   >
     <svg
-      class="emotion-2"
+      class="emotion-3"
     >
       <circle
-        class="emotion-3"
+        class="emotion-4"
         cx="calc(100px / 2)"
         cy="calc(100px / 2)"
         fill="none"
@@ -288,18 +288,18 @@ exports[`Progress renders with error status 1`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-flex;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #ebebeb;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #ff4747;
@@ -313,17 +313,17 @@ exports[`Progress renders with error status 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress"
 >
   <span
-    class="emotion-1"
+    class="emotion-2"
   >
     <svg
-      class="emotion-2"
+      class="emotion-3"
     >
       <circle
-        class="emotion-3"
+        class="emotion-4"
         cx="calc(16px / 2)"
         cy="calc(16px / 2)"
         fill="none"
@@ -355,18 +355,18 @@ exports[`Progress renders with steps 1`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-flex;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #ebebeb;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #1e6fff;
@@ -380,17 +380,17 @@ exports[`Progress renders with steps 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress"
 >
   <span
-    class="emotion-1"
+    class="emotion-2"
   >
     <svg
-      class="emotion-2"
+      class="emotion-3"
     >
       <circle
-        class="emotion-3"
+        class="emotion-4"
         cx="calc(16px / 2)"
         cy="calc(16px / 2)"
         fill="none"

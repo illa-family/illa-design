@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { ChangeEvent, forwardRef, useState } from "react"
 import { useMergeValue } from "@illa-design/system"
@@ -11,13 +10,11 @@ import {
 } from "./style"
 import { PasswordProps } from "./interface"
 import { InputElement } from "./input-element"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 
 export const Password = forwardRef<HTMLDivElement, PasswordProps>(
   (props, ref) => {
     const {
-      style,
-      className,
       inputRef,
       allowClear,
       error,
@@ -61,9 +58,9 @@ export const Password = forwardRef<HTMLDivElement, PasswordProps>(
     }
 
     return (
-      <div ref={ref} style={style} className={className}>
-        <span css={applyContainerCss(stateValue)}>
-          <span css={applyInputContainer(stateValue, requirePadding)}>
+      <div ref={ref}>
+        <span className={applyContainerCss(stateValue)}>
+          <span className={applyInputContainer(stateValue, requirePadding)}>
             <InputElement
               {...passwordProp}
               ref={inputRef}
@@ -86,7 +83,7 @@ export const Password = forwardRef<HTMLDivElement, PasswordProps>(
             />
             {invisibleButton ? (
               <span
-                css={css(pointerStyle, applySuffixCls(stateValue))}
+                className={css(pointerStyle, applySuffixCls(stateValue))}
                 onClick={() => {
                   setVisibility(!visibility)
                 }}

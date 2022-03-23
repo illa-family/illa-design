@@ -1,7 +1,6 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { Meta, Story } from "@storybook/react"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { Button } from "@illa-design/button"
 import { Notification } from "@illa-design/notification"
 import { Affix, AffixProps } from "../src"
@@ -36,7 +35,7 @@ export const Basic = (args) => {
       <Affix {...affixProps}>
         <Button>Affix Top</Button>
       </Affix>
-      <div css={blockStyles}>{loremIpsum}</div>
+      <div className={blockStyles}>{loremIpsum}</div>
     </>
   )
 }
@@ -46,7 +45,7 @@ export const Offset = () => {
 
   return (
     <>
-      <div css={blockStyles}>{loremIpsum}</div>
+      <div className={blockStyles}>{loremIpsum}</div>
       <Affix
         offsetTop={offset}
         onChange={(isFixed: boolean) =>
@@ -57,7 +56,7 @@ export const Offset = () => {
       >
         <Button>{offset}px to affix top</Button>
       </Affix>
-      <div css={blockStyles}>{loremIpsum}</div>
+      <div className={blockStyles}>{loremIpsum}</div>
       <Affix offsetBottom={offset}>
         <Button>{offset}px to affix bottom</Button>
       </Affix>
@@ -74,7 +73,7 @@ export const targetContainer = () => {
         style={{ overflow: "auto", height: 300, width: 500 }}
         ref={container}
       >
-        <div css={containerBlockStyles}>
+        <div className={containerBlockStyles}>
           <Affix
             target={() => container.current}
             targetContainer={() => window}
@@ -84,7 +83,7 @@ export const targetContainer = () => {
           {loremIpsum}
         </div>
       </div>
-      <div css={blockStyles}>{loremIpsum}</div>
+      <div className={blockStyles}>{loremIpsum}</div>
     </>
   )
 }

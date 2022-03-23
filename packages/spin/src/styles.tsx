@@ -1,4 +1,4 @@
-import { css, keyframes, SerializedStyles } from "@emotion/react"
+import { css, keyframes, string } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { SpinSize } from "./interface"
 
@@ -13,10 +13,7 @@ export const tipCss = css`
   color: ${globalColor(`--${illaPrefix}-blue-03`)};
 `
 
-export function applySizeCss(
-  size: SpinSize,
-  loading: boolean,
-): SerializedStyles {
+export function applySizeCss(size: SpinSize, loading: boolean): string {
   let sizeCss
   switch (size) {
     case "small":
@@ -43,9 +40,7 @@ export function applySizeCss(
   `
 }
 
-export function applySpinContainerCss(
-  loading: boolean,
-): SerializedStyles | undefined {
+export function applySpinContainerCss(loading: boolean): string | undefined {
   if (loading) {
     let background
     if (loading) {

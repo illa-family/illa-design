@@ -1,9 +1,9 @@
-import { css, SerializedStyles } from "@emotion/react"
+import { css, string } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { InputNumberStateValue } from "./interface"
 
-function baseFixCls(stateValue: InputNumberStateValue) {
-  let sizeCss: SerializedStyles
+function baseFixCls(stateValue: InputNumberStateValue): string {
+  let sizeCss: string
   switch (stateValue?.size) {
     default:
     case "small":
@@ -45,7 +45,7 @@ function baseFixCls(stateValue: InputNumberStateValue) {
   `
 }
 
-export function applyAddonCss(stateValue: InputNumberStateValue) {
+export function applyAddonCss(stateValue: InputNumberStateValue): string {
   return css`
     ${baseFixCls(stateValue)}
     color: ${globalColor(`--${illaPrefix}-gray-04`)};
@@ -73,7 +73,7 @@ export function applyAddonCss(stateValue: InputNumberStateValue) {
     }
   `
 }
-export function applyInputNumber() {
+export function applyInputNumber(): string {
   return css`
     position: relative;
     &:hover {
@@ -85,8 +85,10 @@ export function applyInputNumber() {
   `
 }
 
-export function applyStepEmbedContainer(stateValue: InputNumberStateValue) {
-  let sizeCss: SerializedStyles
+export function applyStepEmbedContainer(
+  stateValue: InputNumberStateValue,
+): string {
+  let sizeCss: string
   switch (stateValue?.size) {
     default:
     case "small":
@@ -116,7 +118,7 @@ export function applyStepEmbedContainer(stateValue: InputNumberStateValue) {
     ${sizeCss}
   `
 }
-export function applyStepEmbed() {
+export function applyStepEmbed(): string {
   return css`
     display: flex;
     flex-direction: column;

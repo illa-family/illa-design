@@ -1,4 +1,4 @@
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { TriggerColorScheme } from "@illa-design/trigger"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 

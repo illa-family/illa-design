@@ -1,7 +1,5 @@
-/** @jsxImportSource @emotion/react */
 import { ChangeEvent, forwardRef } from "react"
 import { RadioGroupProps } from "./interface"
-import { SerializedStyles } from "@emotion/react"
 import { Radio } from "./radio"
 import {
   applyRadioButtonContainer,
@@ -10,6 +8,7 @@ import {
 } from "./style"
 import { useMergeValue } from "./hook"
 import { RadioGroupContext } from "./radio-group-context"
+import { cx } from "@emotion/css"
 
 function isArray(obj: any) {
   return Object.prototype.toString.call(obj) === "[object Array]"
@@ -21,6 +20,7 @@ export const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps<any>>(
       children,
       options,
       disabled,
+      className,
       colorScheme,
       direction = "horizontal",
       spacing = direction === "horizontal" ? "24px" : "16px",
@@ -36,7 +36,7 @@ export const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps<any>>(
       value: props.value,
     })
 
-    let radioGroupCss: SerializedStyles
+    let radioGroupCss: string
 
     if (type === "button") {
       radioGroupCss = applyRadioButtonContainer(size)
@@ -74,7 +74,7 @@ export const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps<any>>(
     }
 
     return (
-      <div css={radioGroupCss} ref={ref} {...otherProps}>
+      <div ref={ref} className={cx(radioGroupCss, className)} {...otherProps}>
         <RadioGroupContext.Provider value={contextProp}>
           {options && isArray(options)
             ? options.map((option, index) => {

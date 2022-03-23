@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, ReactNode } from "react"
 import { ProgressProps } from "./interface"
 import { SuccessIcon, WarningCircleIcon } from "@illa-design/icon"
@@ -9,7 +8,7 @@ import {
   applyCircleStatus,
   applyCircleSvgContainer,
 } from "./mini-circle-progress-style"
-import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx, globalColor, illaPrefix } from "@illa-design/theme"
 
 export const MiniCircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
   (props, ref) => {
@@ -20,6 +19,7 @@ export const MiniCircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
       width = "16px",
       strokeWidth = "4px",
       trailColor = "gray",
+      className,
       showText = true,
       formatText = (percent: number) => {
         return `${percent}%`
@@ -61,12 +61,20 @@ export const MiniCircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
     }
 
     return (
-      <div css={applyContainer(width)} ref={ref} {...otherProps}>
+      <div
+        className={cx(applyContainer(width), className)}
+        ref={ref}
+        {...otherProps}
+      >
         <Trigger disabled={!showText} content={formatText(percent)}>
           {(status == "normal" || status == "error") && (
-            <svg css={applyCircleSvgContainer(width, trailColor)}>
+            <svg className={applyCircleSvgContainer(width, trailColor)}>
               <circle
-                css={applyCircleProgressContainer(finalColor, width, percent)}
+                className={applyCircleProgressContainer(
+                  finalColor,
+                  width,
+                  percent,
+                )}
                 fill="none"
                 cx={center}
                 cy={center}
@@ -76,7 +84,7 @@ export const MiniCircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
             </svg>
           )}
           {status == "success" && (
-            <span css={applyCircleStatus}>{statusComponent}</span>
+            <span className={applyCircleStatus}>{statusComponent}</span>
           )}
         </Trigger>
       </div>

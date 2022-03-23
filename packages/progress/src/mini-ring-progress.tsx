@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef } from "react"
 import { ProgressProps } from "./interface"
 import { Trigger } from "@illa-design/trigger"
@@ -8,6 +7,7 @@ import {
   applyProgressContainerBg,
   applySvgContainer,
 } from "./common-style"
+import { cx } from "@emotion/css"
 
 export const MiniRingProgress = forwardRef<HTMLDivElement, ProgressProps>(
   (props, ref) => {
@@ -16,6 +16,7 @@ export const MiniRingProgress = forwardRef<HTMLDivElement, ProgressProps>(
       steps,
       status = "normal",
       color = "blue",
+      className,
       width = "16px",
       strokeWidth = "4px",
       trailColor = "gray",
@@ -45,11 +46,19 @@ export const MiniRingProgress = forwardRef<HTMLDivElement, ProgressProps>(
     }
 
     return (
-      <div css={applyContainer(width)} ref={ref} {...otherProps}>
+      <div
+        className={cx(applyContainer(width), className)}
+        ref={ref}
+        {...otherProps}
+      >
         <Trigger disabled={!showText} content={formatText(percent)}>
-          <svg css={applySvgContainer(width)}>
+          <svg className={applySvgContainer(width)}>
             <circle
-              css={applyProgressContainerBg(trailColor, width, strokeWidth)}
+              className={applyProgressContainerBg(
+                trailColor,
+                width,
+                strokeWidth,
+              )}
               fill="none"
               cx={center}
               cy={center}
@@ -57,7 +66,7 @@ export const MiniRingProgress = forwardRef<HTMLDivElement, ProgressProps>(
               strokeWidth={strokeWidth}
             />
             <circle
-              css={applyProgressContainer(
+              className={applyProgressContainer(
                 finalColor,
                 width,
                 strokeWidth,

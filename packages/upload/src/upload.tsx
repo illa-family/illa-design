@@ -1,6 +1,5 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
-import { forwardRef, useEffect, useMemo, useRef, useState } from "react"
+import { forwardRef, useMemo, useRef, useState } from "react"
 import {
   UploadItem,
   UploadListProps,
@@ -13,6 +12,7 @@ import { FileListTextItem } from "./file-list-text-item"
 import { FileListPicItem } from "./file-list-pic-item"
 import { List } from "@illa-design/list"
 import { isFunction } from "@illa-design/system"
+import { cx } from "@emotion/css"
 
 export const Upload = forwardRef<HTMLDivElement, UploadProps>((props, ref) => {
   const {
@@ -23,6 +23,7 @@ export const Upload = forwardRef<HTMLDivElement, UploadProps>((props, ref) => {
     customRequest,
     onChange,
     onReupload,
+    className,
     onRemove,
     disabled,
     onProgress,
@@ -156,7 +157,7 @@ export const Upload = forwardRef<HTMLDivElement, UploadProps>((props, ref) => {
         bordered={false}
         split={false}
         renderRaw={true}
-        css={fileListContainerCss}
+        className={fileListContainerCss}
         render={(item) => {
           return listType === "text" ? (
             <FileListTextItem
@@ -180,7 +181,11 @@ export const Upload = forwardRef<HTMLDivElement, UploadProps>((props, ref) => {
   }
 
   return (
-    <div css={uploadContainerCss} ref={ref} {...rest}>
+    <div
+      ref={ref}
+      className={cx(uploadContainerCss, className)}
+      {...rest}
+    >
       <UploadElement
         directory={directory}
         accept={accept}

@@ -1,6 +1,6 @@
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { TagColorScheme, TagVariant } from "./interface"
-import { SerializedStyles } from "@emotion/serialize"
+
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 export const tagContainer = css`
@@ -11,19 +11,19 @@ export const tagContainer = css`
   align-items: center;
 `
 
-export function applyTagSizeLarge(variant: TagVariant): SerializedStyles {
+export function applyTagSizeLarge(variant: TagVariant): string {
   return css`
     padding: ${variant == "outline" ? "4px 7px" : "5px 8px"};
   `
 }
 
-export function applyTagSizeMedium(variant: TagVariant): SerializedStyles {
+export function applyTagSizeMedium(variant: TagVariant): string {
   return css`
     padding: ${variant == "outline" ? "2px 7px" : "3px 8px"};
   `
 }
 
-export function applyTagSizeSmall(variant: TagVariant): SerializedStyles {
+export function applyTagSizeSmall(variant: TagVariant): string {
   return css`
     padding: ${variant == "outline" ? "0px 7px" : "1px 8px"};
   `
@@ -58,7 +58,7 @@ export const colors: TagColorScheme[] = [
   "purple",
 ]
 
-export function tagOutlinePrepare(color: TagColorScheme): SerializedStyles {
+export function tagOutlinePrepare(color: TagColorScheme): string {
   if (color == "gray") {
     return css`
       border-radius: 1px;
@@ -74,7 +74,7 @@ export function tagOutlinePrepare(color: TagColorScheme): SerializedStyles {
   }
 }
 
-export function tagFillPrepare(color: TagColorScheme): SerializedStyles {
+export function tagFillPrepare(color: TagColorScheme): string {
   return css`
     background-color: ${globalColor(`--${illaPrefix}-${color}-01`)};
     color: ${globalColor(`--${illaPrefix}-white-01`)};
@@ -82,7 +82,7 @@ export function tagFillPrepare(color: TagColorScheme): SerializedStyles {
   `
 }
 
-export function tagLightPrepare(color: TagColorScheme): SerializedStyles {
+export function tagLightPrepare(color: TagColorScheme): string {
   if (color == "gray") {
     return css`
       border-radius: 1px;
@@ -98,9 +98,7 @@ export function tagLightPrepare(color: TagColorScheme): SerializedStyles {
   }
 }
 
-export function tagFillNormal(
-  color: Extract<TagColorScheme, string>,
-): SerializedStyles {
+export function tagFillNormal(color: Extract<TagColorScheme, string>): string {
   return css`
     border-radius: 1px;
     color: ${globalColor(`--${illaPrefix}-white-01`)};
@@ -110,7 +108,7 @@ export function tagFillNormal(
 
 export function tagOutlineNormal(
   color: Extract<TagColorScheme, string>,
-): SerializedStyles {
+): string {
   return css`
     border-radius: 1px;
     color: ${color};

@@ -1,6 +1,5 @@
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { ProgressColorScheme } from "./interface"
-import { SerializedStyles } from "@storybook/theming"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 const colorSchemes: ProgressColorScheme[] = [
@@ -25,7 +24,7 @@ export const applyCircleStatus = css`
 export function applyCircleSvgContainer(
   width: string,
   trailColorScheme: ProgressColorScheme,
-): SerializedStyles {
+): string {
   let color
   if (trailColorScheme == "gray") {
     color = globalColor(`--${illaPrefix}-${trailColorScheme}-08`)
@@ -46,7 +45,7 @@ export function applyCircleProgressContainer(
   colorScheme: ProgressColorScheme,
   width: string,
   percent: number,
-): SerializedStyles {
+): string {
   const perimeter = `calc(${Math.PI} * 2 * ${width} / 2)`
 
   let color

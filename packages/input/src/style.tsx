@@ -1,5 +1,5 @@
 import chroma from "chroma-js"
-import { css, SerializedStyles } from "@emotion/react"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { InputSize, StateValue } from "./interface"
 
@@ -51,7 +51,7 @@ export const errorOutlineStyle = css`
 `
 
 export function applyVariantStyle(variant?: string) {
-  let inputStyle: SerializedStyles
+  let inputStyle: string
   switch (variant) {
     default:
     case "fill":
@@ -69,7 +69,7 @@ export function applyVariantStyle(variant?: string) {
   return inputStyle
 }
 
-export function applyContainerCss(stateValue: StateValue) {
+export function applyContainerCss(stateValue: StateValue): string {
   return css`
     width: 100%;
     position: relative;
@@ -87,7 +87,7 @@ export function applyContainerCss(stateValue: StateValue) {
 }
 
 function applySizeStyle(size?: string) {
-  let sizeCss: SerializedStyles
+  let sizeCss: string
   switch (size) {
     default:
     case "large":
@@ -111,8 +111,8 @@ function applySizeStyle(size?: string) {
 }
 
 function applyStatus(stateValue: StateValue) {
-  let mainStyle: SerializedStyles
-  let disableStyle, hoverStyle, inputStyle, errorStyle: SerializedStyles
+  let mainStyle: string
+  let disableStyle, hoverStyle, inputStyle, errorStyle: string
 
   switch (stateValue?.variant) {
     default:
@@ -171,8 +171,8 @@ function applyStatus(stateValue: StateValue) {
 export function applySizeCss(
   requirePadding?: boolean,
   size?: InputSize,
-): SerializedStyles {
-  let paddingCss: SerializedStyles = css()
+): string {
+  let paddingCss: string = css()
   if (requirePadding && size == "small") {
     paddingCss = css`
       padding: 0 12px;
@@ -201,11 +201,13 @@ export function applyInputContainer(
     border: solid 1px ${globalColor(`--${illaPrefix}-gray-08`)};
     transition: all 200ms ease-in-out;
     ${applySizeCss(requirePadding, stateValue?.size)};
+
     ${applyStatus(stateValue)}
     &:first-of-type {
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
     }
+
     &:last-of-type {
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
@@ -214,7 +216,7 @@ export function applyInputContainer(
 }
 
 export function applyInputStyle(textCenterHorizontal?: boolean | undefined) {
-  let textAlignCss: SerializedStyles
+  let textAlignCss: string
   if (textCenterHorizontal) {
     textAlignCss = css`
       text-align: center;
@@ -253,7 +255,7 @@ export function applyInputStyle(textCenterHorizontal?: boolean | undefined) {
 }
 
 function baseFixCls(stateValue: StateValue) {
-  let sizeCss: SerializedStyles
+  let sizeCss: string
   switch (stateValue?.size) {
     default:
       sizeCss = css`
@@ -298,7 +300,7 @@ export function applySuffixCls(stateValue: StateValue) {
 }
 
 export function applyAddonCss(stateValue: StateValue) {
-  let inputStyle: SerializedStyles
+  let inputStyle: string
   switch (stateValue?.variant) {
     default:
     case "fill":
@@ -340,6 +342,7 @@ export function applyAddonCss(stateValue: StateValue) {
     padding: 0 16px;
     line-height: initial;
     height: 100%;
+
     &:first-of-type {
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;

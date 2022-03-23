@@ -1,16 +1,15 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
-import { forwardRef, useRef, useState, useEffect, useReducer } from "react"
+import { forwardRef, useEffect, useReducer, useRef, useState } from "react"
 import { InputElement, InputElementProps } from "@illa-design/input"
-import { isObject, omit, isNumber } from "@illa-design/system"
+import { isNumber, isObject, omit } from "@illa-design/system"
 import {
+  ErrorIcon,
+  ExpandIcon,
   LoadingIcon,
   SearchIcon,
-  ExpandIcon,
-  ErrorIcon,
 } from "@illa-design/icon"
 import { InputTag, ObjectValueType } from "@illa-design/input-tag"
-import { SelectViewProps, SelectStateValue } from "./interface"
+import { SelectStateValue, SelectViewProps } from "./interface"
 import {
   applyIconStyle,
   applySelectContent,
@@ -18,8 +17,8 @@ import {
   applySelectViewText,
   iconPointerStyle,
 } from "./style"
-import { css } from "@emotion/react"
-import { globalColor, illaPrefix } from "@illa-design/theme"
+import { css } from "@emotion/css"
+import { cx, globalColor, illaPrefix } from "@illa-design/theme"
 
 const SearchStatus = {
   BEFORE: 0,
@@ -31,6 +30,7 @@ export const SelectView = forwardRef<HTMLDivElement, SelectViewProps>(
   (props, ref) => {
     const {
       children,
+      className,
       value,
       mode,
       size = "medium",
@@ -150,14 +150,14 @@ export const SelectView = forwardRef<HTMLDivElement, SelectViewProps>(
     const suffixIcon = loading ? (
       <LoadingIcon
         spin
-        css={css`
+        className={css`
           color: ${globalColor(`--${illaPrefix}-gray-07`)};
         `}
       />
     ) : showSearch && popupVisible ? (
       <SearchIcon />
     ) : popupVisible ? (
-      <ExpandIcon css={css({ transform: "rotate(180deg)" })} />
+      <ExpandIcon className={css({ transform: "rotate(180deg)" })} />
     ) : (
       <ExpandIcon />
     )
@@ -205,12 +205,14 @@ export const SelectView = forwardRef<HTMLDivElement, SelectViewProps>(
       return (
         <>
           <InputElement
-            css={applySelectViewText(needShowInput)}
+            className={applySelectViewText(needShowInput)}
             ref={inputRef}
             disabled={disabled}
             {...inputProps}
           />
-          <span css={applySelectViewText(!needShowInput)}>{_inputValue}</span>
+          <span className={applySelectViewText(!needShowInput)}>
+            {_inputValue}
+          </span>
         </>
       )
     }
@@ -252,11 +254,11 @@ export const SelectView = forwardRef<HTMLDivElement, SelectViewProps>(
 
       return (
         <InputTag
-          css={css`
-            width: 100% !important;
-            border: unset !important;
-            padding: unset !important;
-            box-shadow: unset !important;
+          className={css`
+            width: 100%;
+            border: unset;
+            padding: unset;
+            box-shadow: unset;
           `}
           disableInput={!(showSearch || isMultipleMode)}
           inputRef={inputRef}
@@ -273,7 +275,7 @@ export const SelectView = forwardRef<HTMLDivElement, SelectViewProps>(
     return (
       <div
         ref={ref}
-        css={applySelectView(stateValue)}
+        className={cx(applySelectView(stateValue), className)}
         onClick={onClick}
         onFocus={(event) => {
           if (disabled) {
@@ -294,21 +296,21 @@ export const SelectView = forwardRef<HTMLDivElement, SelectViewProps>(
         ])}
       >
         <div
-          css={applySelectContent(stateValue)}
+          className={applySelectContent(stateValue)}
           onClick={(e) => popupVisible && canFocusInput && e.stopPropagation()}
         >
           {isMultipleMode ? renderMultiple() : renderSingle()}
           {!disabled && !isEmptyValue && allowClear ? (
             <span
               title="selectRemoveIcon"
-              css={iconPointerStyle(size)}
+              className={iconPointerStyle(size)}
               onClick={onClear}
               onMouseDown={(event) => event?.preventDefault()}
             >
               {removeIcon ? removeIcon : <ErrorIcon />}
             </span>
           ) : null}
-          <div css={applyIconStyle}>{suffixIcon}</div>
+          <div className={applyIconStyle}>{suffixIcon}</div>
         </div>
       </div>
     )

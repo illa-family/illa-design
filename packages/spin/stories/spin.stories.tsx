@@ -1,8 +1,7 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { Meta, Story } from "@storybook/react"
 import { Spin, SpinProps } from "../src"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { SiPandas } from "react-icons/all"
 import { SearchIcon } from "@illa-design/icon"
 
@@ -29,7 +28,7 @@ const Template: Story<SpinProps> = (props) => {
   return (
     <Spin {...props}>
       <div
-        css={css`
+        className={css`
           width: 200px;
           height: 200px;
           background-color: #004444;

@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef } from "react"
 import { TabContentProps } from "./interface"
 import {
@@ -13,14 +12,14 @@ export const TabContent = forwardRef<HTMLDivElement, TabContentProps>(
 
     return (
       <div
-        css={
+        className={
           variant === "card"
             ? tabCardContentContainerCss
             : tabContentContainerCss
         }
         ref={ref}
       >
-        <div css={applyTabContentWrapperCss(selectedIndex, animated)}>
+        <div className={applyTabContentWrapperCss(selectedIndex, animated)}>
           {tabPanes && tabPanes?.map((item) => item)}
         </div>
       </div>

@@ -1,6 +1,5 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
-import { forwardRef, useState, useMemo } from "react"
+import { forwardRef, useMemo, useState } from "react"
 import { useMergeValue } from "@illa-design/system"
 import { InputProps } from "./interface"
 import {
@@ -14,14 +13,20 @@ import {
 } from "./style"
 import { InputElement } from "./input-element"
 import { formatForRule } from "./utils"
-import { SerializedStyles } from "@emotion/react"
+import { cx } from "@emotion/css"
 
 const inputAddon = (
   node?: React.ReactNode,
   custom?: boolean,
-  style?: SerializedStyles,
+  style?: string,
 ): React.ReactNode | null => {
-  return node ? custom ? <>{node}</> : <span css={style}>{node}</span> : null
+  return node ? (
+    custom ? (
+      <>{node}</>
+    ) : (
+      <span className={style}>{node}</span>
+    )
+  ) : null
 }
 
 export const Input = forwardRef<HTMLDivElement, InputProps>((props, ref) => {
@@ -80,8 +85,10 @@ export const Input = forwardRef<HTMLDivElement, InputProps>((props, ref) => {
 
   if (maxLength && showCount) {
     suffix.render = (
-      <span css={applyCountLimitStyle}>
-        <span css={applyLengthErrorStyle(lengthError)}>{valueLength}</span>
+      <span className={applyCountLimitStyle}>
+        <span className={applyLengthErrorStyle(lengthError)}>
+          {valueLength}
+        </span>
         <span>/{maxLength}</span>
       </span>
     )
@@ -90,16 +97,15 @@ export const Input = forwardRef<HTMLDivElement, InputProps>((props, ref) => {
   return (
     <div
       ref={ref}
-      css={applyContainerCss(stateValue)}
       style={style}
-      className={className}
+      className={cx(applyContainerCss(stateValue), className)}
     >
       {inputAddon(
         addonBefore?.render,
         addonBefore?.custom,
         applyAddonCss(stateValue),
       )}
-      <span css={applyInputContainer(stateValue, requirePadding)}>
+      <span className={applyInputContainer(stateValue, requirePadding)}>
         {inputAddon(prefix?.render, prefix?.custom, applyPrefixCls(stateValue))}
         <InputElement
           ref={inputRef}

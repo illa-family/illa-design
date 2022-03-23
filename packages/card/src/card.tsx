@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import React, { forwardRef, Children, cloneElement, ReactElement } from "react"
 import { CardGrid } from "./card-grid"
 import { Meta } from "./meta"
@@ -15,6 +14,7 @@ import {
   applyCardHeaderTitle,
   applyCardActionsRight,
 } from "./style"
+import { cx } from "@emotion/css"
 
 export const Card = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
   const {
@@ -24,6 +24,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
     size = "medium",
     hoverable = false,
     cover,
+    className,
     loading = false,
     bordered = true,
     children,
@@ -45,10 +46,10 @@ export const Card = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
 
   const actionList =
     actions && actions.length ? (
-      <div css={applyCardActions(isContainMeta)}>
-        <div css={applyCardActionsRight}>
+      <div className={applyCardActions(isContainMeta)}>
+        <div className={applyCardActionsRight}>
           {actions.map((action, index) => (
-            <span key={`action-${index}`} css={applyCardActionItem}>
+            <span key={`action-${index}`} className={applyCardActionItem}>
               {action}
             </span>
           ))}
@@ -67,17 +68,21 @@ export const Card = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
   )
 
   return (
-    <div ref={ref} css={applyCard(bordered, hoverable)} {...restProps}>
+    <div
+      ref={ref}
+      className={cx(applyCard(bordered, hoverable), className)}
+      {...restProps}
+    >
       {title || extra ? (
-        <div css={applyCardHeader(size)}>
-          {title && <div css={applyCardHeaderTitle}>{title}</div>}
-          {extra && <div css={applyCardHeaderExtra}>{extra}</div>}
+        <div className={applyCardHeader(size)}>
+          {title && <div className={applyCardHeaderTitle}>{title}</div>}
+          {extra && <div className={applyCardHeaderExtra}>{extra}</div>}
         </div>
       ) : null}
 
-      {cover ? <div css={applyCardCover}>{cover}</div> : null}
+      {cover ? <div className={applyCardCover}>{cover}</div> : null}
 
-      <div css={applyCardBody(size, loading, isContainGrid)}>
+      <div className={applyCardBody(size, loading, isContainGrid)}>
         {loading ? <Spin /> : handledChildren}
         {isContainMeta ? null : actionList}
       </div>

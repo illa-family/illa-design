@@ -1,13 +1,13 @@
-/** @jsxImportSource @emotion/react */
 import React, { forwardRef, useState } from "react"
 import { SwitchProps } from "./interface"
 import {
   applySwitch,
   applySwitchDot,
-  applySwitchText,
   applySwitchIcon,
+  applySwitchText,
 } from "./style"
 import { isObject } from "@illa-design/system"
+import { cx } from "@emotion/css"
 
 export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
   (props, ref) => {
@@ -19,6 +19,7 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
       uncheckedText = "",
       checkedIcon,
       uncheckedIcon,
+      className,
       checked: propsChecked,
       defaultChecked = false,
       onChange,
@@ -43,23 +44,23 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
 
     return (
       <button
-        css={applySwitch(colorScheme, mergedChecked, size)}
         ref={ref}
+        className={cx(applySwitch(colorScheme, mergedChecked, size), className)}
         onClick={onHandleClick}
         disabled={disabled}
         type="button"
         {...restProps}
       >
-        <div css={applySwitchDot(size, mergedChecked, disabled)}>
+        <div className={applySwitchDot(size, mergedChecked, disabled)}>
           {(checkedIcon || uncheckedIcon) && (
-            <div css={applySwitchIcon}>
+            <div className={applySwitchIcon}>
               {mergedChecked ? checkedIcon : uncheckedIcon}
             </div>
           )}
         </div>
-        <div css={applySwitchText(mergedChecked, size)}>
+        <div className={applySwitchText(mergedChecked, size)}>
           {isObject(renderText) ? (
-            <div css={applySwitchIcon}>{renderText}</div>
+            <div className={applySwitchIcon}>{renderText}</div>
           ) : (
             renderText
           )}

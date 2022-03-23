@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import React, { forwardRef, ReactElement, useState, useMemo } from "react"
 import {
   TabHeaderChildProps,
@@ -165,7 +164,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
   }, [variant, tabPosition])
 
   return (
-    <div css={containerCss} placeholder={placeholder} ref={ref} {...rest}>
+    <div className={containerCss} placeholder={placeholder} ref={ref} {...rest}>
       {isAhead(tabPosition) && _variant === "line" && (
         <TabLineHeader {...headerProps} />
       )}

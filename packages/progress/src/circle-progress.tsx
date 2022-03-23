@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, ReactNode } from "react"
 import { ProgressProps } from "./interface"
 import { applyCircleStatus, applyProgressText } from "./circle-progress-style"
@@ -9,7 +8,7 @@ import {
   applyProgressContainerBg,
   applySvgContainer,
 } from "./common-style"
-import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx, globalColor, illaPrefix } from "@illa-design/theme"
 
 export const CircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
   (props, ref) => {
@@ -22,6 +21,7 @@ export const CircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
       strokeWidth = "4px",
       trailColor = "gray",
       showText = true,
+      className,
       formatText = (percent: number) => {
         return `${percent}%`
       },
@@ -61,10 +61,14 @@ export const CircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
     }
 
     return (
-      <div css={applyContainer(width)} ref={ref} {...otherProps}>
-        <svg css={applySvgContainer(width)}>
+      <div
+        className={cx(applyContainer(width), className)}
+        ref={ref}
+        {...otherProps}
+      >
+        <svg className={applySvgContainer(width)}>
           <circle
-            css={applyProgressContainerBg(trailColor, width, strokeWidth)}
+            className={applyProgressContainerBg(trailColor, width, strokeWidth)}
             fill="none"
             cx={center}
             cy={center}
@@ -72,7 +76,7 @@ export const CircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
             strokeWidth={strokeWidth}
           />
           <circle
-            css={applyProgressContainer(
+            className={applyProgressContainer(
               finalColor,
               width,
               strokeWidth,
@@ -87,10 +91,10 @@ export const CircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
           />
         </svg>
         {status == "normal" && showText && (
-          <span css={applyProgressText}>{formatText(percent)}</span>
+          <span className={applyProgressText}>{formatText(percent)}</span>
         )}
         {status != "normal" && (
-          <span css={applyCircleStatus}>{statusComponent}</span>
+          <span className={applyCircleStatus}>{statusComponent}</span>
         )}
       </div>
     )

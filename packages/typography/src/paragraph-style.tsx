@@ -1,6 +1,6 @@
-import { css, SerializedStyles } from "@storybook/theming"
+import { css, string } from "@storybook/theming"
 
-export function applyParagraphContainer(indent: boolean): SerializedStyles {
+export function applyParagraphContainer(indent: boolean): string {
   if (indent) {
     return css`
       text-indent: 2em;
@@ -10,7 +10,7 @@ export function applyParagraphContainer(indent: boolean): SerializedStyles {
   }
 }
 
-export function applyTextContainer(fontSize: string): SerializedStyles {
+export function applyTextContainer(fontSize: string): string {
   return css`
     font-size: ${fontSize};
   `

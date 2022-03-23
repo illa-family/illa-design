@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef } from "react"
 import { FileListItemProps } from "./interface"
 import {
@@ -26,16 +25,18 @@ export const FileListPicItem = forwardRef<HTMLSpanElement, FileListItemProps>(
     let rightView = getRightIcon(status, item, percent, reUpload)
     const deleteButton = getDeleteButton(item, deleteUpload)
     return (
-      <div css={fileItemContainerCss}>
-        <div css={filePicItemCss}>
+      <div className={fileItemContainerCss}>
+        <div className={filePicItemCss}>
           <Image
-            css={imageSizeCss}
+            className={imageSizeCss}
             width={40}
             height={40}
             radius={"2px"}
             src={picUrl}
           />
-          <span css={applyFileItemTitleCss(status == "error")}>{name}</span>
+          <span className={applyFileItemTitleCss(status == "error")}>
+            {name}
+          </span>
           {rightView}
         </div>
         {deleteButton}

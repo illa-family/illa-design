@@ -1,7 +1,6 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef } from "react"
 import { IconProps } from "./interface"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { omit } from "@illa-design/system"
 import { rotateAnimation } from "./style"
 
@@ -28,7 +27,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>((props, ref) => {
   return (
     <svg
       ref={ref}
-      css={finalCss}
+      className={finalCss}
       width={width}
       height={height}
       color={color}

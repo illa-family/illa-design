@@ -1,11 +1,11 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
-import { forwardRef, useEffect, useContext, useCallback } from "react"
+import { forwardRef, useCallback, useContext, useEffect } from "react"
 import { useMergeValue } from "@illa-design/system"
 import { CheckmarkIcon, ReduceIcon } from "@illa-design/icon"
 import { CheckboxProps } from "./interface"
-import { applyMergeCss, applyCheckboxSize, applyCheckState } from "./style"
+import { applyCheckboxSize, applyCheckState, applyMergeCss } from "./style"
 import { CheckboxGroupContext } from "./context"
+import { cx } from "@emotion/css"
 
 export const Checkbox = forwardRef<HTMLLabelElement, CheckboxProps>(
   (props, ref) => {
@@ -17,6 +17,7 @@ export const Checkbox = forwardRef<HTMLLabelElement, CheckboxProps>(
       disabled,
       value,
       onChange,
+      className,
       checked,
       indeterminate,
       defaultChecked,
@@ -41,10 +42,14 @@ export const Checkbox = forwardRef<HTMLLabelElement, CheckboxProps>(
     }, [value])
 
     return (
-      <label css={applyMergeCss(props)} ref={ref} {...otherProps}>
+      <label
+        ref={ref}
+        className={cx(applyMergeCss(props), className)}
+        {...otherProps}
+      >
         <input
           type="checkbox"
-          css={applyCheckboxSize(currentChecked || indeterminate)}
+          className={applyCheckboxSize(currentChecked || indeterminate)}
           value={value}
           checked={currentChecked}
           disabled={disabled}
@@ -63,9 +68,9 @@ export const Checkbox = forwardRef<HTMLLabelElement, CheckboxProps>(
           onClick={(e) => e.stopPropagation()}
         />
         {indeterminate ? (
-          <ReduceIcon css={applyCheckState(true)} />
+          <ReduceIcon className={applyCheckState(true)} />
         ) : (
-          <CheckmarkIcon css={applyCheckState(currentChecked)} />
+          <CheckmarkIcon className={applyCheckState(currentChecked)} />
         )}
         {children}
       </label>

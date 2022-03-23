@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef, useState, useCallback, useEffect } from "react"
 import * as ReactDOM from "react-dom"
@@ -15,6 +14,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion"
 import { Notice } from "./notice"
 import { applyNotificationSlide, applyNotificationWrapper } from "./style"
+import { cx } from "@emotion/css"
 
 let maxCount: number
 let duration: number
@@ -56,7 +56,13 @@ export const Notification: NotificationComponent = forwardRef<
   HTMLDivElement,
   NotificationProps
 >((props, ref) => {
-  const { notice, shouldClear, position = "topRight", removeId } = props
+  const {
+    notice,
+    shouldClear,
+    position = "topRight",
+    removeId,
+    className,
+  } = props
   const [notificationSet, setNotificationSet] = useState<NotificationSet>({
     topRight: [],
     topLeft: [],
@@ -139,7 +145,10 @@ export const Notification: NotificationComponent = forwardRef<
   }, [notice])
 
   return (
-    <div ref={ref} css={applyNotificationWrapper(position)}>
+    <div
+      ref={ref}
+      className={cx(applyNotificationWrapper(position), className)}
+    >
       <AnimatePresence>
         {notificationSet[position].map((notice) => (
           <motion.div

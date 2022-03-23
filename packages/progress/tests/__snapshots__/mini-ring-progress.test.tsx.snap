@@ -20,12 +20,12 @@ exports[`Progress renders with colors 1`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 16px;
   height: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   stroke: #fcc;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -35,7 +35,7 @@ exports[`Progress renders with colors 1`] = `
   stroke-dasharray: calc(3.141592653589793 * 2 * (16px - 4px) / 2);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #ff4747;
@@ -49,14 +49,14 @@ exports[`Progress renders with colors 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-red"
 >
   <svg
-    class="emotion-1"
+    class="emotion-2"
   >
     <circle
-      class="emotion-2"
+      class="emotion-3"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -64,7 +64,7 @@ exports[`Progress renders with colors 1`] = `
       stroke-width="4px"
     />
     <circle
-      class="emotion-3"
+      class="emotion-4"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -95,12 +95,12 @@ exports[`Progress renders with colors 2`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 16px;
   height: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   stroke: #ebebeb;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -110,7 +110,7 @@ exports[`Progress renders with colors 2`] = `
   stroke-dasharray: calc(3.141592653589793 * 2 * (16px - 4px) / 2);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #1f1f1f;
@@ -124,14 +124,14 @@ exports[`Progress renders with colors 2`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-gray"
 >
   <svg
-    class="emotion-1"
+    class="emotion-2"
   >
     <circle
-      class="emotion-2"
+      class="emotion-3"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -139,7 +139,7 @@ exports[`Progress renders with colors 2`] = `
       stroke-width="4px"
     />
     <circle
-      class="emotion-3"
+      class="emotion-4"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -170,12 +170,12 @@ exports[`Progress renders with colors 3`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 16px;
   height: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   stroke: #321321;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -185,7 +185,7 @@ exports[`Progress renders with colors 3`] = `
   stroke-dasharray: calc(3.141592653589793 * 2 * (16px - 4px) / 2);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #123123;
@@ -199,14 +199,14 @@ exports[`Progress renders with colors 3`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-custom"
 >
   <svg
-    class="emotion-1"
+    class="emotion-2"
   >
     <circle
-      class="emotion-2"
+      class="emotion-3"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -214,7 +214,7 @@ exports[`Progress renders with colors 3`] = `
       stroke-width="4px"
     />
     <circle
-      class="emotion-3"
+      class="emotion-4"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -245,12 +245,12 @@ exports[`Progress renders with custom width 1`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 100px;
   height: 100px;
 }
 
-.emotion-2 {
+.emotion-3 {
   stroke: #ebebeb;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -260,7 +260,7 @@ exports[`Progress renders with custom width 1`] = `
   stroke-dasharray: calc(3.141592653589793 * 2 * (100px - 10px) / 2);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #1e6fff;
@@ -274,14 +274,14 @@ exports[`Progress renders with custom width 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress"
 >
   <svg
-    class="emotion-1"
+    class="emotion-2"
   >
     <circle
-      class="emotion-2"
+      class="emotion-3"
       cx="calc(100px / 2)"
       cy="calc(100px / 2)"
       fill="none"
@@ -289,7 +289,7 @@ exports[`Progress renders with custom width 1`] = `
       stroke-width="10px"
     />
     <circle
-      class="emotion-3"
+      class="emotion-4"
       cx="calc(100px / 2)"
       cy="calc(100px / 2)"
       fill="none"
@@ -320,12 +320,12 @@ exports[`Progress renders with different status 1`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 16px;
   height: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   stroke: #ebebeb;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -335,7 +335,7 @@ exports[`Progress renders with different status 1`] = `
   stroke-dasharray: calc(3.141592653589793 * 2 * (16px - 4px) / 2);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #00aa5b;
@@ -349,14 +349,14 @@ exports[`Progress renders with different status 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-success"
 >
   <svg
-    class="emotion-1"
+    class="emotion-2"
   >
     <circle
-      class="emotion-2"
+      class="emotion-3"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -364,7 +364,7 @@ exports[`Progress renders with different status 1`] = `
       stroke-width="4px"
     />
     <circle
-      class="emotion-3"
+      class="emotion-4"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -395,12 +395,12 @@ exports[`Progress renders with different status 2`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 16px;
   height: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   stroke: #ebebeb;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -410,7 +410,7 @@ exports[`Progress renders with different status 2`] = `
   stroke-dasharray: calc(3.141592653589793 * 2 * (16px - 4px) / 2);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #ff4747;
@@ -424,14 +424,14 @@ exports[`Progress renders with different status 2`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-error"
 >
   <svg
-    class="emotion-1"
+    class="emotion-2"
   >
     <circle
-      class="emotion-2"
+      class="emotion-3"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -439,7 +439,7 @@ exports[`Progress renders with different status 2`] = `
       stroke-width="4px"
     />
     <circle
-      class="emotion-3"
+      class="emotion-4"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -470,12 +470,12 @@ exports[`Progress renders with steps 1`] = `
   display: inline-flex;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 16px;
   height: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   stroke: #ebebeb;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -485,7 +485,7 @@ exports[`Progress renders with steps 1`] = `
   stroke-dasharray: calc(3.141592653589793 * 2 * (16px - 4px) / 2);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   stroke: #1e6fff;
@@ -499,14 +499,14 @@ exports[`Progress renders with steps 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress"
 >
   <svg
-    class="emotion-1"
+    class="emotion-2"
   >
     <circle
-      class="emotion-2"
+      class="emotion-3"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"
@@ -514,7 +514,7 @@ exports[`Progress renders with steps 1`] = `
       stroke-width="4px"
     />
     <circle
-      class="emotion-3"
+      class="emotion-4"
       cx="calc(16px / 2)"
       cy="calc(16px / 2)"
       fill="none"

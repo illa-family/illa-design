@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import React, { forwardRef, useState, useCallback, useEffect } from "react"
+import React, { forwardRef, useCallback, useEffect, useState } from "react"
 import ReactDOM from "react-dom"
 import {
   MessageComponent,
@@ -7,15 +6,16 @@ import {
   MessageSet,
   MessageWrapper,
 } from "./interface"
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import {
-  Notice,
-  NoticeProps,
-  MessageType,
   ConfigProps,
   MessagePosition,
+  MessageType,
+  Notice,
+  NoticeProps,
 } from "@illa-design/notification"
 import { applyMessageSlide, applyMessageWrapper } from "./style"
+import { cx } from "@emotion/css"
 
 let maxCount: number
 let duration: number
@@ -53,7 +53,7 @@ export const Message: MessageComponent = forwardRef<
   HTMLDivElement,
   MessageProps
 >((props, ref) => {
-  const { notice, shouldClear, position = "top", removeId } = props
+  const { notice, shouldClear, position = "top", className, removeId } = props
   const [messageSet, setMessageSet] = useState<MessageSet>({
     top: [],
     bottom: [],
@@ -131,7 +131,10 @@ export const Message: MessageComponent = forwardRef<
   }, [notice])
 
   return (
-    <div ref={ref} css={applyMessageWrapper(position)}>
+    <div
+      ref={ref}
+      className={cx(applyMessageWrapper(position), className)}
+    >
       <AnimatePresence>
         {messageSet[position].map((notice) => (
           <motion.div

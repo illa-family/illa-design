@@ -1,9 +1,8 @@
-import { css } from "@emotion/react"
-import { SerializedStyles } from "@storybook/theming"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { ListSize } from "./interface"
 
-export function applyListContainer(bordered?: boolean): SerializedStyles {
+export function applyListContainer(bordered?: boolean): string {
   let containerCss = css`
     display: inline-flex;
     min-width: 686px;
@@ -22,8 +21,8 @@ export function applyListContainer(bordered?: boolean): SerializedStyles {
 export function applyListItemOuter(
   size: ListSize,
   hoverable?: boolean,
-): SerializedStyles {
-  let sizeCss: SerializedStyles
+): string {
+  let sizeCss: string
   switch (size) {
     case "small":
       sizeCss = css`
@@ -41,7 +40,7 @@ export function applyListItemOuter(
       `
       break
   }
-  let hoverableCss: SerializedStyles = css``
+  let hoverableCss: string = css``
   if (hoverable) {
     hoverableCss = css`
       &:hover {
@@ -100,7 +99,7 @@ export const applyListItemExtraStyle = css`
 `
 
 export function applyBarStyle(size: ListSize) {
-  let sizeCss: SerializedStyles
+  let sizeCss: string
   switch (size) {
     case "small":
       sizeCss = css`

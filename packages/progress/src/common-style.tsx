@@ -1,7 +1,6 @@
 import { ProgressColorScheme } from "./interface"
-import { SerializedStyles } from "@storybook/theming"
 import { globalColor, illaPrefix } from "@illa-design/theme"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 
 const colorSchemes: ProgressColorScheme[] = [
   "white",
@@ -17,14 +16,14 @@ const colorSchemes: ProgressColorScheme[] = [
   "purple",
 ]
 
-export function applySvgContainer(width: string): SerializedStyles {
+export function applySvgContainer(width: string): string {
   return css`
     width: ${width};
     height: ${width};
   `
 }
 
-export function applyContainer(width: string): SerializedStyles {
+export function applyContainer(width: string): string {
   return css`
     position: relative;
     width: ${width};
@@ -41,7 +40,7 @@ export function applyProgressContainer(
   width: string,
   strokeWidth: string,
   percent: number,
-): SerializedStyles {
+): string {
   const perimeter = `calc(${Math.PI} * 2 * (${width} - ${strokeWidth}) / 2)`
 
   let color
@@ -67,7 +66,7 @@ export function applyProgressContainerBg(
   trailColorScheme: ProgressColorScheme,
   width: string,
   strokeWidth: string,
-): SerializedStyles {
+): string {
   const perimeter = `calc(${Math.PI} * 2 * (${width} - ${strokeWidth}) / 2)`
 
   let color

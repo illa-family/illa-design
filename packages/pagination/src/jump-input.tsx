@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, useContext, useState } from "react"
 import { JumperInputProps } from "./interface"
 import {
@@ -27,10 +26,10 @@ export const JumperInput = forwardRef<HTMLSpanElement, JumperInputProps>(
     const goToText = locale["go"]
 
     return (
-      <span css={paginationContainer}>
-        <span css={jumperTitleCss}>{goToText}</span>
+      <span className={paginationContainer}>
+        <span className={jumperTitleCss}>{goToText}</span>
         <Input
-          css={applyJumperInputCss(size, wholeDisable)}
+          className={applyJumperInputCss(size, wholeDisable)}
           value={compositionValue}
           size={size}
           textCenterHorizontal={true}

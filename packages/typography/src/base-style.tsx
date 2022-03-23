@@ -1,6 +1,6 @@
 import * as React from "react"
 import { TypographyColorScheme } from "./interface"
-import { css, SerializedStyles } from "@storybook/theming"
+import { css, string } from "@storybook/theming"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 const colorSchemes = [
@@ -27,9 +27,7 @@ export const applyCopyContainer = css`
   align-items: center;
 `
 
-export function applyFontColor(
-  colorScheme: TypographyColorScheme,
-): SerializedStyles {
+export function applyFontColor(colorScheme: TypographyColorScheme): string {
   const color = colorSchemes.includes(colorScheme)
     ? globalColor(`--${illaPrefix}-${colorScheme}-02`)
     : colorScheme
@@ -46,7 +44,7 @@ export function applyFontContentStyle(
   deleted?: boolean,
   disabled?: boolean,
   code?: boolean,
-): SerializedStyles {
+): string {
   let finalCss = css``
 
   if (code) {
@@ -96,7 +94,7 @@ export function applyFontContentStyle(
   return finalCss
 }
 
-export function applyExpandLabelCss(): SerializedStyles {
+export function applyExpandLabelCss(): string {
   return css`
     cursor: pointer;
     margin: 0 4px;
@@ -105,7 +103,7 @@ export function applyExpandLabelCss(): SerializedStyles {
   `
 }
 
-export function applyCopyableContainerSize(): SerializedStyles {
+export function applyCopyableContainerSize(): string {
   return css`
     cursor: pointer;
     margin-left: 4px;

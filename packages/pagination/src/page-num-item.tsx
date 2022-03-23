@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef } from "react"
 import { PageNumProps } from "./interface"
 import {
@@ -25,7 +24,7 @@ export const PageNumItem = forwardRef<HTMLSpanElement, PageNumProps>(
 
     return isMoreIndex ? (
       <span
-        css={itemCss}
+        className={itemCss}
         onClick={() => {
           if (wholeDisable) return
           handleClick(index)
@@ -35,7 +34,7 @@ export const PageNumItem = forwardRef<HTMLSpanElement, PageNumProps>(
       </span>
     ) : (
       <span
-        css={itemCss}
+        className={itemCss}
         onClick={() => {
           if (wholeDisable) return
           handleClick(index)

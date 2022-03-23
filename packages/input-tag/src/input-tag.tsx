@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import {
   forwardRef,
@@ -19,6 +18,7 @@ import {
 } from "./style"
 import { formatValue } from "./utils"
 import { RenderTags } from "./render-tag"
+import { cx } from "@emotion/css"
 
 // default validate func
 const defaultValidate = (inputValue: string, values: ObjectValueType[]) =>
@@ -27,7 +27,6 @@ const defaultValidate = (inputValue: string, values: ObjectValueType[]) =>
 export const InputTag = forwardRef<HTMLDivElement, InputTagProps>(
   (props, ref) => {
     const {
-      style,
       className,
       inputRef,
       value,
@@ -112,9 +111,7 @@ export const InputTag = forwardRef<HTMLDivElement, InputTagProps>(
 
     return (
       <div
-        css={applyInputContainer(stateValue)}
-        style={style}
-        className={className}
+        className={cx(applyInputContainer(stateValue), className)}
         ref={ref}
         onClick={(e) => {
           !focus && refInput?.current?.focus?.()
@@ -122,7 +119,7 @@ export const InputTag = forwardRef<HTMLDivElement, InputTagProps>(
         }}
         {...rest}
       >
-        <span css={applyInputInnerCss(stateValue)}>
+        <span className={applyInputInnerCss(stateValue)}>
           <RenderTags
             value={currentValue}
             size={size}
@@ -161,12 +158,12 @@ export const InputTag = forwardRef<HTMLDivElement, InputTagProps>(
             }}
           />
           {suffix ? (
-            <span css={applySuffixCls(stateValue)}>{suffix}</span>
+            <span className={applySuffixCls(stateValue)}>{suffix}</span>
           ) : null}
         </span>
         {allowClear && !disabled && currentValue?.length ? (
           <span
-            css={pointerStyle}
+            className={pointerStyle}
             onClick={(e) => {
               e.stopPropagation()
               valueChangeHandler([])

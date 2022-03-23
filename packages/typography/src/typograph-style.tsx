@@ -1,5 +1,5 @@
 import { HeadingLevel } from "./interface"
-import { css, SerializedStyles } from "@storybook/theming"
+import { css, string } from "@storybook/theming"
 
 export function getHeadingSize(level: HeadingLevel): string[] {
   // font-size line-height
@@ -19,7 +19,7 @@ export function getHeadingSize(level: HeadingLevel): string[] {
   }
 }
 
-export function applyTypoContainer(): SerializedStyles {
+export function applyTypoContainer(): string {
   return css`
     word-break: break-all;
 

@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef } from "react"
 import { ListItemProps } from "./interface"
 import {
@@ -7,17 +6,24 @@ import {
   applyListItemExtraStyle,
   applyListItemInner,
 } from "./style"
+import { cx } from "@emotion/css"
 
 export const ListItem = forwardRef<HTMLDivElement, ListItemProps>(
   (props, ref) => {
-    const { actions, extra, ...otherProps } = props
+    const { actions, extra, className, ...otherProps } = props
     return (
-      <div css={applyListItemContainer} ref={ref} {...otherProps}>
-        <div css={applyListItemInner}>
+      <div
+        className={cx(applyListItemContainer, className)}
+        ref={ref}
+        {...otherProps}
+      >
+        <div className={applyListItemInner}>
           {props.children}
-          {actions && <div css={applyListItemActionsStyle}>{actions}</div>}
+          {actions && (
+            <div className={applyListItemActionsStyle}>{actions}</div>
+          )}
         </div>
-        {extra && <div css={applyListItemExtraStyle}>{extra}</div>}
+        {extra && <div className={applyListItemExtraStyle}>{extra}</div>}
       </div>
     )
   },

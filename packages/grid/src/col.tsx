@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { Children, forwardRef, useContext } from "react"
+import { forwardRef, useContext } from "react"
 import { ColProps } from "./interface"
 import { RowContext } from "./row-context"
 import {
@@ -11,12 +10,14 @@ import {
   applyReactiveStyle,
   getOneUnitWidth,
 } from "./style"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
+import { cx } from "@emotion/css"
 
 export const Col = forwardRef<HTMLDivElement, ColProps>((props, ref) => {
   const {
     span = 24,
     offset = 0,
+    className,
     order,
     push = 0,
     pull = 0,
@@ -88,7 +89,11 @@ export const Col = forwardRef<HTMLDivElement, ColProps>((props, ref) => {
   `
 
   return (
-    <div ref={ref} css={finalCss} {...otherProps}>
+    <div
+      ref={ref}
+      className={cx(finalCss, className)}
+      {...otherProps}
+    >
       {props.children}
     </div>
   )

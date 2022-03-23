@@ -1,17 +1,14 @@
-import { css, SerializedStyles } from "@emotion/react"
+import { css, string } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
-export function applyWrapCss(direction: string): SerializedStyles {
+export function applyWrapCss(direction: string): string {
   return css`
     display: inline-flex;
     ${direction === "vertical" && "flex-direction: column"};
   `
 }
 
-export function applyItemCss(
-  direction: string,
-  mode?: string,
-): SerializedStyles {
+export function applyItemCss(direction: string, mode?: string): string {
   return css`
     ${direction === "horizontal" && "display: inline-block"};
     position: relative;
@@ -22,7 +19,7 @@ export function applyItemCss(
   `
 }
 
-export function baseLineStyle(lineColor?: string): SerializedStyles {
+export function baseLineStyle(lineColor?: string): string {
   let color = lineColor ? lineColor : globalColor(`--${illaPrefix}-gray-08`)
   return css`
     border-color: ${color};
@@ -33,7 +30,7 @@ export function applyVertItemLineCss(
   mode: string,
   lineColor?: string,
   lineType?: string,
-): SerializedStyles {
+): string {
   let leftPositionStyle = css`
     left: 2.5px;
   `
@@ -61,7 +58,7 @@ export function applyHorItemLineCss(
   mode: string,
   lineColor?: string,
   lineType?: string,
-): SerializedStyles {
+): string {
   let otherModePosition
   if (mode === "top") {
     otherModePosition = css`
@@ -87,10 +84,7 @@ export function applyHorItemLineCss(
   `
 }
 
-export function dotCommonStyle(
-  dotColor?: string,
-  dotType?: string,
-): SerializedStyles {
+export function dotCommonStyle(dotColor?: string, dotType?: string): string {
   let dotFillColor = dotColor
     ? dotColor
     : globalColor(`--${illaPrefix}-blue-03`)
@@ -116,7 +110,7 @@ export function applyVertItemDotCss(
   mode: string,
   dotColor?: string,
   dotType?: string,
-): SerializedStyles {
+): string {
   let leftPositionStyle
   if (mode === "right") {
     leftPositionStyle = css`
@@ -139,7 +133,7 @@ export function applyHorItemDotCss(
   mode: string,
   dotColor?: string,
   dotType?: string,
-): SerializedStyles {
+): string {
   let otherModePosition
   if (mode === "top") {
     otherModePosition = css`
@@ -161,7 +155,7 @@ export function applyHorItemDotCss(
   `
 }
 
-export function applyVertPropDotCss(mode: string): SerializedStyles {
+export function applyVertPropDotCss(mode: string): string {
   let posStyle
   if (mode === "left") {
     posStyle = css`
@@ -183,7 +177,7 @@ export function applyVertPropDotCss(mode: string): SerializedStyles {
   `
 }
 
-export function applyHorPropDotCss(mode: string): SerializedStyles {
+export function applyHorPropDotCss(mode: string): string {
   let posStyle
   if (mode === "top") {
     posStyle = css`
@@ -210,7 +204,7 @@ export function applyHorPropDotCss(mode: string): SerializedStyles {
 export function applyVertItemContentCss(
   mode: string,
   autoFixDotSize?: boolean,
-): SerializedStyles {
+): string {
   let alignStyle
   if (mode === "right") {
     alignStyle = css`
@@ -241,7 +235,7 @@ export function applyVertItemContentCss(
 export function applyHorItemContentCss(
   mode: string,
   autoFixDotSize?: boolean,
-): SerializedStyles {
+): string {
   return css`
     position: relative;
     margin: 20px 20px 0 0;

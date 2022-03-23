@@ -1,10 +1,10 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef, useEffect, useState } from "react"
 import { ImageProps } from "./interface"
 import { ImageDefaultIcon } from "@illa-design/icon"
 import { applyDefaultFallback, applyImageCss, applyOuterCss } from "./style"
 import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx } from "@emotion/css"
 
 enum ImageState {
   Loading,
@@ -16,6 +16,7 @@ export const Image = forwardRef<HTMLDivElement, ImageProps>((props, ref) => {
   const {
     // origin
     src = "",
+    className,
     width = "100px",
     height = "100px",
     alt = "",
@@ -44,10 +45,10 @@ export const Image = forwardRef<HTMLDivElement, ImageProps>((props, ref) => {
   }, [src])
 
   return (
-    <div css={applyOuterCss} ref={ref} {...rest}>
+    <div ref={ref} className={cx(applyOuterCss, className)} {...rest}>
       {src && src.length != 0 && imageState != ImageState.Error ? (
         <img
-          css={applyImageCss(objectFit, radius)}
+          className={applyImageCss(objectFit, radius)}
           alt={alt}
           src={src}
           width={width}
@@ -74,7 +75,7 @@ export const Image = forwardRef<HTMLDivElement, ImageProps>((props, ref) => {
         />
       ) : fallbackSrc && fallbackSrc.length != 0 ? (
         <img
-          css={applyImageCss(objectFit, radius)}
+          className={applyImageCss(objectFit, radius)}
           alt={alt}
           src={fallbackSrc}
           width={width}
@@ -88,7 +89,9 @@ export const Image = forwardRef<HTMLDivElement, ImageProps>((props, ref) => {
           useMap={useMap}
         />
       ) : (
-        <div css={applyDefaultFallback(width, height, radius)}>{fallback}</div>
+        <div className={applyDefaultFallback(width, height, radius)}>
+          {fallback}
+        </div>
       )}
     </div>
   )

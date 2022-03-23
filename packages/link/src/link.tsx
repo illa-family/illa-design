@@ -1,13 +1,14 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef } from "react"
 import { LinkProps } from "./interface"
 import { applyDisable, applyLeftIcon, applyLinkContainer } from "./style"
 import { LinkIcon } from "@illa-design/icon"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
+import { cx } from "@emotion/css"
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const {
     disabled,
+    className,
     icon,
     colorScheme = "blue",
     hoverable = true,
@@ -22,8 +23,12 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   `
 
   return (
-    <a ref={ref} css={finalCss} {...otherProps}>
-      {leftIcon && <span css={applyLeftIcon}>{leftIcon}</span>}
+    <a
+      ref={ref}
+      className={cx(finalCss, className)}
+      {...otherProps}
+    >
+      {leftIcon && <span className={applyLeftIcon}>{leftIcon}</span>}
       {props.children}
     </a>
   )

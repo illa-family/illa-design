@@ -8,6 +8,7 @@ export default defineConfig({
       jsxRuntime: "automatic",
       babel: {
         compact: false,
+        plugins: ["@emotion/babel-plugin"],
       },
       exclude: [/\.stories\.([tj])sx?$/, /\.test\.([tj])sx?$/],
       include: ["**/**.tsx", "**/**.ts"],

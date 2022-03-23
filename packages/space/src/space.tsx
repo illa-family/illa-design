@@ -1,9 +1,9 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { Children, forwardRef, Fragment } from "react"
 import { SpaceProps } from "./interface"
 import { Divider, DividerDirection } from "@illa-design/divider"
 import { applyContainer, applyDividerSize } from "./style"
+import { cx } from "@emotion/css"
 
 export const Space = forwardRef<HTMLDivElement, SpaceProps>((props, ref) => {
   const {
@@ -11,6 +11,7 @@ export const Space = forwardRef<HTMLDivElement, SpaceProps>((props, ref) => {
     align = "center",
     direction = "horizontal",
     divider,
+    className,
     wrap,
     ...otherProps
   } = props
@@ -19,8 +20,8 @@ export const Space = forwardRef<HTMLDivElement, SpaceProps>((props, ref) => {
 
   return (
     <div
-      css={applyContainer(direction, align, wrap ?? false)}
       ref={ref}
+      className={cx(applyContainer(direction, align, wrap ?? false), className)}
       {...otherProps}
     >
       {childrenArray.map((child, index) => {
@@ -28,7 +29,12 @@ export const Space = forwardRef<HTMLDivElement, SpaceProps>((props, ref) => {
           <Fragment key={index}>
             {index != 0 && divider ? (
               <Divider
-                css={applyDividerSize(size, direction, wrap ?? false, false)}
+                className={applyDividerSize(
+                  size,
+                  direction,
+                  wrap ?? false,
+                  false,
+                )}
                 direction={
                   direction == "horizontal"
                     ? ("vertical" as DividerDirection)
@@ -37,7 +43,7 @@ export const Space = forwardRef<HTMLDivElement, SpaceProps>((props, ref) => {
               />
             ) : null}
             <div
-              css={applyDividerSize(
+              className={applyDividerSize(
                 size,
                 direction,
                 wrap ?? false,

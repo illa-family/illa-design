@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, useContext, useState } from "react"
 import { PageSizeSelectorProps } from "./interface"
 import { applyPageSizeSelectorCss } from "./style"
@@ -26,7 +25,7 @@ export const PageSizeSelector = forwardRef<
   return (
     <span>
       <select
-        css={applyPageSizeSelectorCss(size, wholeDisable)}
+        className={applyPageSizeSelectorCss(size, wholeDisable)}
         value={compositionValue}
         disabled={wholeDisable}
         onChange={(e) => {

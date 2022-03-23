@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import React, { forwardRef, useEffect, useMemo, useRef, useState } from "react"
 import { TabHeaderChildProps, TabHeaderProps } from "../interface"
 import {
@@ -78,7 +77,7 @@ export const TabCommonHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
     }, [scrolling])
 
     return (
-      <div css={applyHeaderContainerCss(false)} ref={ref}>
+      <div className={applyHeaderContainerCss(false)} ref={ref}>
         {needScroll && (
           <span
             onClick={() => {
@@ -92,14 +91,14 @@ export const TabCommonHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
               scrollRef.current?.scrollTo(dis, 0)
               setLeftDis(dis)
             }}
-            css={applyCommonPreNextIconCss(true, variant, preDisable)}
+            className={applyCommonPreNextIconCss(true, variant, preDisable)}
           >
             <PreIcon />
           </span>
         )}
-        <div ref={scrollRef} css={containerHideScrollBarCss}>
-          <div css={containerCss}>
-            <div ref={childRef} css={tabHeaderContainerCss}>
+        <div ref={scrollRef} className={containerHideScrollBarCss}>
+          <div className={containerCss}>
+            <div ref={childRef} className={tabHeaderContainerCss}>
               {tabHeaderChild &&
                 tabHeaderChild?.map((item, index) => {
                   const childProps: TabHeaderChildProps = {
@@ -119,7 +118,7 @@ export const TabCommonHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
                 })}
               {variant === "card" && editable && (
                 <span
-                  css={addButtonCss}
+                  className={addButtonCss}
                   onClick={() => {
                     onAddTab && onAddTab()
                   }}
@@ -128,7 +127,7 @@ export const TabCommonHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
                 </span>
               )}
             </div>
-            {variant === "card" && <div css={cardDividerContainerCss} />}
+            {variant === "card" && <div className={cardDividerContainerCss} />}
           </div>
         </div>
         {needScroll && (
@@ -146,7 +145,7 @@ export const TabCommonHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
                 0,
               )
             }}
-            css={applyCommonPreNextIconCss(false, variant, nextDisable)}
+            className={applyCommonPreNextIconCss(false, variant, nextDisable)}
           >
             <NextIcon />
           </span>

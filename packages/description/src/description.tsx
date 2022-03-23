@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, Fragment, ReactNode } from "react"
 import {
   DescriptionAlign,
@@ -18,8 +17,9 @@ import {
   applyTitleStyle,
   applyValueStyle,
 } from "./style"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import useWindowSize from "react-use/lib/useWindowSize"
+import { cx } from "@emotion/css"
 
 function getTrList(
   data: DescriptionItem[],
@@ -86,7 +86,7 @@ function applyHorizontalLayout(
       tdContent.push(
         <Fragment key={tr.indexOf(td)}>
           <td
-            css={css`
+            className={css`
               ${applyBlockStyle(size, bordered ?? false, column)};
               ${applyLabelStyle(bordered ?? false, layout)};
             `}
@@ -97,7 +97,7 @@ function applyHorizontalLayout(
             {td.label}
           </td>
           <td
-            css={css`
+            className={css`
               ${applyBlockStyle(size, bordered ?? false, column)};
               ${applyValueStyle()};
             `}
@@ -130,15 +130,15 @@ function applyInlineHorizontalLayout(
         <Fragment key={tr.indexOf(td)}>
           <td
             align={align}
-            css={applyBlockStyle(size, bordered ?? false, column)}
+            className={applyBlockStyle(size, bordered ?? false, column)}
             colSpan={(td.span ?? 1) * 2}
             key={tr.indexOf(td) + "value"}
           >
-            <div css={applyInlineHorizontalStyle}>
-              <span css={applyLabelStyle(bordered ?? false, layout)}>
+            <div className={applyInlineHorizontalStyle}>
+              <span className={applyLabelStyle(bordered ?? false, layout)}>
                 {td.label}
               </span>
-              <span css={applyValueStyle()}>{td.value}</span>
+              <span className={applyValueStyle()}>{td.value}</span>
             </div>
           </td>
         </Fragment>,
@@ -165,15 +165,15 @@ function applyInlineVerticalLayout(
         <Fragment key={tr.indexOf(td)}>
           <td
             align={align}
-            css={applyBlockStyle(size, bordered ?? false, column)}
+            className={applyBlockStyle(size, bordered ?? false, column)}
             colSpan={(td.span ?? 1) * 2}
             key={tr.indexOf(td) + "value"}
           >
-            <div css={applyInlineVerticalStyle}>
-              <span css={applyLabelStyle(bordered ?? false, layout)}>
+            <div className={applyInlineVerticalStyle}>
+              <span className={applyLabelStyle(bordered ?? false, layout)}>
                 {td.label}
               </span>
-              <span css={applyValueStyle()}>{td.value}</span>
+              <span className={applyValueStyle()}>{td.value}</span>
             </div>
           </td>
         </Fragment>,
@@ -200,7 +200,7 @@ function applyVerticalLayout(
       tdFirst.push(
         <Fragment key={tr.indexOf(td) + "first"}>
           <td
-            css={css`
+            className={css`
               ${applyBlockStyle(size, bordered ?? false, column)};
               ${applyLabelStyle(bordered ?? false, layout)};
             `}
@@ -216,7 +216,7 @@ function applyVerticalLayout(
         <Fragment key={tr.indexOf(td) + "second"}>
           <td
             align={align}
-            css={css`
+            className={css`
               ${applyBlockStyle(size, bordered ?? false, column)};
               ${applyValueStyle()};
             `}
@@ -246,6 +246,7 @@ export const Description = forwardRef<HTMLDivElement, DescriptionProps>(
       size = "medium",
       layout = "horizontal",
       title,
+      className,
       tableLayout = "auto",
       ...otherProps
     } = props
@@ -300,10 +301,14 @@ export const Description = forwardRef<HTMLDivElement, DescriptionProps>(
     }
 
     return (
-      <div ref={ref} css={applyDescContainerStyle} {...otherProps}>
-        {title && <div css={applyTitleStyle(size)}>{title}</div>}
+      <div
+        ref={ref}
+        className={cx(applyDescContainerStyle, className)}
+        {...otherProps}
+      >
+        {title && <div className={applyTitleStyle(size)}>{title}</div>}
         {data && (
-          <table css={applyTableStyle(tableLayout, bordered ?? false)}>
+          <table className={applyTableStyle(tableLayout, bordered ?? false)}>
             <tbody>{tableContent}</tbody>
           </table>
         )}

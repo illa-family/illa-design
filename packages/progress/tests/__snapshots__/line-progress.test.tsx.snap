@@ -16,14 +16,14 @@ exports[`Progress renders with colors 1`] = `
   flex-direction: row;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-block;
   height: 4px;
   width: 320px;
   position: relative;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   background-color: #fcc;
   width: 100%;
@@ -31,7 +31,7 @@ exports[`Progress renders with colors 1`] = `
   height: 4px;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: width 200ms;
   transition: width 200ms;
   position: absolute;
@@ -41,7 +41,7 @@ exports[`Progress renders with colors 1`] = `
   height: 4px;
 }
 
-.emotion-4 {
+.emotion-5 {
   margin-left: 8px;
   line-height: 14px;
   font-size: 14px;
@@ -49,21 +49,21 @@ exports[`Progress renders with colors 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-red"
 >
   <div
-    class="emotion-1"
+    class="emotion-2"
   >
-    <div
-      class="emotion-2"
-    />
     <div
       class="emotion-3"
     />
+    <div
+      class="emotion-4"
+    />
   </div>
   <span
-    class="emotion-4"
+    class="emotion-5"
   >
     0%
   </span>
@@ -86,14 +86,14 @@ exports[`Progress renders with colors 2`] = `
   flex-direction: row;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-block;
   height: 4px;
   width: 320px;
   position: relative;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   background-color: #ebebeb;
   width: 100%;
@@ -101,7 +101,7 @@ exports[`Progress renders with colors 2`] = `
   height: 4px;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: width 200ms;
   transition: width 200ms;
   position: absolute;
@@ -111,7 +111,7 @@ exports[`Progress renders with colors 2`] = `
   height: 4px;
 }
 
-.emotion-4 {
+.emotion-5 {
   margin-left: 8px;
   line-height: 14px;
   font-size: 14px;
@@ -119,21 +119,21 @@ exports[`Progress renders with colors 2`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-gray"
 >
   <div
-    class="emotion-1"
+    class="emotion-2"
   >
-    <div
-      class="emotion-2"
-    />
     <div
       class="emotion-3"
     />
+    <div
+      class="emotion-4"
+    />
   </div>
   <span
-    class="emotion-4"
+    class="emotion-5"
   >
     0%
   </span>
@@ -156,14 +156,14 @@ exports[`Progress renders with colors 3`] = `
   flex-direction: row;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-block;
   height: 4px;
   width: 320px;
   position: relative;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   background-color: #321321;
   width: 100%;
@@ -171,7 +171,7 @@ exports[`Progress renders with colors 3`] = `
   height: 4px;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: width 200ms;
   transition: width 200ms;
   position: absolute;
@@ -181,7 +181,7 @@ exports[`Progress renders with colors 3`] = `
   height: 4px;
 }
 
-.emotion-4 {
+.emotion-5 {
   margin-left: 8px;
   line-height: 14px;
   font-size: 14px;
@@ -189,21 +189,21 @@ exports[`Progress renders with colors 3`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress-custom"
 >
   <div
-    class="emotion-1"
+    class="emotion-2"
   >
-    <div
-      class="emotion-2"
-    />
     <div
       class="emotion-3"
     />
+    <div
+      class="emotion-4"
+    />
   </div>
   <span
-    class="emotion-4"
+    class="emotion-5"
   >
     0%
   </span>
@@ -234,11 +234,6 @@ exports[`Progress renders with colors 4`] = `
 }
 
 .emotion-2 {
-  width: 100%;
-  position: absolute;
-}
-
-.emotion-3 {
   display: inline-flex;
   vertical-align: middle;
   -webkit-flex-direction: row;
@@ -254,35 +249,40 @@ exports[`Progress renders with colors 4`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-3 {
+  width: 100%;
+  position: absolute;
+}
+
+.emotion-5 {
   height: 100%;
   display: inline-flex;
   margin-right: 4px;
   margin-bottom: 0px;
 }
 
-.emotion-5 {
+.emotion-6 {
   background-color: #fcc;
   width: calc((320px - (3 - 1) * 4px) / 3);
   border-radius: calc(4px / 2);
   height: 4px;
 }
 
-.emotion-8 {
+.emotion-9 {
   height: 100%;
   display: inline-flex;
   margin-right: 0px;
   margin-bottom: 0px;
 }
 
-.emotion-13 {
+.emotion-15 {
   width: 0px;
   border-radius: calc(4px / 2);
   background-color: #ff4747;
   height: 4px;
 }
 
-.emotion-18 {
+.emotion-20 {
   margin-left: 8px;
   line-height: 14px;
   font-size: 14px;
@@ -297,58 +297,58 @@ exports[`Progress renders with colors 4`] = `
     class="emotion-1"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2 emotion-3 emotion-2"
     >
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
       <div
-        class="emotion-8"
+        class="emotion-9"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2 emotion-3 emotion-2"
     >
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-13"
+          class="emotion-15"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-13"
+          class="emotion-15"
         />
       </div>
       <div
-        class="emotion-8"
+        class="emotion-9"
       >
         <div
-          class="emotion-13"
+          class="emotion-15"
         />
       </div>
     </div>
   </div>
   <span
-    class="emotion-18"
+    class="emotion-20"
   >
     0%
   </span>
@@ -379,11 +379,6 @@ exports[`Progress renders with colors 5`] = `
 }
 
 .emotion-2 {
-  width: 100%;
-  position: absolute;
-}
-
-.emotion-3 {
   display: inline-flex;
   vertical-align: middle;
   -webkit-flex-direction: row;
@@ -399,35 +394,40 @@ exports[`Progress renders with colors 5`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-3 {
+  width: 100%;
+  position: absolute;
+}
+
+.emotion-5 {
   height: 100%;
   display: inline-flex;
   margin-right: 4px;
   margin-bottom: 0px;
 }
 
-.emotion-5 {
+.emotion-6 {
   background-color: #ebebeb;
   width: calc((320px - (3 - 1) * 4px) / 3);
   border-radius: calc(4px / 2);
   height: 4px;
 }
 
-.emotion-8 {
+.emotion-9 {
   height: 100%;
   display: inline-flex;
   margin-right: 0px;
   margin-bottom: 0px;
 }
 
-.emotion-13 {
+.emotion-15 {
   width: 0px;
   border-radius: calc(4px / 2);
   background-color: #1f1f1f;
   height: 4px;
 }
 
-.emotion-18 {
+.emotion-20 {
   margin-left: 8px;
   line-height: 14px;
   font-size: 14px;
@@ -442,58 +442,58 @@ exports[`Progress renders with colors 5`] = `
     class="emotion-1"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2 emotion-3 emotion-2"
     >
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
       <div
-        class="emotion-8"
+        class="emotion-9"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2 emotion-3 emotion-2"
     >
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-13"
+          class="emotion-15"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-13"
+          class="emotion-15"
         />
       </div>
       <div
-        class="emotion-8"
+        class="emotion-9"
       >
         <div
-          class="emotion-13"
+          class="emotion-15"
         />
       </div>
     </div>
   </div>
   <span
-    class="emotion-18"
+    class="emotion-20"
   >
     0%
   </span>
@@ -524,11 +524,6 @@ exports[`Progress renders with colors 6`] = `
 }
 
 .emotion-2 {
-  width: 100%;
-  position: absolute;
-}
-
-.emotion-3 {
   display: inline-flex;
   vertical-align: middle;
   -webkit-flex-direction: row;
@@ -544,35 +539,40 @@ exports[`Progress renders with colors 6`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-3 {
+  width: 100%;
+  position: absolute;
+}
+
+.emotion-5 {
   height: 100%;
   display: inline-flex;
   margin-right: 4px;
   margin-bottom: 0px;
 }
 
-.emotion-5 {
+.emotion-6 {
   background-color: #321321;
   width: calc((320px - (3 - 1) * 4px) / 3);
   border-radius: calc(4px / 2);
   height: 4px;
 }
 
-.emotion-8 {
+.emotion-9 {
   height: 100%;
   display: inline-flex;
   margin-right: 0px;
   margin-bottom: 0px;
 }
 
-.emotion-13 {
+.emotion-15 {
   width: 0px;
   border-radius: calc(4px / 2);
   background-color: #123123;
   height: 4px;
 }
 
-.emotion-18 {
+.emotion-20 {
   margin-left: 8px;
   line-height: 14px;
   font-size: 14px;
@@ -587,58 +587,58 @@ exports[`Progress renders with colors 6`] = `
     class="emotion-1"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2 emotion-3 emotion-2"
     >
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
       <div
-        class="emotion-8"
+        class="emotion-9"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2 emotion-3 emotion-2"
     >
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-13"
+          class="emotion-15"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-13"
+          class="emotion-15"
         />
       </div>
       <div
-        class="emotion-8"
+        class="emotion-9"
       >
         <div
-          class="emotion-13"
+          class="emotion-15"
         />
       </div>
     </div>
   </div>
   <span
-    class="emotion-18"
+    class="emotion-20"
   >
     0%
   </span>
@@ -661,14 +661,14 @@ exports[`Progress renders with custom width 1`] = `
   flex-direction: row;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-block;
   height: 10px;
   width: 100px;
   position: relative;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   background-color: #ebebeb;
   width: 100%;
@@ -676,7 +676,7 @@ exports[`Progress renders with custom width 1`] = `
   height: 10px;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-transition: width 200ms;
   transition: width 200ms;
   position: absolute;
@@ -686,7 +686,7 @@ exports[`Progress renders with custom width 1`] = `
   height: 10px;
 }
 
-.emotion-4 {
+.emotion-5 {
   margin-left: 8px;
   line-height: 14px;
   font-size: 14px;
@@ -694,21 +694,21 @@ exports[`Progress renders with custom width 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-0"
   data-testid="test-progress"
 >
   <div
-    class="emotion-1"
+    class="emotion-2"
   >
-    <div
-      class="emotion-2"
-    />
     <div
       class="emotion-3"
     />
+    <div
+      class="emotion-4"
+    />
   </div>
   <span
-    class="emotion-4"
+    class="emotion-5"
   >
     50%
   </span>
@@ -739,11 +739,6 @@ exports[`Progress renders with steps 1`] = `
 }
 
 .emotion-2 {
-  width: 100%;
-  position: absolute;
-}
-
-.emotion-3 {
   display: inline-flex;
   vertical-align: middle;
   -webkit-flex-direction: row;
@@ -759,42 +754,47 @@ exports[`Progress renders with steps 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-3 {
+  width: 100%;
+  position: absolute;
+}
+
+.emotion-5 {
   height: 100%;
   display: inline-flex;
   margin-right: 4px;
   margin-bottom: 0px;
 }
 
-.emotion-5 {
+.emotion-6 {
   background-color: #ebebeb;
   width: calc((320px - (3 - 1) * 4px) / 3);
   border-radius: calc(4px / 2);
   height: 4px;
 }
 
-.emotion-8 {
+.emotion-9 {
   height: 100%;
   display: inline-flex;
   margin-right: 0px;
   margin-bottom: 0px;
 }
 
-.emotion-13 {
+.emotion-15 {
   width: calc((320px - (3 - 1) * 4px) / 3);
   border-radius: calc(4px / 2);
   background-color: #1e6fff;
   height: 4px;
 }
 
-.emotion-15 {
+.emotion-17 {
   width: 0px;
   border-radius: calc(4px / 2);
   background-color: #1e6fff;
   height: 4px;
 }
 
-.emotion-18 {
+.emotion-20 {
   margin-left: 8px;
   line-height: 14px;
   font-size: 14px;
@@ -809,58 +809,58 @@ exports[`Progress renders with steps 1`] = `
     class="emotion-1"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2 emotion-3 emotion-2"
     >
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
       <div
-        class="emotion-8"
+        class="emotion-9"
       >
         <div
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2 emotion-3 emotion-2"
     >
       <div
-        class="emotion-4"
-      >
-        <div
-          class="emotion-13"
-        />
-      </div>
-      <div
-        class="emotion-4"
+        class="emotion-5"
       >
         <div
           class="emotion-15"
         />
       </div>
       <div
-        class="emotion-8"
+        class="emotion-5"
       >
         <div
-          class="emotion-15"
+          class="emotion-17"
+        />
+      </div>
+      <div
+        class="emotion-9"
+      >
+        <div
+          class="emotion-17"
         />
       </div>
     </div>
   </div>
   <span
-    class="emotion-18"
+    class="emotion-20"
   >
     40%
   </span>

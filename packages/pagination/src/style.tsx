@@ -1,5 +1,5 @@
-import { css } from "@emotion/react"
-import { SerializedStyles } from "@emotion/serialize"
+import { css } from "@emotion/css"
+
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { PaginationSize } from "./interface"
 
@@ -75,7 +75,7 @@ export function applyDefaultItemWithMarginCss(
 export function applyBackground(
   disable?: boolean,
   selected?: boolean,
-): SerializedStyles | undefined {
+): string | undefined {
   if (!disable && !selected) {
     return css`
       &:hover {
@@ -95,7 +95,7 @@ export function applyBackground(
   }
 }
 
-export function applyCursor(disabled?: boolean): SerializedStyles {
+export function applyCursor(disabled?: boolean): string {
   if (disabled) {
     return css`
       cursor: not-allowed;
@@ -107,10 +107,7 @@ export function applyCursor(disabled?: boolean): SerializedStyles {
   }
 }
 
-export function applyTextColor(
-  disabled?: boolean,
-  selected?: boolean,
-): SerializedStyles {
+export function applyTextColor(disabled?: boolean, selected?: boolean): string {
   if (!selected) {
     if (disabled) {
       return css`
@@ -137,7 +134,7 @@ export function applyTextColor(
 export function applyPageNumItemSelectedCss(
   size: PaginationSize,
   disabled?: boolean,
-): SerializedStyles {
+): string {
   return css`
     ${applyDefaultItemCss(size, disabled)};
     margin-right: 8px;
@@ -184,8 +181,8 @@ export function applyPageSizeSelectorCss(
   `
 }
 
-function applySizeCss(size: PaginationSize): SerializedStyles {
-  let sizeCss: SerializedStyles
+function applySizeCss(size: PaginationSize): string {
+  let sizeCss: string
   switch (size) {
     default:
     case "small":
@@ -210,8 +207,8 @@ function applySizeCss(size: PaginationSize): SerializedStyles {
   return sizeCss
 }
 
-function applySelectorSizeCss(size: PaginationSize): SerializedStyles {
-  let sizeCss: SerializedStyles
+function applySelectorSizeCss(size: PaginationSize): string {
+  let sizeCss: string
   switch (size) {
     default:
     case "small":

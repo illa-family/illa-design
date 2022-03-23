@@ -1,9 +1,9 @@
-import { css, SerializedStyles } from "@emotion/react"
 import { TriggerColorScheme, TriggerPosition } from "./interface"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { getAnimation } from "./transform"
 import { Variants } from "framer-motion"
 import { AdjustResult } from "./adjust-tips-location"
+import { string, css } from "@emotion/css"
 
 const colorSchemes = [
   "white",
@@ -30,9 +30,7 @@ export function applyMotionDiv() {
   `
 }
 
-export function applyTipsContainer(
-  position: TriggerPosition,
-): SerializedStyles {
+export function applyTipsContainer(position: TriggerPosition): string {
   const isColumn =
     position == "top" ||
     position == "tl" ||
@@ -41,7 +39,7 @@ export function applyTipsContainer(
     position == "bl" ||
     position == "br"
 
-  let paddingStyle: SerializedStyles
+  let paddingStyle: string
   switch (position) {
     case "top":
     case "tl":
@@ -86,7 +84,7 @@ export function applyTipsText(
   withoutPadding?: boolean,
   adjustResult?: AdjustResult,
   autoAlignPopupWidth?: boolean,
-): SerializedStyles {
+): string {
   const bgColor = colorSchemes.includes(colorScheme)
     ? colorScheme == "white"
       ? globalColor(`--${illaPrefix}-${colorScheme}-01`)
@@ -137,7 +135,7 @@ export function applyTipsText(
 export function applyTriangleStyle(
   colorScheme: TriggerColorScheme,
   position: TriggerPosition,
-): SerializedStyles {
+): string {
   const bgColor = colorSchemes.includes(colorScheme)
     ? globalColor(`--${illaPrefix}-${colorScheme}-02`)
     : colorScheme
@@ -145,7 +143,7 @@ export function applyTriangleStyle(
     color: ${bgColor};
     z-index: 1;
   `
-  let positionStyle: SerializedStyles
+  let positionStyle: string
   switch (position) {
     case "top":
     case "bottom":

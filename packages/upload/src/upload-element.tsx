@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import {
   forwardRef,
@@ -236,7 +235,7 @@ export const UploadElement = forwardRef<UploadRefType, UploadInputElementProps>(
           accept={accept}
           multiple={multiple}
           style={{ display: "none" }}
-          css={inputCss}
+          className={inputCss}
           {...(directory ? { webkitdirectory: "true" } : {})}
           onChange={(event) => {
             const files = event.target.files
@@ -275,7 +274,7 @@ export const UploadElement = forwardRef<UploadRefType, UploadInputElementProps>(
           }}
           type={"file"}
         />
-        <div css={uploadChildrenCss}>
+        <div className={uploadChildrenCss}>
           <ChildrenNode
             onClick={() => {
               handleUploadButton()

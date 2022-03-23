@@ -1,10 +1,9 @@
-/** @jsxImportSource @emotion/react */
 import React, { forwardRef } from "react"
 import { CardMetaProps } from "./interface"
 import {
-  applyCardMetaTitle,
   applyCardMetaDescription,
   applyCardMetaFooter,
+  applyCardMetaTitle,
 } from "./style"
 
 export const Meta = forwardRef<HTMLDivElement, CardMetaProps>((props, ref) => {
@@ -13,14 +12,14 @@ export const Meta = forwardRef<HTMLDivElement, CardMetaProps>((props, ref) => {
     <div ref={ref} {...restProps}>
       {title || description ? (
         <div>
-          {title && <div css={applyCardMetaTitle}>{title}</div>}
+          {title && <div className={applyCardMetaTitle}>{title}</div>}
           {description && (
-            <div css={applyCardMetaDescription}>{description}</div>
+            <div className={applyCardMetaDescription}>{description}</div>
           )}
         </div>
       ) : null}
       {avatar || actionList ? (
-        <div css={applyCardMetaFooter}>
+        <div className={applyCardMetaFooter}>
           {avatar ? <div>{avatar}</div> : null}
           {actionList}
         </div>

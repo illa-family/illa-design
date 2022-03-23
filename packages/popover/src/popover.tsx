@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { FC, useContext, useState } from "react"
 import { PopoverProps } from "./interface"
 import { Trigger } from "@illa-design/trigger"
@@ -55,12 +54,12 @@ export const Popover: FC<PopoverProps> = (props) => {
         }
       }}
       content={
-        <div css={applyTypographyContainer}>
+        <div className={applyTypographyContainer}>
           <Typography>
             {title && (
               <>
                 <Heading
-                  css={applyTitleColor(colorScheme)}
+                  className={applyTitleColor(colorScheme)}
                   colorScheme={colorScheme == "white" ? "gray" : "white"}
                   title={title}
                   ellipsis={false}
@@ -76,7 +75,7 @@ export const Popover: FC<PopoverProps> = (props) => {
           {hasCloseIcon && (
             <Link
               colorScheme={colorScheme == "white" ? "blue" : "white"}
-              css={applyCloseButton}
+              className={applyCloseButton}
               onClick={() => {
                 if (popupVisible == undefined) {
                   setPopoverVisible(false)

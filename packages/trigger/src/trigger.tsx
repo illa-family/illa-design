@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import {
   cloneElement,
@@ -127,16 +126,16 @@ export const Trigger: FC<TriggerProps> = (props) => {
   let tipsNode: ReactNode
   let centerNode: ReactNode
 
-  const closeContent = <div css={applyDefaultContentSize}>{content}</div>
+  const closeContent = <div className={applyDefaultContentSize}>{content}</div>
 
   switch (finalPosition) {
     case "top":
     case "tl":
     case "tr":
       centerNode = (
-        <div css={applyTipsContainer(finalPosition)}>
+        <div className={applyTipsContainer(finalPosition)}>
           <div
-            css={applyTipsText(
+            className={applyTipsText(
               colorScheme,
               withoutPadding,
               adjustResult,
@@ -147,7 +146,7 @@ export const Trigger: FC<TriggerProps> = (props) => {
           </div>
           {showArrow && (
             <TriangleTop
-              css={applyTriangleStyle(colorScheme, finalPosition)}
+              className={applyTriangleStyle(colorScheme, finalPosition)}
               width="8px"
               height="4px"
             />
@@ -159,16 +158,16 @@ export const Trigger: FC<TriggerProps> = (props) => {
     case "bl":
     case "br":
       centerNode = (
-        <div css={applyTipsContainer(finalPosition)}>
+        <div className={applyTipsContainer(finalPosition)}>
           {showArrow && (
             <TriangleBottom
-              css={applyTriangleStyle(colorScheme, finalPosition)}
+              className={applyTriangleStyle(colorScheme, finalPosition)}
               width="8px"
               height="4px"
             />
           )}
           <div
-            css={applyTipsText(
+            className={applyTipsText(
               colorScheme,
               withoutPadding,
               adjustResult,
@@ -184,9 +183,9 @@ export const Trigger: FC<TriggerProps> = (props) => {
     case "lt":
     case "lb":
       centerNode = (
-        <div css={applyTipsContainer(finalPosition)}>
+        <div className={applyTipsContainer(finalPosition)}>
           <div
-            css={applyTipsText(
+            className={applyTipsText(
               colorScheme,
               withoutPadding,
               adjustResult,
@@ -197,7 +196,7 @@ export const Trigger: FC<TriggerProps> = (props) => {
           </div>
           {showArrow && (
             <TriangleLeft
-              css={applyTriangleStyle(colorScheme, finalPosition)}
+              className={applyTriangleStyle(colorScheme, finalPosition)}
               width="4px"
               height="8px"
             />
@@ -209,16 +208,16 @@ export const Trigger: FC<TriggerProps> = (props) => {
     case "rt":
     case "rb":
       centerNode = (
-        <div css={applyTipsContainer(finalPosition)}>
+        <div className={applyTipsContainer(finalPosition)}>
           {showArrow && (
             <TriangleRight
-              css={applyTriangleStyle(colorScheme, finalPosition)}
+              className={applyTriangleStyle(colorScheme, finalPosition)}
               width="4px"
               height="8px"
             />
           )}
           <div
-            css={applyTipsText(
+            className={applyTipsText(
               colorScheme,
               withoutPadding,
               adjustResult,
@@ -267,7 +266,7 @@ export const Trigger: FC<TriggerProps> = (props) => {
   tipsNode = (
     <motion.div
       ref={tipsRef}
-      css={applyMotionDiv()}
+      className={applyMotionDiv()}
       variants={applyAnimation(finalPosition, showArrow)}
       initial="initial"
       animate="animate"
@@ -464,7 +463,7 @@ export const Trigger: FC<TriggerProps> = (props) => {
   } else {
     return (
       <span
-        css={applyChildrenContainer}
+        className={applyChildrenContainer}
         ref={(ref) => {
           if (ref != null) {
             measureRef(ref)

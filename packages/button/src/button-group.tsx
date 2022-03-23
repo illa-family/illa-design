@@ -1,9 +1,9 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { Children, forwardRef, ReactNode } from "react"
 import { ButtonGroupContext } from "./button-group-context"
 import { ButtonGroupProps } from "./interface"
 import { applySpacing, avatarGroupContainer } from "./style"
+import { cx } from "@emotion/css"
 
 export const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>(
   (props, ref) => {
@@ -13,6 +13,7 @@ export const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>(
       variant = "fill",
       shape = "square",
       spacing = "4px",
+      className,
       attached,
       ...otherProps
     } = props
@@ -34,7 +35,7 @@ export const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>(
               last,
             }}
           >
-            <span css={applySpacing(spacing, index, attached ?? false)}>
+            <span className={applySpacing(spacing, index, attached ?? false)}>
               {child}
             </span>
           </ButtonGroupContext.Provider>
@@ -42,7 +43,11 @@ export const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>(
       },
     )
     return (
-      <div css={avatarGroupContainer} ref={ref} {...otherProps}>
+      <div
+        className={cx(avatarGroupContainer, className)}
+        ref={ref}
+        {...otherProps}
+      >
         {newChildren}
       </div>
     )

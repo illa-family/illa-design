@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { DeleteIcon, SuccessIcon } from "@illa-design/icon"
 import { deleteIconCss, rightIconCss, tryTextCss } from "./styles"
 import { Progress } from "@illa-design/progress"
@@ -14,12 +13,12 @@ export const getRightIcon = (
   let rightView
   switch (statusStr) {
     case "done":
-      rightView = <SuccessIcon css={rightIconCss} />
+      rightView = <SuccessIcon className={rightIconCss} />
       break
     case "error":
       rightView = (
         <span
-          css={tryTextCss}
+          className={tryTextCss}
           onClick={() => {
             reUpload && reUpload(item)
           }}
@@ -30,7 +29,11 @@ export const getRightIcon = (
       break
     default:
       rightView = (
-        <Progress css={rightIconCss} type="miniCircle" percent={percent} />
+        <Progress
+          className={rightIconCss}
+          type="miniCircle"
+          percent={percent}
+        />
       )
   }
   return rightView
@@ -45,7 +48,7 @@ export const getDeleteButton = (
       onClick={() => {
         deleteEvent && deleteEvent(item)
       }}
-      css={deleteIconCss}
+      className={deleteIconCss}
     />
   )
 }

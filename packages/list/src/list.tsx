@@ -1,16 +1,17 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, ReactNode } from "react"
 import { ListProps } from "./interface"
 import { applyBarStyle, applyListContainer, applyListItemOuter } from "./style"
 import { Divider } from "@illa-design/divider"
 import VirtualList from "rc-virtual-list"
 import { Text, Typography } from "@illa-design/typography"
+import { cx } from "@emotion/css"
 
 export const List = forwardRef<HTMLDivElement, ListProps<any>>((props, ref) => {
   const {
     data,
     size = "medium",
     bordered = true,
+    className,
     split = true,
     hoverable,
     header,
@@ -29,11 +30,15 @@ export const List = forwardRef<HTMLDivElement, ListProps<any>>((props, ref) => {
   } = props
 
   return (
-    <div css={applyListContainer(bordered)} ref={ref} {...otherProps}>
+    <div
+      ref={ref}
+      className={cx(applyListContainer(bordered), className)}
+      {...otherProps}
+    >
       {header && (
         <>
           {typeof header == "string" ? (
-            <div css={applyBarStyle(size)}>
+            <div className={applyBarStyle(size)}>
               <Typography>
                 <Text bold colorScheme={"gray"}>
                   {header}
@@ -41,7 +46,7 @@ export const List = forwardRef<HTMLDivElement, ListProps<any>>((props, ref) => {
               </Typography>
             </div>
           ) : (
-            <div css={applyBarStyle(size)}>{header}</div>
+            <div className={applyBarStyle(size)}>{header}</div>
           )}
           <Divider direction="horizontal" />
         </>
@@ -89,7 +94,7 @@ export const List = forwardRef<HTMLDivElement, ListProps<any>>((props, ref) => {
             } else {
               return (
                 <>
-                  <div css={applyListItemOuter(size, hoverable)}>
+                  <div className={applyListItemOuter(size, hoverable)}>
                     {render(item, data.indexOf(item))}
                   </div>
                   {endNode}
@@ -103,7 +108,7 @@ export const List = forwardRef<HTMLDivElement, ListProps<any>>((props, ref) => {
         <>
           <Divider direction="horizontal" />
           {typeof footer == "string" ? (
-            <div css={applyBarStyle(size)}>
+            <div className={applyBarStyle(size)}>
               <Typography>
                 <Text bold colorScheme={"gray"}>
                   {footer}
@@ -111,7 +116,7 @@ export const List = forwardRef<HTMLDivElement, ListProps<any>>((props, ref) => {
               </Typography>
             </div>
           ) : (
-            <div css={applyBarStyle(size)}>{footer}</div>
+            <div className={applyBarStyle(size)}>{footer}</div>
           )}
         </>
       )}

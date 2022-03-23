@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, ReactNode, useMemo } from "react"
 import { FileListItemProps } from "./interface"
 import {
@@ -86,10 +85,12 @@ export const FileListTextItem = forwardRef<HTMLSpanElement, FileListItemProps>(
     const deleteButton = getDeleteButton(item, deleteUpload)
 
     return (
-      <div css={fileItemContainerCss}>
-        <div css={fileTextItemCss}>
+      <div className={fileItemContainerCss}>
+        <div className={fileTextItemCss}>
           {fileIcon}
-          <span css={applyFileItemTitleCss(status == "error")}>{name}</span>
+          <span className={applyFileItemTitleCss(status == "error")}>
+            {name}
+          </span>
           {rightView}
         </div>
         {deleteButton}

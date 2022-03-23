@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, useMemo } from "react"
 import { StatisticProps } from "./interface"
 import dayjs from "dayjs"
@@ -11,12 +10,14 @@ import {
   applyStatisticValue,
 } from "./style"
 import { isObject } from "@illa-design/system"
+import { cx } from "@emotion/css"
 
 export const Statistic = forwardRef<HTMLDivElement, StatisticProps>(
   (props, ref) => {
     const {
       title,
       value = 0,
+      className,
       decimalSeparator = ".",
       format,
       groupSeparator = ",",
@@ -42,17 +43,21 @@ export const Statistic = forwardRef<HTMLDivElement, StatisticProps>(
       return decimal !== void 0 ? int + decimalSeparator + decimal : int
     }, [format, value, groupSeparator, decimalSeparator, precision])
     return (
-      <div css={applyStatistic} ref={ref} {...restProps}>
-        {title && <div css={applyStatisticTitle}>{title}</div>}
-        <div css={applyStatisticContent}>
+      <div
+        className={cx(applyStatistic(), className)}
+        ref={ref}
+        {...restProps}
+      >
+        {title && <div className={applyStatisticTitle()}>{title}</div>}
+        <div className={applyStatisticContent()}>
           {prefix && (
-            <span css={applyStatisticDecorator(true, !isObject(prefix))}>
+            <span className={applyStatisticDecorator(true, !isObject(prefix))}>
               {prefix}
             </span>
           )}
-          <span css={applyStatisticValue}>{renderValue}</span>
+          <span className={applyStatisticValue()}>{renderValue}</span>
           {suffix && (
-            <span css={applyStatisticDecorator(false, !isObject(suffix))}>
+            <span className={applyStatisticDecorator(false, !isObject(suffix))}>
               {suffix}
             </span>
           )}

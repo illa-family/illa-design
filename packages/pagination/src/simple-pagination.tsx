@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, useEffect, useState } from "react"
 import { SimplePaginationProps } from "./interface"
 import {
@@ -38,9 +37,9 @@ export const SimplePagination = forwardRef<
   }, [currentPage])
 
   return (
-    <span css={paginationContainer}>
+    <span className={paginationContainer}>
       <span
-        css={applyDefaultItemCss(size, currentPage == 0 || wholeDisabled)}
+        className={applyDefaultItemCss(size, currentPage == 0 || wholeDisabled)}
         onClick={() => {
           if (currentPage - 1 < 0 || wholeDisabled) return
           setCurrentPage(currentPage - 1)
@@ -49,7 +48,7 @@ export const SimplePagination = forwardRef<
         {prevIcon}
       </span>
       <Input
-        css={applyInputCss(size, wholeDisabled)}
+        className={applyInputCss(size, wholeDisabled)}
         disabled={wholeDisabled}
         value={compositionValue.toString()}
         onChange={(val) => {
@@ -68,9 +67,9 @@ export const SimplePagination = forwardRef<
         requirePadding={false}
         variant={"fill"}
       />
-      <span css={simplePaginationSumCss}> {`/ ${pageSum}`}</span>
+      <span className={simplePaginationSumCss}> {`/ ${pageSum}`}</span>
       <span
-        css={applyDefaultItemCss(
+        className={applyDefaultItemCss(
           size,
           currentPage == pageSum - 1 || wholeDisabled,
         )}

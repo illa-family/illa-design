@@ -1,26 +1,22 @@
-import { css } from "@emotion/react"
-import { SerializedStyles } from "@emotion/serialize"
+import { css } from "@emotion/css"
+
 import { PositionValue, SizeValue, AffixFixedValue } from "./interface"
 
-export function applyFixedPosition(
-  positionValue: PositionValue,
-): SerializedStyles {
+export function applyFixedPosition(positionValue: PositionValue): string {
   return css`
     position: fixed;
     ${positionValue.type}: ${positionValue.offset}px
   `
 }
 
-export function applySize(sizeValue: SizeValue): SerializedStyles {
+export function applySize(sizeValue: SizeValue): string {
   return css`
     width: ${sizeValue.width}px;
     height: ${sizeValue.height}px;
   `
 }
 
-export function applyAffixFixedStyle(
-  affixFixedValue: AffixFixedValue,
-): SerializedStyles {
+export function applyAffixFixedStyle(affixFixedValue: AffixFixedValue): string {
   if (affixFixedValue.isFixed) {
     return css`
       ${applyFixedPosition(affixFixedValue.position)};

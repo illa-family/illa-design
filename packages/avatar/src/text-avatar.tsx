@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { FC, MutableRefObject, useEffect, useRef } from "react"
 import { AvatarProps } from "./interface"
 import { applyMergeCss } from "./style"
@@ -38,7 +37,7 @@ export const TextAvatar: FC<AvatarProps> = (props) => {
   }, [finalProps.text, finalProps.size])
 
   return (
-    <div ref={avatarRef} css={applyMergeCss(finalProps)}>
+    <div ref={avatarRef} className={applyMergeCss(finalProps)}>
       <span ref={textRef}>{props.text}</span>
     </div>
   )

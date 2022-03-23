@@ -1,15 +1,16 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef } from "react"
 import { OptionProps } from "./interface"
 import { applyOptionStyle } from "./style"
 import { omit } from "@illa-design/system"
 import { Checkbox } from "@illa-design/checkbox"
+import { cx } from "@emotion/css"
 
 export const Option = forwardRef<HTMLLIElement, OptionProps>((props, ref) => {
   const {
     children,
     value,
+    className,
     defaultValue,
     size = "medium",
     disabled,
@@ -42,7 +43,11 @@ export const Option = forwardRef<HTMLLIElement, OptionProps>((props, ref) => {
   return (
     <>
       {isMultipleMode ? (
-        <li css={applyOptionStyle(size)} ref={ref} {...optionProps}>
+        <li
+          className={cx(applyOptionStyle(size), className)}
+          ref={ref}
+          {...optionProps}
+        >
           <Checkbox
             checked={isChecked}
             disabled={disabled}
@@ -51,7 +56,11 @@ export const Option = forwardRef<HTMLLIElement, OptionProps>((props, ref) => {
           <span>{children}</span>
         </li>
       ) : (
-        <li css={applyOptionStyle(size)} ref={ref} {...optionProps}>
+        <li
+          className={cx(applyOptionStyle(size), className)}
+          ref={ref}
+          {...optionProps}
+        >
           {children}
         </li>
       )}

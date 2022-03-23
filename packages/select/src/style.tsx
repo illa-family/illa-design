@@ -1,7 +1,7 @@
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { SelectProps, SelectStateValue } from "./interface"
-import { SerializedStyles } from "@emotion/serialize"
-import { css } from "@emotion/react"
+
+import { css } from "@emotion/css"
 import chroma from "chroma-js"
 
 // default select
@@ -30,7 +30,7 @@ export const errorOutlineStyle = css`
 `
 
 function applyStatus(stateValue: SelectStateValue) {
-  let mainStyle: SerializedStyles
+  let mainStyle: string
   let inputStyle = inputOutlineStyle
 
   if (stateValue?.disabled) {
@@ -65,7 +65,7 @@ function applyStatus(stateValue: SelectStateValue) {
 }
 
 export function applySizeStyle(size?: SelectProps["size"]) {
-  let sizeStyle: SerializedStyles = css()
+  let sizeStyle: string = css()
   switch (size) {
     default:
     case "large":
@@ -94,9 +94,7 @@ export function applySizeStyle(size?: SelectProps["size"]) {
 }
 
 // SelectView
-export function applySelectView(
-  stateValue: SelectStateValue,
-): SerializedStyles {
+export function applySelectView(stateValue: SelectStateValue): string {
   return css`
     box-sizing: border-box;
     width: 100%;
@@ -121,9 +119,7 @@ export function applySelectView(
   `
 }
 
-export function applySelectContent(
-  stateValue: SelectStateValue,
-): SerializedStyles {
+export function applySelectContent(stateValue: SelectStateValue): string {
   return css`
     position: relative;
     box-sizing: border-box;
@@ -140,7 +136,7 @@ export function applySelectViewText(
   showInput?:
     | boolean
     | { retainInputValue?: boolean; retainInputValueWhileSelect?: boolean },
-): SerializedStyles {
+): string {
   return css`
     width: 100%;
     font-size: 14px;
@@ -151,7 +147,7 @@ export function applySelectViewText(
   `
 }
 
-export function applyIconStyle(): SerializedStyles {
+export function applyIconStyle(): string {
   return css`
     & > svg {
       font-size: 12px;
@@ -162,7 +158,7 @@ export function applyIconStyle(): SerializedStyles {
 }
 
 export function iconPointerStyle(size: string) {
-  let positionStyle: SerializedStyles = css()
+  let positionStyle: string = css()
   switch (size) {
     default:
     case "large":
@@ -202,7 +198,7 @@ export function iconPointerStyle(size: string) {
 }
 
 // option
-export function applyOptionStyle(size: SelectProps["size"]): SerializedStyles {
+export function applyOptionStyle(size: SelectProps["size"]): string {
   return css`
     position: relative;
     box-sizing: border-box;

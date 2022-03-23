@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import {
   forwardRef,
@@ -89,7 +88,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
     let totalElement: ReactNode = null
     if (typeof showTotal === "boolean" && showTotal) {
       totalElement = (
-        <span css={totalTextCss}>
+        <span className={totalTextCss}>
           {totalText.replace("{0}", total.toString())}
         </span>
       )
@@ -97,7 +96,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
 
     if (typeof showTotal === "function") {
       totalElement = (
-        <div css={totalTextCss}>
+        <div className={totalTextCss}>
           {showTotal(total, [
             curPageVal * itemCountVal + 1,
             (curPageVal + 1) * itemCountVal,
@@ -111,7 +110,11 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
     const _moreIcon: ReactNode = moreIcon ?? <MoreIcon />
 
     return (
-      <div css={paginationContainer} placeholder={placeholder} {...otherProps}>
+      <div
+        className={paginationContainer}
+        placeholder={placeholder}
+        {...otherProps}
+      >
         {totalElement}
         {simple ? (
           <SimplePagination
@@ -127,9 +130,9 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
             wholeDisabled={disabled == true}
           />
         ) : (
-          <span css={paginationContainer}>
+          <span className={paginationContainer}>
             <span
-              css={applyDefaultItemWithMarginCss(size, prevDisable)}
+              className={applyDefaultItemWithMarginCss(size, prevDisable)}
               onClick={() => {
                 if (prevDisable) return
                 setCurPage(curPage - 1)
@@ -150,7 +153,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
               />
             )}
             <span
-              css={applyDefaultItemCss(size, nextDisable)}
+              className={applyDefaultItemCss(size, nextDisable)}
               onClick={() => {
                 if (nextDisable) return
                 setCurPage(curPage + 1)

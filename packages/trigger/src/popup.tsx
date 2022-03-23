@@ -1,9 +1,8 @@
-/** @jsxImportSource @emotion/react */
 import { FC } from "react"
 import { createPortal } from "react-dom"
-import { css, SerializedStyles } from "@emotion/react"
+import { css, string } from "@emotion/css"
 
-function applyPopupContainer(top: string, left: string): SerializedStyles {
+function applyPopupContainer(top: string, left: string): string {
   return css`
     display: inline-flex;
     position: absolute;
@@ -20,7 +19,7 @@ export interface PopupProps {
 
 export const Popup: FC<PopupProps> = (props) => {
   return createPortal(
-    <div css={applyPopupContainer(props.top, props.left)}>
+    <div className={applyPopupContainer(props.top, props.left)}>
       {props.children}
     </div>,
     document.body,

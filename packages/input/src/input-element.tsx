@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import {
   forwardRef,
@@ -8,7 +7,7 @@ import {
   useImperativeHandle,
   useEffect,
 } from "react"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { omit } from "@illa-design/system"
 import { ErrorIcon } from "@illa-design/icon"
 import { InputElementProps } from "./interface"
@@ -113,13 +112,13 @@ export const InputElement = forwardRef<HTMLInputElement, InputElementProps>(
       <>
         <input
           ref={inputRef}
-          css={applyInputStyle(textCenterHorizontal)}
+          className={applyInputStyle(textCenterHorizontal)}
           {...inputProps}
           {...(type ? { type } : {})}
         />
         {!disabled && allowClear && value ? (
           <span
-            css={pointerStyle}
+            className={pointerStyle}
             onClick={(e) => {
               e.stopPropagation()
               inputRef?.current?.focus?.()
@@ -129,12 +128,12 @@ export const InputElement = forwardRef<HTMLInputElement, InputElementProps>(
               e.preventDefault()
             }}
           >
-            <ErrorIcon css={css(`margin-left: 10px;`)} />
+            <ErrorIcon className={css(`margin-left: 10px;`)} />
           </span>
         ) : null}
         {autoFitWidth ? (
           <span
-            css={css(applyInputStyle(textCenterHorizontal), mirrorStyle)}
+            className={css(applyInputStyle(textCenterHorizontal), mirrorStyle)}
             ref={mirrorInputRef}
           >
             {mirrorValue && mirrorValue.replace(/\s/g, "\u00A0")}

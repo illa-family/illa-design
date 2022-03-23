@@ -1,10 +1,9 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef, useState } from "react"
 import { TagProps } from "./interface"
-import { css } from "@emotion/react"
+import { css, cx } from "@emotion/css"
 import { CloseIcon } from "@illa-design/icon"
-import { SerializedStyles } from "@emotion/serialize"
+
 import { omit } from "@illa-design/system"
 import {
   applyTagSizeLarge,
@@ -27,13 +26,14 @@ export const Tag = forwardRef<HTMLDivElement, TagProps>((props, ref) => {
     colorScheme = "gray",
     size = "small",
     variant = "light",
+    className,
     closable,
     ...rest
   } = props
 
   const otherProps = omit(rest, ["onClose", "icon"])
 
-  let variantCss: SerializedStyles
+  let variantCss: string
 
   const [realVisible, setRealVisible] = useState(true)
 
@@ -68,7 +68,7 @@ export const Tag = forwardRef<HTMLDivElement, TagProps>((props, ref) => {
   }
 
   // size
-  let sizeCss: SerializedStyles
+  let sizeCss: string
   switch (size) {
     case "small": {
       sizeCss = applyTagSizeSmall(variant)
@@ -91,10 +91,10 @@ export const Tag = forwardRef<HTMLDivElement, TagProps>((props, ref) => {
   `
 
   return (visible == undefined ? realVisible : visible) ? (
-    <div css={finalStyle} ref={ref} {...otherProps}>
-      {props.icon && <span css={leftIcon}>{props.icon}</span>}
+    <div className={cx(finalStyle, className)} ref={ref} {...otherProps}>
+      {props.icon && <span className={leftIcon}>{props.icon}</span>}
       <span
-        css={css`
+        className={css`
           font-size: 14px;
           line-height: 22px;
           overflow: hidden;
@@ -108,7 +108,7 @@ export const Tag = forwardRef<HTMLDivElement, TagProps>((props, ref) => {
         <span>
           <CloseIcon
             size="7px"
-            css={closeIcon}
+            className={closeIcon}
             onClick={() => {
               if (props.onClose != undefined) {
                 props.onClose()

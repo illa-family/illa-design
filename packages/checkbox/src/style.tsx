@@ -1,7 +1,7 @@
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { CheckboxProps } from "./interface"
-import { SerializedStyles } from "@emotion/serialize"
-import { css } from "@emotion/react"
+
+import { css } from "@emotion/css"
 
 export function applyCheckboxSize(checked?: boolean) {
   let checkedCss = css()
@@ -54,7 +54,7 @@ export function applyCheckState(checked: boolean) {
   `
 }
 
-export function applyMergeCss(props: CheckboxProps): SerializedStyles {
+export function applyMergeCss(props: CheckboxProps): string {
   const currentDisabled = props.disabled ?? false
 
   return css`
@@ -75,7 +75,7 @@ export function applyMergeCss(props: CheckboxProps): SerializedStyles {
 
 export function applyCheckboxContainerHorizontal(
   spacing: string | number,
-): SerializedStyles {
+): string {
   const currentSpacing = typeof spacing === "string" ? spacing : `${spacing}px`
 
   return css`
@@ -90,7 +90,7 @@ export function applyCheckboxContainerHorizontal(
 
 export function applyCheckboxContainerVertical(
   spacing: string | number,
-): SerializedStyles {
+): string {
   const currentSpacing = typeof spacing === "string" ? spacing : `${spacing}px`
 
   return css`

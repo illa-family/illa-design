@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import {
   ChangeEvent,
@@ -11,10 +10,10 @@ import {
   useRef,
   useImperativeHandle,
 } from "react"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { omit, useMergeValue } from "@illa-design/system"
 import { ErrorIcon } from "@illa-design/icon"
-import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx, globalColor, illaPrefix } from "@illa-design/theme"
 import autoSizeTextAreaHeight from "./autoSizeTextAreaHeight"
 import { applyLengthErrorStyle, applyCountLimitStyle } from "./style"
 import { InputSize, TextAreaProps } from "./interface"
@@ -38,11 +37,10 @@ export interface TextAreaState {
 export const TextArea = forwardRef<HTMLSpanElement, TextAreaProps>(
   (props, ref) => {
     const {
-      style,
-      className,
       textAreaRef,
       allowClear,
       error,
+      className,
       disabled,
       placeholder,
       maxLength,
@@ -92,8 +90,10 @@ export const TextArea = forwardRef<HTMLSpanElement, TextAreaProps>(
 
     if (maxLength && showCount) {
       suffix = (
-        <span css={applyCountLimitStyle}>
-          <span css={applyLengthErrorStyle(lengthError)}>{valueLength}</span>
+        <span className={applyCountLimitStyle}>
+          <span className={applyLengthErrorStyle(lengthError)}>
+            {valueLength}
+          </span>
           <span>/{maxLength}</span>
         </span>
       )
@@ -167,14 +167,12 @@ export const TextArea = forwardRef<HTMLSpanElement, TextAreaProps>(
     return (
       <span
         ref={ref}
-        css={applyTextAreaContainer(stateValue)}
-        style={style}
-        className={className}
+        className={cx(applyTextAreaContainer(stateValue), className)}
       >
         <textarea
           style={{ ...autoSizeStyle }}
           ref={refTextArea}
-          css={applyTextAreaStyle}
+          className={applyTextAreaStyle}
           {...textAreaProps}
           onChange={onChange}
           onFocus={(e) => {
@@ -188,7 +186,7 @@ export const TextArea = forwardRef<HTMLSpanElement, TextAreaProps>(
         />
         {!disabled && allowClear && value ? (
           <span
-            css={clearStyle}
+            className={clearStyle}
             onClick={(e) => {
               e.stopPropagation()
               onClear && onClear()
@@ -198,7 +196,7 @@ export const TextArea = forwardRef<HTMLSpanElement, TextAreaProps>(
             }}
           >
             <ErrorIcon
-              css={css`
+              className={css`
                 color: ${globalColor(`--${illaPrefix}-gray-07`)};
                 width: 12px;
                 height: 12px;
@@ -206,7 +204,7 @@ export const TextArea = forwardRef<HTMLSpanElement, TextAreaProps>(
             />
           </span>
         ) : null}
-        {suffix ? <span css={applyPrefixCls}>{suffix}</span> : null}
+        {suffix ? <span className={applyPrefixCls}>{suffix}</span> : null}
       </span>
     )
   },

@@ -1,9 +1,8 @@
-/** @jsxImportSource @emotion/react */
 import { Children, CSSProperties, forwardRef, ReactNode } from "react"
 import { AvatarGroupProps } from "./interface"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { Avatar } from "./avatar"
-import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx, globalColor, illaPrefix } from "@illa-design/theme"
 import { AvatarGroupContext } from "./avatar-group-context"
 
 const avatarGroupCss = css`
@@ -19,6 +18,7 @@ export const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
       maxCount = Number.MAX_VALUE,
       colorScheme,
       size,
+      className,
       ...otherProps
     } = props
 
@@ -73,13 +73,14 @@ export const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
         </AvatarGroupContext.Provider>
       )
     })
+    const finalCss = css`
+      display: inline-block;
+      ${avatarGroupCss};
+    `
     return (
       <div
-        css={css`
-          display: inline-block;
-          ${avatarGroupCss};
-        `}
         ref={ref}
+        className={cx(finalCss, className)}
         {...otherProps}
       >
         {newNodeList}

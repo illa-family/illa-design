@@ -1,4 +1,4 @@
-import { css, keyframes } from "@emotion/react"
+import { css, keyframes } from "@emotion/css"
 
 export const rotateKeyframe = keyframes`
   0% {

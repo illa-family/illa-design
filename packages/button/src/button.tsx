@@ -1,8 +1,7 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { Children, forwardRef } from "react"
 import { ButtonProps } from "./interface"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { LoadingIcon } from "@illa-design/icon"
 import {
   applyBg,
@@ -18,6 +17,7 @@ import {
   applyWithoutTextSize,
 } from "./style"
 import { ButtonGroupContext } from "."
+import { cx } from "@emotion/css"
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {
@@ -31,6 +31,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             size = value?.size ?? "small",
             variant = value?.variant ?? "fill",
             shape = value?.shape ?? "square",
+            className,
             fullWidth,
             loading,
             loadingText,
@@ -63,20 +64,20 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             return (
               <button
                 ref={ref}
-                css={finalContainer}
+                className={cx(finalContainer, className)}
                 disabled={disabled || loading}
                 {...otherProps}
               >
                 {(loading || leftIcon) && (
-                  <span css={applyLeftIconStyle(size)}>
+                  <span className={applyLeftIconStyle(size)}>
                     {loading ? <LoadingIcon spin={true} /> : leftIcon}
                   </span>
                 )}
-                <span css={applyFontStyle(size)}>
+                <span className={applyFontStyle(size)}>
                   {loading && loadingText ? loadingText : props.children}
                 </span>
                 {rightIcon && (
-                  <span css={applyRightIconStyle(size)}>{rightIcon}</span>
+                  <span className={applyRightIconStyle(size)}>{rightIcon}</span>
                 )}
               </button>
             )
@@ -99,17 +100,19 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             return (
               <button
                 ref={ref}
-                css={finalContainer}
+                className={cx(finalContainer, className)}
                 disabled={disabled || loading}
                 {...otherProps}
               >
                 {(loading || leftIcon) && (
-                  <span css={applyIconWithoutText(size)}>
+                  <span className={applyIconWithoutText(size)}>
                     {loading ? <LoadingIcon spin={true} /> : leftIcon}
                   </span>
                 )}
                 {rightIcon && (
-                  <span css={applyIconWithoutText(size)}>{rightIcon}</span>
+                  <span className={applyIconWithoutText(size)}>
+                    {rightIcon}
+                  </span>
                 )}
               </button>
             )

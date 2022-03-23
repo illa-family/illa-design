@@ -1,10 +1,10 @@
 import { DividerVariant } from "./interface"
-import { css, SerializedStyles } from "@emotion/react"
+import { css, string } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 export function applyDividerContainerHorizontal(
   variant: DividerVariant,
-): SerializedStyles {
+): string {
   return css`
     display: inline-flex;
     vertical-align: middle;
@@ -15,9 +15,7 @@ export function applyDividerContainerHorizontal(
   `
 }
 
-export function applyDividerContainerVertical(
-  variant: DividerVariant,
-): SerializedStyles {
+export function applyDividerContainerVertical(variant: DividerVariant): string {
   return css`
     display: inline-flex;
     vertical-align: middle;

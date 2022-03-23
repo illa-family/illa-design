@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css, keyframes } from "@emotion/react"
+import { css, keyframes, string } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { isObject } from "@illa-design/system"
 import { BadgeColorScheme, BadgeStatus } from "./interface"
@@ -22,7 +21,7 @@ export const badgeScale = keyframes`
     transform: scale(1, 1);
   }
 `
-export function applyBadge() {
+export function applyBadge(): string {
   return css`
     display: inline-block;
     position: relative;
@@ -34,7 +33,7 @@ export function applyBadgeDot(
   color: string,
   hasChildren: boolean,
   hasStatus?: boolean,
-) {
+): string {
   let position: string = ``
   if (!hasStatus && hasChildren) {
     position += `
@@ -60,7 +59,7 @@ export function applyBadgeNumberOrText(
   color: string,
   hasChildren: boolean,
   length: number,
-) {
+): string {
   const padding = length > 1 ? "padding: 0 6px;" : ""
   const position = hasChildren
     ? `
@@ -93,7 +92,7 @@ export function applyBadgeNumberOrText(
   `
 }
 
-export function applyBadgeScale(isChanged: boolean = false) {
+export function applyBadgeScale(isChanged: boolean = false): string {
   return isChanged
     ? css`
         animation-name: ${badgeScale};
@@ -105,14 +104,14 @@ export function applyBadgeScale(isChanged: boolean = false) {
     : css``
 }
 
-export function applyBadgeStatusWrapper() {
+export function applyBadgeStatusWrapper(): string {
   return css`
     display: inline-flex;
     align-items: center;
   `
 }
 
-export function applyBadgeStatusText() {
+export function applyBadgeStatusText(): string {
   return css`
     margin-left: 9px;
     font-size: 12px;
@@ -125,7 +124,7 @@ export function getDotColor(
   count: number | ReactNode,
   colorScheme?: BadgeColorScheme,
   status?: BadgeStatus,
-) {
+): string {
   let colorStyle
   if (colorScheme) {
     colorStyle = globalColor(`--${illaPrefix}-${colorScheme}-03`)

@@ -1,30 +1,32 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef } from "react"
 import { ListItemMetaProps } from "./interface"
 import {
   applyItemMetaAvatar,
   applyItemMetaContainer,
-  applyItemMetaTitle,
   applyTypoStyle,
 } from "./style"
 import { Avatar } from "@illa-design/avatar"
 import { Paragraph, Text, Typography } from "@illa-design/typography"
-import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx, globalColor, illaPrefix } from "@illa-design/theme"
 
 export const ListItemMeta = forwardRef<HTMLDivElement, ListItemMetaProps>(
   (props, ref) => {
-    const { title, avatar, description, ...otherProps } = props
+    const { title, avatar, description, className, ...otherProps } = props
     return (
-      <div css={applyItemMetaContainer} ref={ref} {...otherProps}>
+      <div
+        ref={ref}
+        className={cx(applyItemMetaContainer, className)}
+        {...otherProps}
+      >
         {avatar && (
           <Avatar
-            css={applyItemMetaAvatar}
+            className={applyItemMetaAvatar}
             size="medium"
             shape="square"
             src={avatar}
           />
         )}
-        <Typography css={applyTypoStyle}>
+        <Typography className={applyTypoStyle}>
           {title && (
             <Text fontSize="14px" colorScheme="gray" bold>
               {title}

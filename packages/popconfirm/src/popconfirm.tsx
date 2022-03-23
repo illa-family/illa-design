@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { FC, useContext, useState } from "react"
 import { PopconfirmProps } from "./interface"
@@ -68,13 +67,13 @@ export const Popconfirm: FC<PopconfirmProps> = (props) => {
       closeOnClick={closeOnClick}
       withoutPadding
       content={
-        <div css={applyTypographyContainer}>
+        <div className={applyTypographyContainer}>
           <Typography>
             {title && (
               <Space size="8px">
                 {icon}
                 <Heading
-                  css={applyTitleColor(colorScheme)}
+                  className={applyTitleColor(colorScheme)}
                   colorScheme={colorScheme == "white" ? "gray" : "white"}
                   title={title}
                   ellipsis={false}
@@ -86,7 +85,11 @@ export const Popconfirm: FC<PopconfirmProps> = (props) => {
             )}
             <div style={{ height: "16px" }} />
           </Typography>
-          <Space css={applyButtonGroupStyle} size="16px" direction="horizontal">
+          <Space
+            className={applyButtonGroupStyle}
+            size="16px"
+            direction="horizontal"
+          >
             <Button
               colorScheme={cancelColorScheme}
               onClick={() => {

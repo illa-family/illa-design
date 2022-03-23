@@ -1,5 +1,5 @@
 import chroma from "chroma-js"
-import { css, SerializedStyles } from "@emotion/react"
+import { css, string } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { InputTagStateValue } from "./interface"
 
@@ -29,7 +29,7 @@ export const errorOutlineStyle = css`
 `
 
 function applySizeStyle(size?: string) {
-  let sizeCss: SerializedStyles
+  let sizeCss: string
   switch (size) {
     default:
     case "large":
@@ -52,7 +52,7 @@ function applySizeStyle(size?: string) {
 }
 
 export function applyInputInnerCss(stateValue: InputTagStateValue) {
-  let paddingCss: SerializedStyles
+  let paddingCss: string
   switch (stateValue?.size) {
     default:
     case "large":
@@ -82,8 +82,8 @@ export function applyInputInnerCss(stateValue: InputTagStateValue) {
 }
 
 function applyStatus(stateValue: InputTagStateValue) {
-  let mainStyle: SerializedStyles
-  let disableStyle, hoverStyle, inputStyle, errorStyle: SerializedStyles
+  let mainStyle: string
+  let disableStyle, hoverStyle, inputStyle, errorStyle: string
 
   disableStyle = disableOutlineStyle
   inputStyle = inputOutlineStyle
@@ -141,7 +141,7 @@ export function applyInputContainer(stateValue: InputTagStateValue) {
 }
 
 function baseFixCls(stateValue: InputTagStateValue) {
-  let sizeCss: SerializedStyles
+  let sizeCss: string
   switch (stateValue?.size) {
     default:
       sizeCss = css`

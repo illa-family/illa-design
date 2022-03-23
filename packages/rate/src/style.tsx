@@ -1,5 +1,5 @@
 import { globalColor, illaPrefix } from "@illa-design/theme"
-import { css, keyframes } from "@emotion/react"
+import { css, keyframes } from "@emotion/css"
 
 export const rateScale = keyframes`
   0% {

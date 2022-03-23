@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef } from "react"
 import { TextProps } from "./interface"
@@ -6,6 +5,7 @@ import { Base } from "./base"
 import { applyTextContainer } from "./text-style"
 import mergedToString from "./measure-element"
 import { Tooltip } from "@illa-design/tooltip"
+import { cx } from "@emotion/css"
 
 export const Text = forwardRef<HTMLSpanElement, TextProps>((props, ref) => {
   // get props
@@ -15,6 +15,7 @@ export const Text = forwardRef<HTMLSpanElement, TextProps>((props, ref) => {
     bold,
     disabled,
     mark,
+    className,
     underline,
     deleted,
     code,
@@ -42,7 +43,11 @@ export const Text = forwardRef<HTMLSpanElement, TextProps>((props, ref) => {
     </Base>
   )
   const text = (
-    <span css={applyTextContainer(fontSize)} ref={ref} {...otherProps}>
+    <span
+      ref={ref}
+      className={cx(applyTextContainer(fontSize), className)}
+      {...otherProps}
+    >
       {base}
     </span>
   )

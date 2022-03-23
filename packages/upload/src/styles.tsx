@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from "@storybook/theming"
+import { css, string } from "@storybook/theming"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 export const uploadContainerCss = css`
@@ -66,14 +66,14 @@ export function applyDragUploadContainerCss(disabled?: boolean) {
   `
 }
 
-export function applyImageUploadTextCss(disable?: boolean): SerializedStyles {
+export function applyImageUploadTextCss(disable?: boolean): string {
   return css`
     ${applyTextColorCss(disable)};
     font-size: 14px;
   `
 }
 
-export function applyDragUploadTitleCss(disable?: boolean): SerializedStyles {
+export function applyDragUploadTitleCss(disable?: boolean): string {
   return css`
     ${applyTextColorCss(disable)};
     margin-top: 24px;
@@ -91,7 +91,7 @@ export const dragUploadTipCss = css`
   text-align: center;
 `
 
-export function applyTextColorCss(disable?: boolean): SerializedStyles {
+export function applyTextColorCss(disable?: boolean): string {
   if (disable) {
     return css`
       color: ${globalColor(`--${illaPrefix}-gray-05`)};
@@ -102,7 +102,7 @@ export function applyTextColorCss(disable?: boolean): SerializedStyles {
   `
 }
 
-export function applyIconCss(disable?: boolean): SerializedStyles {
+export function applyIconCss(disable?: boolean): string {
   if (disable) {
     return css`
       color: ${globalColor(`--${illaPrefix}-gray-05`)};

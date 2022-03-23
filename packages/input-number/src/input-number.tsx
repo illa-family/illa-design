@@ -1,17 +1,16 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import {
   forwardRef,
-  useState,
-  useRef,
   useCallback,
   useEffect,
   useImperativeHandle,
+  useRef,
+  useState,
 } from "react"
 import NP from "number-precision"
 import { InputNumberProps } from "./interface"
 import { Input } from "@illa-design/input"
-import { UpIcon, DownIcon, MinusIcon, PlusIcon } from "@illa-design/icon"
+import { DownIcon, MinusIcon, PlusIcon, UpIcon } from "@illa-design/icon"
 import { isNumber } from "@illa-design/system"
 import {
   applyAddonCss,
@@ -19,6 +18,7 @@ import {
   applyStepEmbed,
   applyStepEmbedContainer,
 } from "./style"
+import { cx } from "@emotion/css"
 
 type StepMethods = "minus" | "plus"
 
@@ -34,7 +34,6 @@ const getPrecision = (precision?: number, step?: number) => {
 export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
   (props, ref) => {
     const {
-      style,
       className,
       inputRef,
       defaultValue,
@@ -209,12 +208,10 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
 
     return (
       <Input
-        css={applyInputNumber}
         size={size}
         ref={ref}
         inputRef={refInput}
-        style={style}
-        className={className}
+        className={cx(applyInputNumber(), className)}
         error={error}
         disabled={disabled}
         readOnly={readOnly}
@@ -226,13 +223,13 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
             <>
               {renderStepEmbed ? (
                 <div
-                  css={applyStepEmbedContainer(stateValue)}
+                  className={applyStepEmbedContainer(stateValue)}
                   title="inputStepEmbed"
                 >
-                  <span css={applyStepEmbed} {...stepEvents("plus")}>
+                  <span className={applyStepEmbed} {...stepEvents("plus")}>
                     {icons && icons.up ? icons.up : <UpIcon />}
                   </span>
-                  <span css={applyStepEmbed} {...stepEvents("minus")}>
+                  <span className={applyStepEmbed} {...stepEvents("minus")}>
                     {icons && icons.down ? icons.down : <DownIcon />}
                   </span>
                 </div>
@@ -244,7 +241,10 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
         }}
         addonBefore={{
           render: renderStepButton ? (
-            <span css={applyAddonCss(stateValue)} {...stepEvents("minus")}>
+            <span
+              className={applyAddonCss(stateValue)}
+              {...stepEvents("minus")}
+            >
               {icons && icons.plus ? icons.plus : <MinusIcon />}
             </span>
           ) : null,
@@ -252,7 +252,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
         }}
         addonAfter={{
           render: renderStepButton ? (
-            <span css={applyAddonCss(stateValue)} {...stepEvents("plus")}>
+            <span className={applyAddonCss(stateValue)} {...stepEvents("plus")}>
               {icons && icons.minus ? icons.minus : <PlusIcon />}
             </span>
           ) : null,

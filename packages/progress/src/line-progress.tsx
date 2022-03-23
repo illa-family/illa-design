@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, ReactNode } from "react"
 import { ProgressProps } from "./interface"
 import {
@@ -14,7 +13,7 @@ import {
 } from "./line-progress-style"
 import { SuccessIcon, WarningCircleIcon } from "@illa-design/icon"
 import { Space } from "@illa-design/space"
-import { globalColor, illaPrefix } from "@illa-design/theme"
+import { cx, globalColor, illaPrefix } from "@illa-design/theme"
 
 export const LineProgress = forwardRef<HTMLDivElement, ProgressProps>(
   (props, ref) => {
@@ -23,6 +22,7 @@ export const LineProgress = forwardRef<HTMLDivElement, ProgressProps>(
       status = "normal",
       color = "blue",
       trailColor = "gray",
+      className,
       showText = true,
       formatText = (percent: number) => {
         return `${percent}%`
@@ -63,16 +63,22 @@ export const LineProgress = forwardRef<HTMLDivElement, ProgressProps>(
 
     if (steps == 1) {
       return (
-        <div ref={ref} css={applyProgressContainer} {...otherProps}>
-          <div css={applyLineContainer(width, strokeWidth)}>
-            <div css={applyLineProgressBg(strokeWidth, trailColor)} />
-            <div css={applyLineProgress(percent, strokeWidth, finalColor)} />
+        <div
+          ref={ref}
+          className={cx(applyProgressContainer, className)}
+          {...otherProps}
+        >
+          <div className={applyLineContainer(width, strokeWidth)}>
+            <div className={applyLineProgressBg(strokeWidth, trailColor)} />
+            <div
+              className={applyLineProgress(percent, strokeWidth, finalColor)}
+            />
           </div>
           {showText && (
-            <span css={applyProgressText}>{formatText(percent)}</span>
+            <span className={applyProgressText}>{formatText(percent)}</span>
           )}
           {status != "normal" && (
-            <span css={applyStatusIcon}>{statusComponent}</span>
+            <span className={applyStatusIcon}>{statusComponent}</span>
           )}
         </div>
       )
@@ -84,7 +90,7 @@ export const LineProgress = forwardRef<HTMLDivElement, ProgressProps>(
         lineProgressContainer.push(
           <div
             key={i}
-            css={applyLineProgressStep(
+            className={applyLineProgressStep(
               percent,
               strokeWidth,
               `calc((${width} - (${steps} - 1) * 4px) / ${steps})`,
@@ -97,7 +103,7 @@ export const LineProgress = forwardRef<HTMLDivElement, ProgressProps>(
         lineProgressBgContainer.push(
           <div
             key={i}
-            css={applyLineProgressBgStep(
+            className={applyLineProgressBgStep(
               strokeWidth,
               `calc((${width} - (${steps} - 1) * 4px) / ${steps})`,
               trailColor,
@@ -107,20 +113,20 @@ export const LineProgress = forwardRef<HTMLDivElement, ProgressProps>(
       }
 
       return (
-        <div ref={ref} css={applyProgressContainer} {...otherProps}>
-          <div css={applyLineContainer(width, strokeWidth)}>
-            <Space css={applySpace()} size="4px">
+        <div ref={ref} className={applyProgressContainer} {...otherProps}>
+          <div className={applyLineContainer(width, strokeWidth)}>
+            <Space className={applySpace()} size="4px">
               {lineProgressBgContainer}
             </Space>
-            <Space css={applySpace()} size="4px">
+            <Space className={applySpace()} size="4px">
               {lineProgressContainer}
             </Space>
           </div>
           {showText && (
-            <span css={applyProgressText}>{formatText(percent)}</span>
+            <span className={applyProgressText}>{formatText(percent)}</span>
           )}
           {status != "normal" && (
-            <span css={applyStatusIcon}>{statusComponent}</span>
+            <span className={applyStatusIcon}>{statusComponent}</span>
           )}
         </div>
       )

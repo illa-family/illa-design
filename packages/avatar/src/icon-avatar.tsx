@@ -1,9 +1,8 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { FC } from "react"
 import { AvatarProps, AvatarSize } from "./interface"
 import { applyIconSize, applyMergeCss } from "./style"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { PersonIcon } from "@illa-design/icon"
 
 export const IconAvatar: FC<AvatarProps> = (props) => {
@@ -37,8 +36,8 @@ export const IconAvatar: FC<AvatarProps> = (props) => {
     icon: currentIcon,
   } as AvatarProps
   return (
-    <div css={applyMergeCss(finalProps)}>
-      <div css={applyIconSize(finalProps.size!!)}>{finalProps.icon}</div>
+    <div className={applyMergeCss(finalProps)}>
+      <div className={applyIconSize(finalProps.size!!)}>{finalProps.icon}</div>
     </div>
   )
 }

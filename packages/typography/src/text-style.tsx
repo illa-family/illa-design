@@ -1,6 +1,6 @@
-import { css, SerializedStyles } from "@storybook/theming"
+import { css, string } from "@storybook/theming"
 
-export function applyTextContainer(fontSize: string): SerializedStyles {
+export function applyTextContainer(fontSize: string): string {
   return css`
     font-size: ${fontSize};
   `

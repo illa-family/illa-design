@@ -1,24 +1,24 @@
-/** @jsxImportSource @emotion/react */
-import React, { forwardRef, useState, useMemo, MouseEvent } from "react"
+import React, { forwardRef, MouseEvent, useMemo, useState } from "react"
 import { AlertProps } from "./interface"
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import {
-  RightIcon,
-  ErrorIcon,
-  WarningCircleIcon,
   CloseIcon,
+  ErrorIcon,
   InfoCircleIcon,
+  RightIcon,
+  WarningCircleIcon,
 } from "@illa-design/icon"
 import {
-  applyAlertCloseBtn,
   applyAlert,
   applyAlertAction,
+  applyAlertCloseBtn,
+  applyAlertContainer,
   applyAlertContent,
   applyAlertContentWrapper,
   applyAlertIcon,
   applyAlertTitle,
-  applyAlertContainer,
 } from "./style"
+import { cx } from "@emotion/css"
 
 const iconMap = {
   info: <InfoCircleIcon />,
@@ -83,9 +83,11 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>((props, ref) => {
     <AnimatePresence>
       {visible && (
         <motion.div
-          css={applyAlertContainer(type, !!content, !!banner)}
           style={style}
-          className={className}
+          className={cx(
+            applyAlertContainer(type, !!content, !!banner),
+            className,
+          )}
           variants={variants}
           animate={"show"}
           exit={"hidden"}
@@ -97,17 +99,24 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>((props, ref) => {
             }
           }}
         >
-          <div css={applyAlert(!!content)} {...restProps}>
+          <div className={applyAlert(!!content)} {...restProps}>
             {showIcon && (
-              <div css={applyAlertIcon(type, !!content)}>{renderIcon}</div>
+              <div className={applyAlertIcon(type, !!content)}>
+                {renderIcon}
+              </div>
             )}
-            <div css={applyAlertContentWrapper}>
-              {title && <div css={applyAlertTitle(!!content)}>{title}</div>}
-              {content && <div css={applyAlertContent}>{content}</div>}
+            <div className={applyAlertContentWrapper}>
+              {title && (
+                <div className={applyAlertTitle(!!content)}>{title}</div>
+              )}
+              {content && <div className={applyAlertContent}>{content}</div>}
             </div>
-            {action && <div css={applyAlertAction}>{action}</div>}
+            {action && <div className={applyAlertAction}>{action}</div>}
             {closable && (
-              <button css={applyAlertCloseBtn(type)} onClick={onHandleClose}>
+              <button
+                className={applyAlertCloseBtn(type)}
+                onClick={onHandleClose}
+              >
                 {closeElement || <CloseIcon />}
               </button>
             )}

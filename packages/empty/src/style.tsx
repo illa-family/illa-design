@@ -1,4 +1,4 @@
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 
 export const emptyContainerCss = css`

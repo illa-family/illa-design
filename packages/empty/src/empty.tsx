@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, useContext } from "react"
 import { Image } from "@illa-design/image"
 import { EmptyIcon } from "@illa-design/icon"
@@ -9,6 +8,7 @@ import {
 } from "@illa-design/config-provider"
 import { descriptionCss, emptyContainerCss, iconCss } from "./style"
 import { EmptyProps } from "./interface"
+import { cx } from "@emotion/css"
 
 export const Empty = forwardRef<HTMLDivElement, EmptyProps>((props, ref) => {
   const configProviderProps = useContext<ConfigProviderProps>(
@@ -17,14 +17,19 @@ export const Empty = forwardRef<HTMLDivElement, EmptyProps>((props, ref) => {
   const locale = configProviderProps?.locale?.empty ?? def.empty
 
   const {
-    icon = <EmptyIcon css={iconCss} />,
+    icon = <EmptyIcon className={iconCss} />,
     imgSrc,
+    className,
     description = locale["noData"],
     ...rest
   } = props
 
   return (
-    <div ref={ref} css={emptyContainerCss} {...rest}>
+    <div
+      ref={ref}
+      className={cx(emptyContainerCss, className)}
+      {...rest}
+    >
       <div>
         {imgSrc ? (
           <Image
@@ -37,7 +42,7 @@ export const Empty = forwardRef<HTMLDivElement, EmptyProps>((props, ref) => {
           <span>{icon}</span>
         )}
       </div>
-      <div css={descriptionCss}>{description}</div>
+      <div className={descriptionCss}>{description}</div>
     </div>
   )
 })

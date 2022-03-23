@@ -5,8 +5,8 @@ import {
   RadioSize,
   RadioStatus,
 } from "./interface"
-import { SerializedStyles } from "@emotion/serialize"
-import { css } from "@emotion/react"
+
+import { css } from "@emotion/css"
 
 // default radio
 export function applyRadioSize(colorScheme: RadioColorScheme) {
@@ -45,7 +45,7 @@ export function applyRadioSize(colorScheme: RadioColorScheme) {
   `
 }
 
-export function applyMergeCss(stateValue?: RadioStatus): SerializedStyles {
+export function applyMergeCss(stateValue?: RadioStatus): string {
   const currentDisabled = stateValue?.disabled ?? false
 
   return css`
@@ -65,7 +65,7 @@ export function applyMergeCss(stateValue?: RadioStatus): SerializedStyles {
 
 export function applyRadioContainerHorizontal(
   spacing: string | number,
-): SerializedStyles {
+): string {
   const currentSpacing = typeof spacing === "string" ? spacing : `${spacing}px`
 
   return css`
@@ -77,9 +77,7 @@ export function applyRadioContainerHorizontal(
   `
 }
 
-export function applyRadioContainerVertical(
-  spacing: string | number,
-): SerializedStyles {
+export function applyRadioContainerVertical(spacing: string | number): string {
   const currentSpacing = typeof spacing === "string" ? spacing : `${spacing}px`
 
   return css`
@@ -107,7 +105,7 @@ export const disappear = css`
   }
 `
 
-export function applyRadioButtonContainer(size?: RadioSize): SerializedStyles {
+export function applyRadioButtonContainer(size?: RadioSize): string {
   return css`
     border-radius: 4px;
     display: inline-flex;

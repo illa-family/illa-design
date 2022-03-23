@@ -9,7 +9,6 @@ export default defineConfig({
   assetsInclude: "src/assets/*",
   plugins: [
     react({
-      jsxImportSource: "@emotion/react",
       jsxRuntime: "automatic",
       babel: {
         plugins: ["@emotion/babel-plugin"],

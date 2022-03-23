@@ -1,22 +1,23 @@
-/** @jsxImportSource @emotion/react */
 import React, { forwardRef, useState } from "react"
 import NP from "number-precision"
 import { RateProps } from "./interface"
-import { StarIcon, HeartIcon } from "@illa-design/icon"
+import { HeartIcon, StarIcon } from "@illa-design/icon"
 import { Tooltip } from "@illa-design/tooltip"
 import {
-  applyRateInner,
   applyRate,
   applyRateCharacter,
   applyRateCharacterLeft,
   applyRateCharacterRight,
+  applyRateInner,
 } from "./style"
+import { cx } from "@emotion/css"
 
 export const Rate = forwardRef<HTMLDivElement, RateProps>((props, ref) => {
   const {
     defaultValue,
     character = <StarIcon />,
     count = 5,
+    className,
     value: stars,
     tooltips,
     allowHalf,
@@ -95,7 +96,7 @@ export const Rate = forwardRef<HTMLDivElement, RateProps>((props, ref) => {
     return (
       <CharacterWrapper key={index} {...tooltipProps}>
         <div
-          css={applyRateCharacter(
+          className={applyRateCharacter(
             disabled,
             readonly,
             animation && index + 1 < mergedValue,
@@ -108,7 +109,7 @@ export const Rate = forwardRef<HTMLDivElement, RateProps>((props, ref) => {
           }}
         >
           <div
-            css={applyRateCharacterLeft(
+            className={applyRateCharacterLeft(
               allowHalf && index + 0.5 === _usedIndex,
               !heart,
             )}
@@ -117,7 +118,7 @@ export const Rate = forwardRef<HTMLDivElement, RateProps>((props, ref) => {
             {_usedCharacter}
           </div>
           <div
-            css={applyRateCharacterRight(index + 1 <= _usedIndex, !heart)}
+            className={applyRateCharacterRight(index + 1 <= _usedIndex, !heart)}
             {...rightProps}
           >
             {_usedCharacter}
@@ -130,11 +131,11 @@ export const Rate = forwardRef<HTMLDivElement, RateProps>((props, ref) => {
   return (
     <div
       ref={ref}
-      css={applyRate(disabled)}
+      className={cx(applyRate(disabled), className)}
       {...restProps}
       onMouseLeave={resetHoverIndex}
     >
-      <div css={applyRateInner}>
+      <div className={applyRateInner}>
         {Array.apply(null, Array(count)).map((_, index) =>
           renderCharacter(index),
         )}

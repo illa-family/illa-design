@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, useMemo } from "react"
 import { TabHeaderChildProps } from "../interface"
 import {
@@ -39,7 +38,7 @@ export const TabHeaderChild = forwardRef<HTMLSpanElement, TabHeaderChildProps>(
 
     return (
       <span
-        css={childCss}
+        className={childCss}
         key={tabKey}
         ref={ref}
         onClick={() => {
@@ -47,11 +46,13 @@ export const TabHeaderChild = forwardRef<HTMLSpanElement, TabHeaderChildProps>(
           handleSelectTab(tabKey)
         }}
       >
-        <span css={applyTextCss(size, isSelected, disabled)}>{title}</span>
-        {needDivLine && !needDivLine && <div css={verticalLineCss} />}
+        <span className={applyTextCss(size, isSelected, disabled)}>
+          {title}
+        </span>
+        {needDivLine && !needDivLine && <div className={verticalLineCss} />}
         {closable && (
           <span
-            css={deleteButtonCss}
+            className={deleteButtonCss}
             onClick={(event) => {
               handleDeleteTab && handleDeleteTab(tabKey)
               event.stopPropagation()

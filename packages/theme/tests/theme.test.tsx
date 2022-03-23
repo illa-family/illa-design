@@ -1,5 +1,5 @@
-import { globalColor } from "../src"
-import { illaPrefix } from "../src"
+import { globalColor, illaPrefix } from "../src"
+import "@testing-library/jest-dom"
 
 test("Theme get color", () => {
   expect(globalColor("null")).toBe("")

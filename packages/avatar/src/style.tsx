@@ -5,8 +5,8 @@ import {
   AvatarShape,
   AvatarSize,
 } from "./interface"
-import { SerializedStyles } from "@emotion/serialize"
-import { css } from "@emotion/react"
+
+import { css } from "@emotion/css"
 
 export const colors: AvatarColorScheme[] = [
   "white",
@@ -22,8 +22,8 @@ export const colors: AvatarColorScheme[] = [
   "purple",
 ]
 
-export function applyBgColor(colorScheme: AvatarColorScheme): SerializedStyles {
-  let bgColor: SerializedStyles
+export function applyBgColor(colorScheme: AvatarColorScheme): string {
+  let bgColor: string
   if (colors.includes(colorScheme)) {
     if (colorScheme == "gray") {
       bgColor = css`
@@ -42,7 +42,7 @@ export function applyBgColor(colorScheme: AvatarColorScheme): SerializedStyles {
   return bgColor
 }
 
-export function applyAvatarShapeSquare(size: AvatarSize): SerializedStyles {
+export function applyAvatarShapeSquare(size: AvatarSize): string {
   const [width, height, textSize, lineHeight] = applyAvatarSize(size)
   return css`
     width: ${width};
@@ -53,7 +53,7 @@ export function applyAvatarShapeSquare(size: AvatarSize): SerializedStyles {
   `
 }
 
-export function applyAvatarShapeCircle(size: AvatarSize): SerializedStyles {
+export function applyAvatarShapeCircle(size: AvatarSize): string {
   const [width, height, textSize, lineHeight] = applyAvatarSize(size)
   return css`
     width: ${width};
@@ -110,13 +110,13 @@ export function applyAvatarSize(size: AvatarSize): string[] {
   return [width, height, textSize, lineHeight]
 }
 
-export function applyMergeCss(props: AvatarProps): SerializedStyles {
+export function applyMergeCss(props: AvatarProps): string {
   const currentColorScheme = props.colorScheme ?? "blue"
   const currentSize = props.size ?? "small"
   const currentShape = props.shape ?? "circle"
 
   const containerCss = applyAvatarContainer(currentColorScheme)
-  let shapeCss: SerializedStyles
+  let shapeCss: string
   switch (currentShape) {
     case "circle": {
       shapeCss = applyAvatarShapeCircle(currentSize)

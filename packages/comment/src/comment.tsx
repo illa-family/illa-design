@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef } from "react"
 import { CommentProps } from "./interface"
 import {
@@ -12,6 +11,7 @@ import {
   dateTimeTextCss,
   singleCommentContainerCss,
 } from "./style"
+import { cx } from "@emotion/css"
 
 export const Comment = forwardRef<HTMLDivElement, CommentProps>(
   (props, ref) => {
@@ -23,6 +23,7 @@ export const Comment = forwardRef<HTMLDivElement, CommentProps>(
       datetime,
       children,
       content,
+      className,
       align,
       ...rest
     } = props
@@ -39,22 +40,22 @@ export const Comment = forwardRef<HTMLDivElement, CommentProps>(
     return (
       <div
         placeholder={placeholder}
-        css={commentContainerCss}
         ref={ref}
+        className={cx(commentContainerCss, className)}
         {...rest}
       >
-        <div css={singleCommentContainerCss}>
+        <div className={singleCommentContainerCss}>
           <span>{avatar}</span>
-          <div css={contentContainerCss}>
-            <div css={applyAuthorDatetimeContainer(dateTimeAlign)}>
-              <span css={authorTextCss}> {author}</span>
-              <span css={[dateTimeTextCss]}>{datetime}</span>
+          <div className={contentContainerCss}>
+            <div className={applyAuthorDatetimeContainer(dateTimeAlign)}>
+              <span className={authorTextCss}> {author}</span>
+              <span className={[dateTimeTextCss]}>{datetime}</span>
             </div>
-            <span css={contentCss}>{content}</span>
-            <span css={applyActionCss(actionAlign)}> {actions}</span>
+            <span className={contentCss}>{content}</span>
+            <span className={applyActionCss(actionAlign)}> {actions}</span>
           </div>
         </div>
-        <div css={childrenCss}>{children}</div>
+        <div className={childrenCss}>{children}</div>
       </div>
     )
   },

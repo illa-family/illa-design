@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import React from "react"
 import usePrevious from "./usePrevious"
 import { CountProps } from "./interface"
@@ -18,10 +17,14 @@ export function Count(props: CountProps) {
 
   return (
     <span
-      css={applyBadgeNumberOrText(color, hasChildren, (count as string).length)}
+      className={applyBadgeNumberOrText(
+        color,
+        hasChildren,
+        (count as string).length,
+      )}
       {...restProps}
     >
-      <span key={count as React.Key} css={applyBadgeScale(isChanged)}>
+      <span key={count as React.Key} className={applyBadgeScale(isChanged)}>
         {count}
       </span>
     </span>

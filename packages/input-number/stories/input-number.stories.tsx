@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { Meta, Story } from "@storybook/react"
 import { InputNumber, InputNumberProps } from "../src"

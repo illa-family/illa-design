@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import React, { CSSProperties, forwardRef } from "react"
 import { BadgeProps } from "./interface"
 import { isObject } from "@illa-design/system"
@@ -12,6 +11,7 @@ import {
 } from "./style"
 
 import { Count } from "./count"
+import { cx } from "@emotion/css"
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
   const {
@@ -21,6 +21,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
     maxCount = 99,
     colorScheme,
     offset,
+    className,
     status,
     children,
     ...restProps
@@ -44,9 +45,9 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
     // display status dot
     if (status) {
       return (
-        <span css={applyBadgeStatusWrapper} style={dotStyle}>
-          <span css={applyBadgeDot(colorStyle, hasChildren, true)} />
-          {text && <span css={applyBadgeStatusText}>{text}</span>}
+        <span className={applyBadgeStatusWrapper} style={dotStyle}>
+          <span className={applyBadgeDot(colorStyle, hasChildren, true)} />
+          {text && <span className={applyBadgeStatusText}>{text}</span>}
         </span>
       )
     }
@@ -54,7 +55,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
     if (isObject(count)) {
       return (
         <span
-          css={applyBadgeNumberOrText(colorStyle, hasChildren, 0)}
+          className={applyBadgeNumberOrText(colorStyle, hasChildren, 0)}
           style={dotStyle}
         >
           {count}
@@ -65,7 +66,11 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
     if (text) {
       return (
         <span
-          css={applyBadgeNumberOrText(colorStyle, hasChildren, text.length)}
+          className={applyBadgeNumberOrText(
+            colorStyle,
+            hasChildren,
+            text.length,
+          )}
           style={dotStyle}
         >
           {text}
@@ -75,7 +80,10 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
     // display dot
     if (dot && count && count > 0) {
       return (
-        <span css={applyBadgeDot(colorStyle, hasChildren)} style={dotStyle} />
+        <span
+          className={applyBadgeDot(colorStyle, hasChildren)}
+          style={dotStyle}
+        />
       )
     }
 
@@ -90,7 +98,11 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
     ) : null
   }
   return (
-    <span css={applyBadge} ref={ref} {...restProps}>
+    <span
+      ref={ref}
+      className={cx(applyBadge(), className)}
+      {...restProps}
+    >
       {children}
       {renderBadge()}
     </span>

@@ -1,4 +1,4 @@
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { MessagePosition } from "@illa-design/notification"
 
 export function applyMessageWrapper(position: MessagePosition) {
@@ -9,7 +9,7 @@ export function applyMessageWrapper(position: MessagePosition) {
     align-items: center;
     position: fixed;
     z-index: 999;
-    ${position === "top" ? "top" : "bottom"}:20px;
+    ${position === "top" ? "top" : "bottom"}: 20px;
     box-sizing: border-box;
     pointer-events: none;
     width: 100%;

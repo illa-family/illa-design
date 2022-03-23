@@ -1,14 +1,13 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, ReactText, useCallback, useState } from "react"
 import { useMergeValue } from "@illa-design/system"
 import { CheckboxGroupProps } from "./interface"
-import { SerializedStyles } from "@emotion/react"
 import { Checkbox } from "./checkbox"
 import {
   applyCheckboxContainerHorizontal,
   applyCheckboxContainerVertical,
 } from "./style"
 import { CheckboxGroupContext } from "./context"
+import { cx } from "@emotion/css"
 
 function isArray(obj: any) {
   return Object.prototype.toString.call(obj) === "[object Array]"
@@ -20,6 +19,7 @@ export const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
       children,
       options,
       disabled,
+      className,
       value,
       defaultValue,
       direction = "horizontal",
@@ -35,7 +35,7 @@ export const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
     })
     const [allOptionValues, setAllOptionValues] = useState<ReactText[]>([])
 
-    let checkboxGroupCss: SerializedStyles
+    let checkboxGroupCss: string
     switch (direction) {
       case "vertical":
         checkboxGroupCss = applyCheckboxContainerVertical(spacing)
@@ -63,7 +63,11 @@ export const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
     )
 
     return (
-      <div css={checkboxGroupCss} ref={ref} {...otherProps}>
+      <div
+        ref={ref}
+        className={cx(checkboxGroupCss, className)}
+        {...otherProps}
+      >
         <CheckboxGroupContext.Provider
           value={{
             isGroup: true,

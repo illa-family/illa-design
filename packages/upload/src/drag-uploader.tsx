@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { forwardRef, ReactNode, useContext } from "react"
 import { TriggerNodeProps, UploadRefType } from "./interface"
 import useDrop from "react-use/lib/useDrop"
@@ -34,7 +33,7 @@ export const TriggerNode = forwardRef<UploadRefType, TriggerNodeProps>(
 
     let tipNode: ReactNode
     if (typeof tip === "string") {
-      tipNode = <div css={dragUploadTipCss}>{tip}</div>
+      tipNode = <div className={dragUploadTipCss}>{tip}</div>
     } else {
       tipNode = <div>{tip}</div>
     }
@@ -48,9 +47,12 @@ export const TriggerNode = forwardRef<UploadRefType, TriggerNodeProps>(
 
     return (
       <>
-        <span onClick={onClick} css={applyDragUploadContainerCss(disabled)}>
-          <AddIcon css={applyIconCss(disabled)} />
-          <span css={applyDragUploadTitleCss(disabled)}>{dragTip}</span>
+        <span
+          onClick={onClick}
+          className={applyDragUploadContainerCss(disabled)}
+        >
+          <AddIcon className={applyIconCss(disabled)} />
+          <span className={applyDragUploadTitleCss(disabled)}>{dragTip}</span>
           {tipNode}
         </span>
       </>

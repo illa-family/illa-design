@@ -1,4 +1,4 @@
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { globalColor, illaPrefix } from "@illa-design/theme"
 import { MessageType, NoticePosition } from "./interface"
 import { AlertType, iconColorMap } from "@illa-design/alert"
@@ -135,7 +135,6 @@ export function applyMessageIcon(type: MessageType) {
 }
 export function applyMessageContent() {
   return css`
-    font-family: SFProDisplay;
     font-size: 14px;
     line-height: 1.57;
     color: ${globalColor(`--${illaPrefix}-gray-02`)};

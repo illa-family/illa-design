@@ -1,12 +1,12 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef, ReactNode } from "react"
 import { AvatarProps } from "./interface"
 import { IconAvatar } from "./icon-avatar"
 import { TextAvatar } from "./text-avatar"
 import { ImgAvatar } from "./img-avatar"
-import { css } from "@emotion/react"
+import { css } from "@emotion/css"
 import { AvatarGroupContext } from "./avatar-group-context"
+import { cx } from "@emotion/css"
 
 const applyOuterCss = css`
   vertical-align: middle;
@@ -24,6 +24,7 @@ export const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
           text = undefined,
           src = undefined,
           icon = undefined,
+          className,
           style = value?.style,
           ...otherProps
         } = props
@@ -64,7 +65,12 @@ export const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
           )
         }
         return (
-          <div css={applyOuterCss} style={style} ref={ref} {...otherProps}>
+          <div
+            style={style}
+            ref={ref}
+            className={cx(applyOuterCss, className)}
+            {...otherProps}
+          >
             {finalNode}
           </div>
         )

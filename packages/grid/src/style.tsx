@@ -1,11 +1,10 @@
-import { css } from "@emotion/react"
-import { SerializedStyles } from "@storybook/theming"
+import { css } from "@emotion/css"
 import { ColSize, GridSize, RowAlign, RowJustify } from "./interface"
 
 export function applyRowContainer(
   align?: RowAlign,
   justify?: RowJustify,
-): SerializedStyles {
+): string {
   return css`
     display: flex;
     flex-direction: row;
@@ -15,9 +14,7 @@ export function applyRowContainer(
   `
 }
 
-export function applyHorizontalGap(
-  horizontalGap?: GridSize | string,
-): SerializedStyles {
+export function applyHorizontalGap(horizontalGap?: GridSize | string): string {
   if (typeof horizontalGap == "object") {
     const { xs, sm, md, lg, xl, xxl } = horizontalGap
     return applyHorizontalSizeGap(xs, sm, md, lg, xl, xxl)
@@ -27,9 +24,7 @@ export function applyHorizontalGap(
   `
 }
 
-export function applyVerticalGap(
-  verticalGap?: GridSize | string,
-): SerializedStyles {
+export function applyVerticalGap(verticalGap?: GridSize | string): string {
   if (typeof verticalGap == "object") {
     const { xs, sm, md, lg, xl, xxl } = verticalGap
     return applyVerticalSizeGap(xs, sm, md, lg, xl, xxl)
@@ -46,7 +41,7 @@ export function applyHorizontalSizeGap(
   lg?: string,
   xl?: string,
   xxl?: string,
-): SerializedStyles {
+): string {
   return css`
     @media (min-width: 0px) {
       column-gap: ${xs};
@@ -76,7 +71,7 @@ export function applyVerticalSizeGap(
   lg?: string,
   xl?: string,
   xxl?: string,
-): SerializedStyles {
+): string {
   return css`
     @media (min-width: 0px) {
       row-gap: ${xs};
@@ -99,7 +94,7 @@ export function applyVerticalSizeGap(
   `
 }
 
-export function applyColContainer(order?: number): SerializedStyles {
+export function applyColContainer(order?: number): string {
   if (order != undefined) {
     return css`
       box-sizing: border-box;
@@ -162,10 +157,7 @@ export function getOneUnitWidth(
 }
 
 // reactive
-export function applyColPushStyle(
-  oneUnitWidth: string,
-  push?: number,
-): SerializedStyles {
+export function applyColPushStyle(oneUnitWidth: string, push?: number): string {
   if (push) {
     return css`
       left: calc(${push} * ${oneUnitWidth});
@@ -175,10 +167,7 @@ export function applyColPushStyle(
   }
 }
 
-export function applyColPullStyle(
-  oneUnitWidth: string,
-  pull?: number,
-): SerializedStyles {
+export function applyColPullStyle(oneUnitWidth: string, pull?: number): string {
   if (pull) {
     return css`
       right: calc(${pull} * ${oneUnitWidth});
@@ -191,7 +180,7 @@ export function applyColPullStyle(
 export function applyColOffsetStyle(
   oneUnitWidth: string,
   offset?: number,
-): SerializedStyles {
+): string {
   if (offset) {
     return css`
       margin-left: calc(${offset} * ${oneUnitWidth});
@@ -204,7 +193,7 @@ export function applyColOffsetStyle(
 export function applyColWidthStyle(
   oneUnitWidth: string,
   span?: number,
-): SerializedStyles {
+): string {
   if (span) {
     return css`
       width: calc(${span} * ${oneUnitWidth});
@@ -219,7 +208,7 @@ export function applyReactiveStyle(
   minWidth: string,
   oneUnitWidth: string,
   size?: ColSize | number,
-): SerializedStyles {
+): string {
   if (size != undefined) {
     if (typeof size == "number") {
       return css`

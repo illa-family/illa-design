@@ -1,20 +1,19 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef } from "react"
 import { TimelineItemProps } from "./interface"
-import { SerializedStyles } from "@emotion/react"
 import { TimelineContext } from "./timeline-context"
 import {
-  applyItemCss,
-  applyVertItemLineCss,
-  applyHorItemLineCss,
-  applyVertItemDotCss,
-  applyHorItemDotCss,
-  applyVertPropDotCss,
-  applyHorPropDotCss,
-  applyVertItemContentCss,
   applyHorItemContentCss,
+  applyHorItemDotCss,
+  applyHorItemLineCss,
+  applyHorPropDotCss,
+  applyItemCss,
+  applyVertItemContentCss,
+  applyVertItemDotCss,
+  applyVertItemLineCss,
+  applyVertPropDotCss,
 } from "./styles"
+import { cx } from "@emotion/css"
 
 export const TimelineItem = forwardRef<HTMLDivElement, TimelineItemProps>(
   (props, ref) => {
@@ -31,12 +30,13 @@ export const TimelineItem = forwardRef<HTMLDivElement, TimelineItemProps>(
             dotColor,
             dotType = "solid",
             lineType = "solid",
+            className,
             lineColor,
             autoFixDotSize = true,
             ...rest
           } = props
 
-          let modehandle = (mode: string, key: number) => {
+          let modeHandle = (mode: string, key: number) => {
             let classArr = ["alternate-same", "alternate-relative"]
             // if labelPosition is relative :  1 -> 0, 0 -> 1
             let classIdx = Math.abs(
@@ -45,40 +45,42 @@ export const TimelineItem = forwardRef<HTMLDivElement, TimelineItemProps>(
             return mode === "alternate" ? classArr[classIdx] : mode
           }
 
-          let handleLineCss: SerializedStyles = applyVertItemLineCss(
+          let handleLineCss: string = applyVertItemLineCss(
               mode,
               lineColor,
               lineType,
             ),
-            handleDotCss: SerializedStyles = applyVertItemDotCss(
-              mode,
-              dotColor,
-              dotType,
-            ),
-            handleContentCss: SerializedStyles = applyVertItemContentCss(
-              modehandle(mode, index),
+            handleDotCss: string = applyVertItemDotCss(mode, dotColor, dotType),
+            handleContentCss: string = applyVertItemContentCss(
+              modeHandle(mode, index),
               autoFixDotSize,
             ),
-            handlePropDotCss: SerializedStyles = applyVertPropDotCss(mode)
+            handlePropDotCss: string = applyVertPropDotCss(mode)
           if (direction === "horizontal") {
             handleLineCss = applyHorItemLineCss(mode, lineColor, lineType)
             handleDotCss = applyHorItemDotCss(mode, dotColor, dotType)
             handlePropDotCss = applyHorPropDotCss(mode)
             handleContentCss = applyHorItemContentCss(
-              modehandle(mode, index),
+              modeHandle(mode, index),
               autoFixDotSize,
             )
           }
 
           return (
-            <div css={applyItemCss(direction, mode)} ref={ref} {...rest}>
-              {!dot && <div css={handleLineCss}></div>}
+            <div
+              className={cx(applyItemCss(direction, mode), className)}
+              ref={ref}
+              {...rest}
+            >
+              {!dot && <div className={handleLineCss} />}
               {dot ? (
-                <div css={handlePropDotCss}>{dot}</div>
+                <div className={handlePropDotCss}>{dot}</div>
               ) : (
-                <div css={handleDotCss}></div>
+                <div className={handleDotCss} />
               )}
-              <div css={handleContentCss}>{label ? label : props.children}</div>
+              <div className={handleContentCss}>
+                {label ? label : props.children}
+              </div>
             </div>
           )
         }}

@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as React from "react"
 import { forwardRef } from "react"
 import { ParagraphProps } from "./interface"
@@ -7,6 +6,7 @@ import { applyParagraphContainer, applyTextContainer } from "./paragraph-style"
 import mergedToString from "./measure-element"
 import { Tooltip } from "@illa-design/tooltip"
 import { css } from "@storybook/theming"
+import { cx } from "@emotion/css"
 
 export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
   (props, ref) => {
@@ -20,6 +20,7 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
       underline,
       deleted,
       code,
+      className,
       copyable,
       fontSize = "14px",
       indent,
@@ -36,7 +37,11 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
     `
 
     const p = (
-      <div css={finalCss} ref={ref} {...otherProps}>
+      <div
+        ref={ref}
+        className={cx(finalCss, className)}
+        {...otherProps}
+      >
         <Base
           colorScheme={colorScheme}
           ellipsis={ellipsis}

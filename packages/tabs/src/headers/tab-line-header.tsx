@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import React, { forwardRef, useEffect, useMemo, useRef, useState } from "react"
 import {
   applyCommonBlueLineCss,
@@ -161,7 +160,7 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
     }, [_isHorizontalLayout])
 
     return (
-      <div css={applyHeaderContainerCss(_isHorizontalLayout)} ref={ref}>
+      <div className={applyHeaderContainerCss(_isHorizontalLayout)} ref={ref}>
         {needScroll && (
           <span
             onClick={() => {
@@ -188,17 +187,22 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
               }
               _isHorizontalLayout ? setTopDis(dis) : setLeftDis(dis)
             }}
-            css={applyPreNextIconCss(true, "line", preDisable, tabPosition)}
+            className={applyPreNextIconCss(
+              true,
+              "line",
+              preDisable,
+              tabPosition,
+            )}
           >
             {_preIcon}
           </span>
         )}
-        <div ref={scrollRef} css={scrollContainerCss}>
-          <div css={headerContainer} ref={ref}>
+        <div ref={scrollRef} className={scrollContainerCss}>
+          <div className={headerContainer} ref={ref}>
             {!_isAhead && (
-              <div css={applyLineCss(childRef && dividerSize)}>
+              <div className={applyLineCss(childRef && dividerSize)}>
                 <div
-                  css={applyBlueLineCss(
+                  className={applyBlueLineCss(
                     getChildrenSize(_isHorizontalLayout, childRef.current)[
                       selectedIndex
                     ],
@@ -208,7 +212,7 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
                 />
               </div>
             )}
-            <div ref={childRef} css={tabsContainerCss}>
+            <div ref={childRef} className={tabsContainerCss}>
               {tabHeaderChild &&
                 tabHeaderChild?.map((item, index) => {
                   return (
@@ -226,9 +230,9 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
                 })}
             </div>
             {isAhead(tabPosition) && (
-              <div css={applyLineCss(childRef && dividerSize)}>
+              <div className={applyLineCss(childRef && dividerSize)}>
                 <div
-                  css={applyBlueLineCss(
+                  className={applyBlueLineCss(
                     getChildrenSize(_isHorizontalLayout, childRef.current)[
                       selectedIndex
                     ],
@@ -266,7 +270,12 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
               }
               _isHorizontalLayout ? setTopDis(dis) : setLeftDis(dis)
             }}
-            css={applyPreNextIconCss(false, "line", nextDisable, tabPosition)}
+            className={applyPreNextIconCss(
+              false,
+              "line",
+              nextDisable,
+              tabPosition,
+            )}
           >
             {_nextIcon}
           </span>
