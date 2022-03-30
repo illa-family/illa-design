@@ -8,20 +8,21 @@ export const treeContainer = css`
   white-space: nowrap;
   flex-direction: row;
   align-items: center;
+  height: 100%;
 `
 
-export function applyNodePadding(size: TreeSize) {
+export function applyNodeHeight(size: TreeSize) {
   switch (size) {
     case "small":
-      return 3
+      return 24
     case "large":
-      return 9
-    case "default":
-      return 5
+      return 40
+    default:
+      return 32
   }
 }
 
-export function applyNodeTextColor(disabled: boolean, selected: boolean) {
+export function applyNodeTextColor(disabled?: boolean, selected?: boolean) {
   if (disabled) {
     return css`
       color: ${globalColor(`--${illaPrefix}-gray-05`)};
@@ -37,26 +38,33 @@ export function applyNodeTextColor(disabled: boolean, selected: boolean) {
 }
 
 export function applyNodeContainerCss(size: TreeSize) {
+  const height = applyNodeHeight(size)
   return css`
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 0 8px;
+    height: ${height}px;
   `
 }
 
-export function applyNodeFoldSwitchCss(folding: boolean) {
-  return css`
-    display: flex;
-    width: 16px;
-    height: 16px;
-    justify-content: center;
-    align-items: center;
-  `
-}
+export const dragContainerCss = css`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: start;
+`
 
-export function applyNodeFoldSwitchIconCss(folding: boolean) {
-  const rotate = folding ? -90 : 0
+export const nodeFoldSwitchCss = css`
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  justify-content: center;
+  align-items: center;
+`
+
+export function applyNodeFoldSwitchIconCss(folding?: boolean) {
+  const rotate = folding ? 0 : -90
   return css`
     display: flex;
     height: 8px;
@@ -68,12 +76,21 @@ export function applyNodeFoldSwitchIconCss(folding: boolean) {
   `
 }
 
-export function applyNodeTextCss(
+export const leafIconCss = css`
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  font-size: 12px;
+  margin-left: 8px;
+  color: ${globalColor(`--${illaPrefix}-gray-02`)}; ;
+`
+
+export function applyNodeTextContainerCss(
   size: TreeSize,
-  disabled: boolean,
-  selected: boolean,
+  disabled?: boolean,
+  selected?: boolean,
+  blockNode?: boolean,
 ) {
-  const verticalPadding = applyNodePadding(size)
   const hoverCss = !disabled
     ? css`
         &:hover {
@@ -88,10 +105,15 @@ export function applyNodeTextCss(
         }
       `
   return css`
-    padding: ${verticalPadding}px 8px;
     size: 14px;
+    flex-grow: ${blockNode ? 1 : 0};
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
     ${applyNodeTextColor(disabled, selected)};
-    flex-grow: 2;
+    position: relative;
     ${hoverCss}
   `
 }
@@ -101,9 +123,34 @@ export const indentContainerCss = css`
   height: 100%;
 `
 
-export const indentBlockCss = css`
-  display: block;
-  width: 24px;
-  height: 100%;
-  border-right: solid 1px ${globalColor(`--${illaPrefix}-gray-08`)};
+export const halfIndentCss = css`
+  width: 8px;
+`
+
+export const checkboxCss = css`
+  margin-left: 8px;
+`
+
+export function applyIndentBlockCss(requireDivider?: boolean) {
+  return css`
+    height: 100%;
+    width: 16.5px;
+    border-left: solid 1px
+      ${requireDivider ? globalColor(`--${illaPrefix}-gray-08`) : "white"};
+    box-sizing: border-box;
+    margin-left: 15.5px;
+  `
+}
+export const loadingIconCss = css`
+  color: ${globalColor(`--${illaPrefix}-blue-01`)};
+  display: inline-flex;
+  height: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 8px;
+`
+
+export const iconColorCss = css`
+  margin-left: 8px;
+  color: ${globalColor(`--${illaPrefix}-blue-01`)};
 `

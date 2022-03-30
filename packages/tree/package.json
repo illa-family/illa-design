@@ -42,6 +42,7 @@
     "@illa-design/theme": "*",
     "@illa-design/system": "*",
     "@illa-design/list": "*",
-    "@illa-design/icon": "*"
+    "@illa-design/icon": "*",
+    "@illa-design/checkbox": "*"
   }
 }

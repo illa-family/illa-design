@@ -48,6 +48,7 @@ import {
   PenIcon,
   PreDoubleIcon,
   NextDoubleIcon,
+  LeafIcon,
 } from "../src"
 
 //👇 This default export determines where your story goes in the story list
@@ -142,3 +143,5 @@ export const CaretDown: Story<IconProps> = (props) => (
 export const DragPoint: Story<IconProps> = (props) => (
   <DragPointIcon {...props} />
 )
+
+export const Leaf: Story<IconProps> = (props) => <LeafIcon {...props} />
