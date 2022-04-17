@@ -5,6 +5,7 @@ import { Divider } from "@illa-design/divider"
 import VirtualList from "rc-virtual-list"
 import { Text, Typography } from "@illa-design/typography"
 import { css } from "@emotion/react"
+import { AnimatePresence } from "framer-motion"
 
 export const List = forwardRef<HTMLDivElement, ListProps<any>>((props, ref) => {
   const {

@@ -20,9 +20,9 @@ import {
   NodeProps,
   TreeDataType,
   updateKeys,
-} from "@illa-design/tree-common"
+} from "../../tree-common/src/index"
 import { TreeProps } from "./interface"
-
+import { AnimatePresence } from "framer-motion"
 // treeData is default
 export const Tree = forwardRef<HTMLDivElement, TreeProps>((props, ref) => {
   const {
@@ -301,7 +301,8 @@ export const Tree = forwardRef<HTMLDivElement, TreeProps>((props, ref) => {
   }
 
   return (
-    <div ref={ref} {...rest}>
+    <div ref={ref} {...rest} role={"tree"}>
+      {/*<AnimatePresence initial={false}>*/}
       <TreeList
         handleLoadMore={loadMore && handleLoadMore}
         listData={_treeData}
@@ -331,6 +332,7 @@ export const Tree = forwardRef<HTMLDivElement, TreeProps>((props, ref) => {
         updateDragState={updateDragState}
         allowDrop={allowDrop}
       />
+      {/*</AnimatePresence>*/}
     </div>
   )
 })

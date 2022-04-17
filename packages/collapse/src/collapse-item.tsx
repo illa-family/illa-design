@@ -83,6 +83,7 @@ export const CollapseItem = forwardRef<HTMLDivElement, CollapseItemProps>(
               exit={"exit"}
               initial={unmountOnExit ? "exit" : false}
               transition={{ duration: 0.2 }}
+              layout
             >
               <div css={applyCollapseItemContentBox}>{children}</div>
             </motion.div>
