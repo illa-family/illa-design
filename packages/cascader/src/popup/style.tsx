@@ -8,7 +8,7 @@ export const searchListWrapper = css`
 `
 export const optionListWrapper = css`
   padding: 4px 0;
-
+  overflow: hidden;
   &:not(:last-child) {
     border-right: solid 1px ${globalColor(`--${illaPrefix}-gray-08`)};
   }

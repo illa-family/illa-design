@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef, useReducer } from "react"
+import React, { useState, useEffect } from "react"
 import isEqual from "react-fast-compare"
+import { motion } from "framer-motion"
 import { isNumber } from "@illa-design/system"
 import { LoadingIcon, NextIcon } from "@illa-design/icon"
 import { Checkbox } from "@illa-design/checkbox"
@@ -146,7 +147,23 @@ export const DefaultPopup = <T extends OptionProps>(
           return <Empty css={flexCenterStyle} style={style} />
         }
         return list.length === 0 ? null : (
-          <div css={optionListWrapper} key={level}>
+          <motion.div
+            variants={{
+              initial: {
+                width: 0,
+              },
+              enter: {
+                width: "auto",
+                transition: {
+                  width: { duration: 0.2, ease: "linear" },
+                },
+              },
+            }}
+            animate={"enter"}
+            initial={"initial"}
+            css={optionListWrapper}
+            key={level}
+          >
             <ul
               onClick={(e) => {
                 e.preventDefault()
@@ -225,7 +242,7 @@ export const DefaultPopup = <T extends OptionProps>(
                 )
               })}
             </ul>
-          </div>
+          </motion.div>
         )
       })}
     </>
