@@ -24,3 +24,21 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import "@testing-library/cypress/add-commands"
+
+Cypress.Commands.add("skipMotion", (selector = "head", style) => {
+  cy.get("html").then(() => {
+    document.querySelector(selector).insertAdjacentHTML(
+      "beforeend",
+      `
+      <style>
+        /* Disable CSS transitions. */
+        * { -webkit-transition: none !important; -moz-transition: none !important; -o-transition: none !important; transition: none !important; }
+        /* Disable CSS animations. */
+        * { -webkit-animation: none !important; -moz-animation: none !important; -o-animation: none !important; animation: none !important; }
+        /* Reset values on non-opaque/offscreen framer-motion components. */
+        ${style}
+      </style>
+    `,
+    )
+  })
+})
