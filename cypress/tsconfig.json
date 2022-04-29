@@ -5,7 +5,8 @@
       "vite/client",
       "cypress",
       "@testing-library/cypress"
-    ]
+    ],
+    "typeRoots": ["./support","../node_modules/@types"]
   },
   "include": [
     "../packages/**/tests/*.e2e.{tsx,ts}"
