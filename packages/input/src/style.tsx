@@ -77,7 +77,7 @@ export function applyContainerCss(stateValue: StateValue) {
     flex-direction: row;
     align-items: center;
     font-size: 14px;
-    border-radius: ${stateValue.radius};
+    border-radius: 8px;
     vertical-align: middle;
     color: ${globalColor(`--${illaPrefix}-gray-02`)};
     ${applyVariantStyle(stateValue?.variant)}
@@ -224,13 +224,13 @@ export function applyInputContainer(
 
     ${applyStatus(stateValue)}
     &:first-of-type {
-      border-top-left-radius: ${stateValue.radius};
-      border-bottom-left-radius: ${stateValue.radius};
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
     }
 
     &:last-of-type {
-      border-top-right-radius: ${stateValue.radius};
-      border-bottom-right-radius: ${stateValue.radius};
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
     }
 
     &:hover {
@@ -265,7 +265,6 @@ export function applyInputStyle(textCenterHorizontal?: boolean | undefined) {
     appearance: none;
     font-size: inherit;
     font-family: inherit;
-    border-radius: 4px;
     line-height: inherit;
     color: ${globalColor(`--${illaPrefix}-gray-02`)};
     border: none;
@@ -380,13 +379,13 @@ export function applyAddonCss(stateValue: StateValue) {
     box-sizing: border-box;
 
     &:first-of-type {
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
     }
 
     &:last-of-type {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
     }
 
     ${inputStyle}
@@ -483,7 +482,7 @@ export function applyRangeContainer(stateValue: StateValue): SerializedStyles {
     color: ${globalColor(`--${illaPrefix}-gray-02`)};
     border: solid 1px ${globalColor(`--${illaPrefix}-gray-08`)};
     transition: all 200ms ease-in-out;
-    border-radius: 4px;
+    border-radius: 8px;
     ${applyStatus(stateValue)}
     ${applySizeStyle(stateValue?.size)}
     ${applySizeCss(true, stateValue?.size)};
