@@ -50,7 +50,14 @@ const Template: Story<InputProps> = (props) => {
   return (
     <div>
       <Space direction={"vertical"} wrap>
-        <Input style={{ width: 280 }} {...props} />
+        <Input
+          type="email"
+          maxLength={10}
+          style={{ width: 280 }}
+          defaultValue={"111"}
+          showCount={true}
+          {...props}
+        />
         <Input
           style={{ width: 280 }}
           suffix={{ render: <PersonIcon /> }}

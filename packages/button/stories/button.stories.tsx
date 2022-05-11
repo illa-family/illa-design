@@ -22,7 +22,7 @@ export default {
 export const Basic: Story<ButtonProps> = (args) => {
   return (
     <Space direction="vertical" align="start" wrap>
-      <Button {...args}>Hello</Button>
+      <Button {...args}></Button>
       <Button {...args} leftIcon={<BsFacebook />}>
         Hello
       </Button>
