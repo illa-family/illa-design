@@ -1,15 +1,14 @@
-import React, {
+import {
   forwardRef,
   useCallback,
   useEffect,
   useMemo,
   useRef,
   useState,
+  Fragment,
 } from "react"
 import {
   applyCommonBlueLineCss,
-  applyDividerCommonLineCss,
-  applyDividerHorizontalLineCss,
   applyHorizontalBlueLineCss,
   applyHorizontalPreNextIconCss,
   applyCommonPreNextIconCss,
@@ -149,20 +148,9 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
       }
     }, [scrolling])
 
-    const dividerSize = () => {
-      const sizeArr = getChildrenSize(_isHorizontalLayout, childRef.current)
-      let size = 0
-      const len = sizeArr?.length
-      for (let i = 0; i < len; i++) {
-        size += sizeArr[i]
-      }
-      return size > getOffsetSize() ? size : getOffsetSize()
-    }
-
     let [
       headerContainer,
       tabsContainerCss,
-      applyLineCss,
       applyBlueLineCss,
       scrollContainerCss,
       applyPreNextIconCss,
@@ -170,7 +158,6 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
       ? [
           tabLineHeaderHorizontalContainerCss,
           tabHeaderHorizontalContainerCss,
-          applyDividerHorizontalLineCss,
           applyHorizontalBlueLineCss,
           containerHorizontalHideScrollBarCss,
           applyHorizontalPreNextIconCss,
@@ -179,7 +166,6 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
       : [
           tabLineHeaderContainerCss,
           tabHeaderContainerCss,
-          applyDividerCommonLineCss,
           applyCommonBlueLineCss,
           containerHideScrollBarCss,
           applyCommonPreNextIconCss,
@@ -199,7 +185,7 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
         css={applyLineHeaderContainerCss(_isHorizontalLayout, tabPosition)}
         ref={ref}
       >
-        {prefix}
+        <Fragment key="prefix">{prefix}</Fragment>
         <div css={tabsContentCss}>
           {needScroll && (
             <span
@@ -223,16 +209,14 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
           <div ref={scrollRef} css={scrollContainerCss}>
             <div css={headerContainer} ref={ref}>
               {!_isAhead && (
-                <div css={applyLineCss(childRef && dividerSize())}>
-                  <div
-                    css={applyBlueLineCss(
-                      blueLineWidth,
-                      blueLinePosition,
-                      colorScheme,
-                      size,
-                    )}
-                  />
-                </div>
+                <div
+                  css={applyBlueLineCss(
+                    blueLineWidth,
+                    blueLinePosition,
+                    colorScheme,
+                    size,
+                  )}
+                />
               )}
               <div ref={childRef} css={tabsContainerCss}>
                 {tabHeaderChild &&
@@ -255,16 +239,14 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
                   })}
               </div>
               {isAhead(tabPosition) && (
-                <div css={applyLineCss(childRef && dividerSize())}>
-                  <div
-                    css={applyBlueLineCss(
-                      blueLineWidth,
-                      blueLinePosition,
-                      colorScheme,
-                      size,
-                    )}
-                  />
-                </div>
+                <div
+                  css={applyBlueLineCss(
+                    blueLineWidth,
+                    blueLinePosition,
+                    colorScheme,
+                    size,
+                  )}
+                />
               )}
             </div>
           </div>
@@ -288,7 +270,7 @@ export const TabLineHeader = forwardRef<HTMLDivElement, TabHeaderProps>(
             </span>
           )}
         </div>
-        {suffix}
+        <Fragment key="suffix">{suffix}</Fragment>
       </div>
     )
   },
